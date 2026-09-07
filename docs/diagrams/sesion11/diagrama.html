@@ -6819,16 +6819,17 @@
         <path data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="11" data-composition-points="1160,544;1160,612;935,612;935,680" d="M 1160 544 L 1160 604 Q 1160 612 1152 612 L 943 612 Q 935 612 935 620 L 935 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="backend-dapp" data-edge-to="smart-contracts" data-edge-label="lectura / escritura" data-edge-key="12" data-composition-points="710,544;710,612;935,612;935,680" d="M 710 544 L 710 604 Q 710 612 718 612 L 927 612 Q 935 612 935 620 L 935 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="backend-dapp" data-edge-to="server-wallets" data-edge-label="solicita firma" data-edge-key="13" data-composition-points="710,480;710,385;440,385;440,344" d="M 710 480 L 710 393 Q 710 385 702 385 L 448 385 Q 440 385 440 377 L 440 344" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="oraculos" data-edge-label="consultas feeds" data-edge-key="14" data-composition-points="610,498;586,498;586,656;440,656;440,680" d="M 610 498 L 594 498 Q 586 498 586 506 L 586 648 Q 586 656 578 656 L 448 656 Q 440 656 440 664 L 440 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="indexadores" data-edge-label="consultas GraphQL" data-edge-key="15" data-composition-points="610,512;586,512;586,836;440,836;440,860" d="M 610 512 L 594 512 Q 586 512 586 520 L 586 828 Q 586 836 578 836 L 448 836 Q 440 836 440 844 L 440 860" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="almacenamiento-descent" data-edge-label="metadatos IPFS" data-edge-key="16" data-composition-points="610,526;586,526;586,1056;440,1056;440,1080" d="M 610 526 L 594 526 Q 586 526 586 534 L 586 1048 Q 586 1056 578 1056 L 448 1056 Q 440 1056 440 1064 L 440 1080" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="17" data-composition-points="550,712;610,712" d="M 550 712 L 610 712" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="indexadores" data-edge-to="evm" data-edge-label="eventos on-chain" data-edge-key="18" data-composition-points="550,892;610,892" d="M 550 892 L 610 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="almacenamiento Web3" data-edge-key="19" data-composition-points="440,1144;440,1168;1187.5,1168;1187.5,1144" d="M 440 1144 L 440 1160 Q 440 1168 448 1168 L 1179.5 1168 Q 1187.5 1168 1187.5 1160 L 1187.5 1144" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="capa-l2" data-edge-to="evm" data-edge-label="ejecutar rollups" data-edge-key="20" data-composition-points="682.5,1080;682.5,1002;765,1002;765,924" d="M 682.5 1080 L 682.5 1010 Q 682.5 1002 690.5 1002 L 757 1002 Q 765 1002 765 994 L 765 924" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="21" data-composition-points="850.5,1080;850.5,1002;1105,1002;1105,924" d="M 850.5 1080 L 850.5 1010 Q 850.5 1002 858.5 1002 L 1097 1002 Q 1105 1002 1105 994 L 1105 924" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="22" data-composition-points="920,892;950,892" d="M 920 892 L 950 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="23" data-composition-points="1460,544;1460,680" d="M 1460 544 L 1460 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="relayers-meta-tx" data-edge-label="meta-tx" data-edge-key="14" data-composition-points="610,512;595,512;550,512" d="M 610 512 L 602.5 512 Q 595 512 587.5 512 L 550 512" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="oraculos" data-edge-label="consultas feeds" data-edge-key="15" data-composition-points="610,498;586,498;586,656;440,656;440,680" d="M 610 498 L 594 498 Q 586 498 586 506 L 586 648 Q 586 656 578 656 L 448 656 Q 440 656 440 664 L 440 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="indexadores" data-edge-label="consultas GraphQL" data-edge-key="16" data-composition-points="610,512;586,512;586,836;440,836;440,860" d="M 610 512 L 594 512 Q 586 512 586 520 L 586 828 Q 586 836 578 836 L 448 836 Q 440 836 440 844 L 440 860" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="almacenamiento-descent" data-edge-label="metadatos IPFS" data-edge-key="17" data-composition-points="610,526;586,526;586,1056;440,1056;440,1080" d="M 610 526 L 594 526 Q 586 526 586 534 L 586 1048 Q 586 1056 578 1056 L 448 1056 Q 440 1056 440 1064 L 440 1080" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="18" data-composition-points="550,712;610,712" d="M 550 712 L 610 712" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="indexadores" data-edge-to="evm" data-edge-label="eventos on-chain" data-edge-key="19" data-composition-points="550,892;610,892" d="M 550 892 L 610 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="almacenamiento Web3" data-edge-key="20" data-composition-points="440,1144;440,1168;1187.5,1168;1187.5,1144" d="M 440 1144 L 440 1160 Q 440 1168 448 1168 L 1179.5 1168 Q 1187.5 1168 1187.5 1160 L 1187.5 1144" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="capa-l2" data-edge-to="evm" data-edge-label="ejecutar rollups" data-edge-key="21" data-composition-points="682.5,1080;682.5,1002;765,1002;765,924" d="M 682.5 1080 L 682.5 1010 Q 682.5 1002 690.5 1002 L 757 1002 Q 765 1002 765 994 L 765 924" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="22" data-composition-points="850.5,1080;850.5,1002;1105,1002;1105,924" d="M 850.5 1080 L 850.5 1010 Q 850.5 1002 858.5 1002 L 1097 1002 Q 1105 1002 1105 994 L 1105 924" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="23" data-composition-points="920,892;950,892" d="M 920 892 L 950 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="24" data-composition-points="1460,544;1460,680" d="M 1460 544 L 1460 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 
         <!-- Components -->
         <g id="node-usuarios" data-node-id="usuarios" data-node-label="Usuarios y Clientes" tabindex="0" role="button" aria-label="Focus Usuarios y Clientes, Navegador Web / Mobile dApp, 4. Capa de Acceso e Interfaz de Usuario" aria-pressed="false" data-node-kind="external" data-node-sublabel="Navegador Web / Mobile dApp" data-node-context="4. Capa de Acceso e Interfaz de Usuario">
@@ -6856,8 +6857,8 @@
         <text data-detail="fine" x="935" y="336" class="t-security" font-size="7" text-anchor="middle">Firma Digital</text>
         </g>
 
-        <g id="node-frontend-app" data-node-id="frontend-app" data-node-label="Frontend dApp" tabindex="0" role="button" aria-label="Focus Frontend dApp, React + Wagmi Hooks, 4. Capa de Acceso e Interfaz de Usuario" aria-pressed="false" data-node-kind="frontend" data-node-sublabel="React + Wagmi Hooks" data-node-tag="UI / Web3" data-node-context="4. Capa de Acceso e Interfaz de Usuario">
-          <title>Frontend dApp · React + Wagmi Hooks · 4. Capa de Acceso e Interfaz de Usuario · UI / Web3</title>
+        <g id="node-frontend-app" data-node-id="frontend-app" data-node-label="dApp Frontend" tabindex="0" role="button" aria-label="Focus dApp Frontend, React + Wagmi Hooks, 4. Capa de Acceso e Interfaz de Usuario" aria-pressed="false" data-node-kind="frontend" data-node-sublabel="React + Wagmi Hooks" data-node-tag="UI / Web3" data-node-context="4. Capa de Acceso e Interfaz de Usuario">
+          <title>dApp Frontend · React + Wagmi Hooks · 4. Capa de Acceso e Interfaz de Usuario · UI / Web3</title>
           <rect x="610" y="280" width="200" height="64" rx="6" class="c-mask"/>
           <rect x="610" y="280" width="200" height="64" rx="6" class="c-frontend" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="frontend" class="semantic-sigil s-frontend" transform="translate(616 286) scale(0.6875)">
@@ -6866,7 +6867,7 @@
             <circle cx="4.1" cy="4.8" r=".7" class="sigil-fill"/>
             <circle cx="6.3" cy="4.8" r=".7" class="sigil-fill"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="710" y="310" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Frontend dApp</text>
+          <text data-node-label="" data-detail-anchor="" x="710" y="310" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">dApp Frontend</text>
         <text data-detail="context" x="710" y="326" class="t-muted" font-size="9" text-anchor="middle">React + Wagmi Hooks</text>
         <text data-detail="fine" x="710" y="336" class="t-frontend" font-size="7" text-anchor="middle">UI / Web3</text>
         </g>
@@ -6985,17 +6986,17 @@
         <text data-detail="fine" x="440" y="916" class="t-database" font-size="7" text-anchor="middle">Consultas</text>
         </g>
 
-        <g id="node-almacenamiento-descent" data-node-id="almacenamiento-descent" data-node-label="IPFS / Arweave" tabindex="0" role="button" aria-label="Focus IPFS / Arweave, Metadatos &amp; Frontends, 3. Capa de Datos y Servicios Aux" aria-pressed="false" data-node-kind="database" data-node-sublabel="Metadatos &amp; Frontends" data-node-tag="Descentralizado" data-node-context="3. Capa de Datos y Servicios Aux">
-          <title>IPFS / Arweave · Metadatos &amp; Frontends · 3. Capa de Datos y Servicios Aux · Descentralizado</title>
+        <g id="node-almacenamiento-descent" data-node-id="almacenamiento-descent" data-node-label="Almacenamiento Decentralizado" tabindex="0" role="button" aria-label="Focus Almacenamiento Decentralizado, IPFS / Arweave, 3. Capa de Datos y Servicios Aux" aria-pressed="false" data-node-kind="database" data-node-sublabel="IPFS / Arweave" data-node-tag="Metadatos &amp; Frontends" data-node-context="3. Capa de Datos y Servicios Aux">
+          <title>Almacenamiento Decentralizado · IPFS / Arweave · 3. Capa de Datos y Servicios Aux · Metadatos &amp; Frontends</title>
           <rect x="330" y="1080" width="220" height="64" rx="6" class="c-mask"/>
           <rect x="330" y="1080" width="220" height="64" rx="6" class="c-database" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(336 1086) scale(0.6875)">
             <ellipse cx="8" cy="4" rx="5" ry="2"/>
             <path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="440" y="1110" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">IPFS / Arweave</text>
-        <text data-detail="context" x="440" y="1126" class="t-muted" font-size="9" text-anchor="middle">Metadatos &amp; Frontends</text>
-        <text data-detail="fine" x="440" y="1136" class="t-database" font-size="7" text-anchor="middle">Descentralizado</text>
+          <text data-node-label="" data-detail-anchor="" x="440" y="1110" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Almacenamiento Decentralizado</text>
+        <text data-detail="context" x="440" y="1126" class="t-muted" font-size="9" text-anchor="middle">IPFS / Arweave</text>
+        <text data-detail="fine" x="440" y="1136" class="t-database" font-size="7" text-anchor="middle">Metadatos &amp; Frontends</text>
         </g>
 
         <g id="node-capa-l2" data-node-id="capa-l2" data-node-label="Capa 2 (L2 Rollups)" tabindex="0" role="button" aria-label="Focus Capa 2 (L2 Rollups), Arbitrum / OP / Base, 1. Capa de Infraestructura y Red" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="Arbitrum / OP / Base" data-node-tag="Escalabilidad" data-node-context="1. Capa de Infraestructura y Red">
@@ -7117,14 +7118,14 @@
         <text data-detail="fine" x="1460" y="1136" class="t-external" font-size="7" text-anchor="middle">Inspección Tx</text>
         </g>
 
-        <g id="node-backend-dapp" data-node-id="backend-dapp" data-node-label="Backend dApp" tabindex="0" role="button" aria-label="Focus Backend dApp, API REST, GraphQL, 2. Capa de Protocolo y Lógica" aria-pressed="false" data-node-kind="backend" data-node-sublabel="API REST, GraphQL" data-node-tag="Off-Chain" data-node-context="2. Capa de Protocolo y Lógica">
-          <title>Backend dApp · API REST, GraphQL · 2. Capa de Protocolo y Lógica · Off-Chain</title>
+        <g id="node-backend-dapp" data-node-id="backend-dapp" data-node-label="dApp Backend" tabindex="0" role="button" aria-label="Focus dApp Backend, API REST, GraphQL, 2. Capa de Protocolo y Lógica" aria-pressed="false" data-node-kind="backend" data-node-sublabel="API REST, GraphQL" data-node-tag="Off-Chain" data-node-context="2. Capa de Protocolo y Lógica">
+          <title>dApp Backend · API REST, GraphQL · 2. Capa de Protocolo y Lógica · Off-Chain</title>
           <rect x="610" y="480" width="200" height="64" rx="6" class="c-mask"/>
           <rect x="610" y="480" width="200" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(616 486) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="710" y="510" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Backend dApp</text>
+          <text data-node-label="" data-detail-anchor="" x="710" y="510" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">dApp Backend</text>
         <text data-detail="context" x="710" y="526" class="t-muted" font-size="9" text-anchor="middle">API REST, GraphQL</text>
         <text data-detail="fine" x="710" y="536" class="t-backend" font-size="7" text-anchor="middle">Off-Chain</text>
         </g>
@@ -7186,43 +7187,47 @@
           <rect x="501.4" y="365" width="77.2" height="14" rx="3" class="c-mask"/>
           <text x="540" y="375" class="t-muted" font-size="8" text-anchor="middle">solicita firma</text>
         </g>
-        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="oraculos" data-edge-label="consultas feeds" data-edge-key="14">
+        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="relayers-meta-tx" data-edge-label="meta-tx" data-edge-key="14">
+          <rect x="550.7" y="492" width="43.6" height="14" rx="3" class="c-mask"/>
+          <text x="572.5" y="502" class="t-muted" font-size="8" text-anchor="middle">meta-tx</text>
+        </g>
+        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="oraculos" data-edge-label="consultas feeds" data-edge-key="15">
           <rect x="545" y="557" width="82" height="14" rx="3" class="c-mask"/>
           <text x="586" y="567" class="t-muted" font-size="8" text-anchor="middle">consultas feeds</text>
         </g>
-        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="indexadores" data-edge-label="consultas GraphQL" data-edge-key="15">
+        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="indexadores" data-edge-label="consultas GraphQL" data-edge-key="16">
           <rect x="540.2" y="654" width="91.6" height="14" rx="3" class="c-mask"/>
           <text x="586" y="664" class="t-muted" font-size="8" text-anchor="middle">consultas GraphQL</text>
         </g>
-        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="almacenamiento-descent" data-edge-label="metadatos IPFS" data-edge-key="16">
+        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="almacenamiento-descent" data-edge-label="metadatos IPFS" data-edge-key="17">
           <rect x="547.4" y="771" width="77.2" height="14" rx="3" class="c-mask"/>
           <text x="586" y="781" class="t-muted" font-size="8" text-anchor="middle">metadatos IPFS</text>
         </g>
-        <g data-detail="context" data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="17">
+        <g data-detail="context" data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="18">
           <rect x="548.6" y="748" width="62.8" height="14" rx="3" class="c-mask"/>
           <text x="580" y="758" class="t-muted" font-size="8" text-anchor="middle">price feeds</text>
         </g>
-        <g data-detail="context" data-edge-from="indexadores" data-edge-to="evm" data-edge-label="eventos on-chain" data-edge-key="18">
+        <g data-detail="context" data-edge-from="indexadores" data-edge-to="evm" data-edge-label="eventos on-chain" data-edge-key="19">
           <rect x="536.6" y="928" width="86.8" height="14" rx="3" class="c-mask"/>
           <text x="580" y="938" class="t-muted" font-size="8" text-anchor="middle">eventos on-chain</text>
         </g>
-        <g data-detail="context" data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="almacenamiento Web3" data-edge-key="19">
+        <g data-detail="context" data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="almacenamiento Web3" data-edge-key="20">
           <rect x="763.15" y="1172" width="101.2" height="14" rx="3" class="c-mask"/>
           <text x="813.75" y="1182" class="t-muted" font-size="8" text-anchor="middle">almacenamiento Web3</text>
         </g>
-        <g data-detail="context" data-edge-from="capa-l2" data-edge-to="evm" data-edge-label="ejecutar rollups" data-edge-key="20">
+        <g data-detail="context" data-edge-from="capa-l2" data-edge-to="evm" data-edge-label="ejecutar rollups" data-edge-key="21">
           <rect x="680.35" y="958" width="86.8" height="14" rx="3" class="c-mask"/>
           <text x="723.75" y="968" class="t-muted" font-size="8" text-anchor="middle">ejecutar rollups</text>
         </g>
-        <g data-detail="context" data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="21">
+        <g data-detail="context" data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="22">
           <rect x="931.95" y="958" width="91.6" height="14" rx="3" class="c-mask"/>
           <text x="977.75" y="968" class="t-muted" font-size="8" text-anchor="middle">bloquear / acuñar</text>
         </g>
-        <g data-detail="context" data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="22">
+        <g data-detail="context" data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="23">
           <rect x="898.8" y="928" width="72.4" height="14" rx="3" class="c-mask"/>
           <text x="935" y="938" class="t-muted" font-size="8" text-anchor="middle">estado global</text>
         </g>
-        <g data-detail="context" data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="23">
+        <g data-detail="context" data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="24">
           <rect x="1426.2" y="548" width="67.6" height="14" rx="3" class="c-mask"/>
           <text x="1460" y="558" class="t-muted" font-size="8" text-anchor="middle">fuzz testing</text>
         </g>
@@ -7491,7 +7496,7 @@
         <ul>
           <li>&bull; Gobernanza descentralizada, DAOs y coordinación on/off-chain</li>
           <li>&bull; Protocolos DeFi, AMMs, Lending, Predicciones &amp; RWAs</li>
-          <li>&bull; Backend dApp para servicios off-chain e integración API</li>
+          <li>&bull; dApp Backend para servicios off-chain e integración API</li>
         </ul>
       </div>
 

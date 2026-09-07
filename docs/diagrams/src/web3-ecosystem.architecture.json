@@ -42,7 +42,7 @@
     {
       "id": "frontend-app",
       "type": "frontend",
-      "label": "Frontend dApp",
+      "label": "dApp Frontend",
       "sublabel": "React + Wagmi Hooks",
       "tag": "UI / Web3",
       "pos": [
@@ -192,9 +192,9 @@
     {
       "id": "almacenamiento-descent",
       "type": "database",
-      "label": "IPFS / Arweave",
-      "sublabel": "Metadatos & Frontends",
-      "tag": "Descentralizado",
+      "label": "Almacenamiento Decentralizado",
+      "sublabel": "IPFS / Arweave",
+      "tag": "Metadatos & Frontends",
       "pos": [
         330,
         1080
@@ -342,7 +342,7 @@
     {
       "id": "backend-dapp",
       "type": "backend",
-      "label": "Backend dApp",
+      "label": "dApp Backend",
       "sublabel": "API REST, GraphQL",
       "tag": "Off-Chain",
       "pos": [
@@ -597,6 +597,19 @@
     },
     {
       "from": "backend-dapp",
+      "to": "relayers-meta-tx",
+      "label": "meta-tx",
+      "fromSide": "left",
+      "toSide": "right",
+      "via": [
+        [
+          595,
+          512
+        ]
+      ]
+    },
+    {
+      "from": "backend-dapp",
       "to": "oraculos",
       "label": "consultas feeds",
       "fromSide": "left",
@@ -689,7 +702,7 @@
       "items": [
         "Gobernanza descentralizada, DAOs y coordinación on/off-chain",
         "Protocolos DeFi, AMMs, Lending, Predicciones & RWAs",
-        "Backend dApp para servicios off-chain e integración API"
+        "dApp Backend para servicios off-chain e integración API"
       ]
     },
     {
