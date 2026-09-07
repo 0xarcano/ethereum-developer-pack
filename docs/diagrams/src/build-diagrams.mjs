@@ -244,7 +244,7 @@ const sessions = [
     num: 7,
     title: "Sesión 7: Smart Contracts con Foundry",
     desc: "Framework Foundry (Forge, Anvil, Cast), versiones de Solidity, configuración del compilador y optimización de bytecode.",
-    activeNodes: ["frameworks-dev", "nodos-rpc", "smart-contracts", "suite-testing", "evm"],
+    activeNodes: ["frameworks-dev", "nodos-rpc", "smart-contracts", "evm"],
     instructor: "Paul"
   },
   {
@@ -265,7 +265,7 @@ const sessions = [
     num: 10,
     title: "Sesión 10: Testing y aseguramiento de calidad",
     desc: "Fundamentos de testing, frameworks de pruebas (Foundry tests), Fuzzing / Property-based testing, análisis de casos de borde (edge cases) y auditoría.",
-    activeNodes: ["suite-testing", "frameworks-dev", "smart-contracts"],
+    activeNodes: ["frameworks-dev", "smart-contracts"],
     instructor: "Paul y Nico"
   },
   {
@@ -279,7 +279,7 @@ const sessions = [
     num: 12,
     title: "Sesión 12: Presentación de proyectos finales (DAO con tests)",
     desc: "Presentación de proyecto integrador: diseño e implementación de una DAO con tests exhaustivos armados por humanos y contratos asistidos con herramientas de IA (Claude Code / Codex).",
-    activeNodes: ["gobernanza-daos", "billeteras", "smart-contracts", "suite-testing", "ides"],
+    activeNodes: ["gobernanza-daos", "billeteras", "smart-contracts", "ides"],
     instructor: "Nico"
   }
 ];

@@ -17,7 +17,7 @@
       "sublabel": "Navegador Web / Mobile dApp",
       "pos": [
         1060,
-        280
+        140
       ],
       "size": [
         200,
@@ -31,8 +31,8 @@
       "sublabel": "MetaMask, Rabby & Safe",
       "tag": "Firma Digital",
       "pos": [
-        835,
-        280
+        610,
+        140
       ],
       "size": [
         200,
@@ -280,6 +280,21 @@
       ]
     },
     {
+      "id": "exploradores",
+      "type": "external",
+      "label": "Exploradores",
+      "sublabel": "Etherscan",
+      "tag": "Inspección Tx",
+      "pos": [
+        1060,
+        280
+      ],
+      "size": [
+        200,
+        64
+      ]
+    },
+    {
       "id": "ides",
       "type": "frontend",
       "label": "IDEs & Asistentes IA",
@@ -310,21 +325,6 @@
       ]
     },
     {
-      "id": "suite-testing",
-      "type": "security",
-      "label": "Testing & Aseguramiento",
-      "sublabel": "Unit Tests, Fuzzing & Edge Cases",
-      "tag": "Forge Test",
-      "pos": [
-        1330,
-        680
-      ],
-      "size": [
-        260,
-        64
-      ]
-    },
-    {
       "id": "cliente-web3",
       "type": "frontend",
       "label": "Cliente Web3 & Librerías",
@@ -332,22 +332,7 @@
       "tag": "SDK Web3 Client",
       "pos": [
         1330,
-        860
-      ],
-      "size": [
-        260,
-        64
-      ]
-    },
-    {
-      "id": "exploradores",
-      "type": "external",
-      "label": "Exploradores & Deploy",
-      "sublabel": "Etherscan & Remix QuickApp",
-      "tag": "Inspección Tx",
-      "pos": [
-        1330,
-        1080
+        680
       ],
       "size": [
         260,
@@ -377,7 +362,8 @@
       "wraps": [
         "frontend-app",
         "billeteras",
-        "usuarios"
+        "usuarios",
+        "exploradores"
       ]
     },
     {
@@ -416,13 +402,11 @@
     },
     {
       "kind": "security-group",
-      "label": "Herramientas de Desarrollo, Testing e IA",
+      "label": "Herramientas de Desarrollo e IA",
       "wraps": [
         "ides",
         "frameworks-dev",
-        "suite-testing",
-        "cliente-web3",
-        "exploradores"
+        "cliente-web3"
       ]
     }
   ],
@@ -433,15 +417,23 @@
       "label": "conectar",
       "fromSide": "left",
       "toSide": "right",
-      "labelDy": 56
+      "labelDy": -14
+    },
+    {
+      "from": "usuarios",
+      "to": "exploradores",
+      "label": "inspección de txs",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
     },
     {
       "from": "billeteras",
       "to": "frontend-app",
       "label": "inyecta proveedor",
-      "fromSide": "left",
-      "toSide": "right",
-      "labelDy": 56
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
     },
     {
       "from": "frontend-app",
@@ -545,7 +537,10 @@
       "label": "integración",
       "fromSide": "right",
       "toSide": "left",
-      "labelDy": -28
+      "labelAt": [
+        823,
+        558
+      ]
     },
     {
       "from": "gobernanza-daos",
@@ -705,16 +700,12 @@
       "from": "billeteras",
       "to": "nodos-rpc",
       "label": "broadcast transacciones",
-      "fromSide": "top",
+      "fromSide": "left",
       "toSide": "top",
       "via": [
         [
-          935,
-          256
-        ],
-        [
           562,
-          256
+          172
         ],
         [
           562,
@@ -726,7 +717,7 @@
         ]
       ],
       "labelAt": [
-        750,
+        515,
         246
       ]
     },
@@ -806,9 +797,22 @@
       "from": "exploradores",
       "to": "red-l1",
       "label": "inspección de bloques",
-      "fromSide": "left",
+      "fromSide": "right",
       "toSide": "right",
-      "labelDy": 56
+      "via": [
+        [
+          1285,
+          312
+        ],
+        [
+          1285,
+          1052
+        ]
+      ],
+      "labelAt": [
+        1160,
+        1040
+      ]
     },
     {
       "from": "cliente-web3",
@@ -844,14 +848,6 @@
         935,
         1132
       ]
-    },
-    {
-      "from": "frameworks-dev",
-      "to": "suite-testing",
-      "label": "fuzz testing",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "labelDy": 24
     }
   ],
   "cards": [
