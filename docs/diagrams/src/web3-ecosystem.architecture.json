@@ -73,44 +73,44 @@
       "id": "protocolos-defi",
       "type": "backend",
       "label": "Protocols",
-      "sublabel": "Uniswap, Aave, Curve & Polymarket",
+      "sublabel": "Uniswap, Aave & Curve",
       "tag": "DeFi & Web3",
       "pos": [
         610,
         480
       ],
       "size": [
-        200,
+        140,
         64
       ]
     },
     {
       "id": "gobernanza-daos",
       "type": "backend",
-      "label": "Gobernanza & Coordinación",
-      "sublabel": "DAOs, Aragon, Snapshot & Tally",
+      "label": "Gobernanza & DAOs",
+      "sublabel": "Aragon, Snapshot & Tally",
       "tag": "Coordinación",
       "pos": [
-        835,
+        780,
         480
       ],
       "size": [
-        200,
+        140,
         64
       ]
     },
     {
       "id": "billetera-safe",
       "type": "security",
-      "label": "Safe Multi-Signature",
-      "sublabel": "Gnosis Safe (Multifirma)",
-      "tag": "Control Acceso",
+      "label": "Multi-Signature",
+      "sublabel": "Safe / Multifirma",
+      "tag": "Wallets",
       "pos": [
-        1060,
+        950,
         480
       ],
       "size": [
-        200,
+        140,
         64
       ]
     },
@@ -357,15 +357,15 @@
     {
       "id": "backend-dapp",
       "type": "backend",
-      "label": "Backend dApp (Off-Chain)",
+      "label": "Backend dApp",
       "sublabel": "API REST, GraphQL",
-      "tag": "Capa Intermedia",
+      "tag": "Off-Chain",
       "pos": [
-        1060,
-        380
+        1120,
+        480
       ],
       "size": [
-        200,
+        140,
         64
       ]
     }
@@ -449,20 +449,19 @@
       "label": "interfaz dApp",
       "fromSide": "bottom",
       "toSide": "top",
-      "labelDy": 24,
       "via": [
         [
           1160,
-          360
+          390
         ],
         [
-          935,
-          360
+          850,
+          390
         ]
       ],
       "labelAt": [
-        1048,
-        360
+        900,
+        400
       ]
     },
     {
@@ -471,20 +470,19 @@
       "label": "solicitud gasless",
       "fromSide": "bottom",
       "toSide": "top",
-      "labelDy": 24,
       "via": [
         [
           1160,
-          362
+          370
         ],
         [
           440,
-          362
+          370
         ]
       ],
       "labelAt": [
-        500,
-        370
+        650,
+        360
       ]
     },
     {
@@ -517,7 +515,10 @@
       "label": "ejecución",
       "fromSide": "right",
       "toSide": "left",
-      "labelDy": 56
+      "labelAt": [
+        935,
+        465
+      ]
     },
     {
       "from": "gobernanza-daos",
@@ -589,61 +590,40 @@
       "label": "peticiones API",
       "fromSide": "bottom",
       "toSide": "top",
+      "labelDy": 24,
       "labelAt": [
-        1180,
-        362
+        1150,
+        380
       ]
     },
     {
       "from": "backend-dapp",
       "to": "server-wallets",
       "label": "solicita firma",
-      "fromSide": "left",
+      "fromSide": "top",
       "toSide": "bottom",
       "via": [
         [
-          1040,
-          412
+          1190,
+          430
         ],
         [
           440,
-          412
-        ],
-        [
-          440,
-          344
+          430
         ]
       ],
-      "labelDy": 10
+      "labelAt": [
+        750,
+        420
+      ]
     },
     {
       "from": "backend-dapp",
       "to": "smart-contracts",
       "label": "lectura / escritura",
-      "via": [
-        [
-          1160,
-          460
-        ],
-        [
-          1047,
-          460
-        ],
-        [
-          1047,
-          600
-        ],
-        [
-          935,
-          600
-        ]
-      ],
-      "labelAt": [
-        1104,
-        458
-      ],
       "toSide": "top",
-      "fromSide": "bottom"
+      "fromSide": "bottom",
+      "labelDy": 24
     }
   ],
   "cards": [
@@ -662,7 +642,7 @@
       "items": [
         "Protocolos DeFi, AMMs, Lending, Predicciones & RWAs",
         "Gobernanza descentralizada, DAOs y coordinación on/off-chain",
-        "Custodia multifirma y control de acceso con Safe"
+        "Custodia multifirma y control de acceso con Multi-Signature (Safe)"
       ]
     },
     {
