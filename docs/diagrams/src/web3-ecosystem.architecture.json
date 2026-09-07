@@ -133,44 +133,14 @@
       "id": "smart-contracts",
       "type": "backend",
       "label": "Smart Contracts",
-      "sublabel": "Solidity OOP & Interfaces",
+      "sublabel": "Solidity OOP, Tokens ERC-20/721 & Guards",
       "tag": "Lógica On-Chain",
       "pos": [
         310,
         480
       ],
       "size": [
-        200,
-        64
-      ]
-    },
-    {
-      "id": "estandares-token",
-      "type": "database",
-      "label": "Estándares de Token",
-      "sublabel": "Tokens ERC-20 & NFTs ERC-721",
-      "tag": "Estándar Token",
-      "pos": [
-        535,
-        480
-      ],
-      "size": [
-        200,
-        64
-      ]
-    },
-    {
-      "id": "guards-seguridad",
-      "type": "security",
-      "label": "Guards & Seguridad",
-      "sublabel": "Admin Guards & Reentrancy",
-      "tag": "Seguridad",
-      "pos": [
-        760,
-        480
-      ],
-      "size": [
-        200,
+        650,
         64
       ]
     },
@@ -435,8 +405,6 @@
       "label": "6. Capa Base de Red y Ejecución",
       "wraps": [
         "smart-contracts",
-        "estandares-token",
-        "guards-seguridad",
         "evm",
         "red-l1"
       ]
@@ -515,27 +483,11 @@
     },
     {
       "from": "gobernanza-daos",
-      "to": "guards-seguridad",
+      "to": "smart-contracts",
       "label": "admin check",
       "fromSide": "bottom",
       "toSide": "top",
       "labelDy": 24
-    },
-    {
-      "from": "smart-contracts",
-      "to": "estandares-token",
-      "label": "mint / burn",
-      "fromSide": "right",
-      "toSide": "left",
-      "labelDy": 56
-    },
-    {
-      "from": "estandares-token",
-      "to": "guards-seguridad",
-      "label": "reglas acceso",
-      "fromSide": "right",
-      "toSide": "left",
-      "labelDy": 56
     },
     {
       "from": "oraculos",

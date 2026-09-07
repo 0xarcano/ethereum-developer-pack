@@ -209,7 +209,7 @@ const sessions = [
     num: 2,
     title: "Sesión 2: Estándares y best-practices",
     desc: "Fundamentos Solidity (votación), Guards de control de acceso, Prevención de Reentrancy, Estándares ERC-20 (fungibles) y ERC-721 (NFTs).",
-    activeNodes: ["smart-contracts", "guards-seguridad", "estandares-token"],
+    activeNodes: ["smart-contracts"],
     instructor: "Nico"
   },
   {
@@ -223,21 +223,21 @@ const sessions = [
     num: 4,
     title: "Sesión 4: Protocolos más conocidos",
     desc: "Protocolo Aave (lending/borrowing & colateral), Protocolo Uniswap (DEX/AMM & pools), Puentes cross-chain (Bridges), Mercados predictivos y Acciones tokenizadas.",
-    activeNodes: ["protocolos-defi", "puentes-crosschain", "estandares-token"],
+    activeNodes: ["protocolos-defi", "puentes-crosschain", "smart-contracts"],
     instructor: "Paul"
   },
   {
     num: 5,
     title: "Sesión 5: Integraciones con otros smart contracts",
     desc: "POO de Solidity (contratos múltiples, herencia e interfaces), consejos de seguridad en llamadas externas, composabilidad e integración real: depositar en Aave.",
-    activeNodes: ["smart-contracts", "protocolos-defi", "guards-seguridad", "puentes-crosschain"],
+    activeNodes: ["smart-contracts", "protocolos-defi", "puentes-crosschain"],
     instructor: "Nico"
   },
   {
     num: 6,
     title: "Sesión 6: Gobernanza, L2s y co-procesadores",
     desc: "Admin guards, Estructura de DAOs, Aragon / DaoHaus DAO Toolkit, Safe multi-signature; Capa 2 (L2 Rollups y reducción de gas), Co-procesadores criptográficos (ZK coprocessors).",
-    activeNodes: ["gobernanza-daos", "billetera-safe", "guards-seguridad", "capa-l2", "coprocesadores"],
+    activeNodes: ["gobernanza-daos", "billetera-safe", "smart-contracts", "capa-l2", "coprocesadores"],
     instructor: "Nico"
   },
   {
@@ -265,7 +265,7 @@ const sessions = [
     num: 10,
     title: "Sesión 10: Testing y aseguramiento de calidad",
     desc: "Fundamentos de testing, frameworks de pruebas (Foundry tests), Fuzzing / Property-based testing, análisis de casos de borde (edge cases) y auditoría.",
-    activeNodes: ["suite-testing", "frameworks-dev", "guards-seguridad", "smart-contracts"],
+    activeNodes: ["suite-testing", "frameworks-dev", "smart-contracts"],
     instructor: "Paul y Nico"
   },
   {
@@ -279,7 +279,7 @@ const sessions = [
     num: 12,
     title: "Sesión 12: Presentación de proyectos finales (DAO con tests)",
     desc: "Presentación de proyecto integrador: diseño e implementación de una DAO con tests exhaustivos armados por humanos y contratos asistidos con herramientas de IA (Claude Code / Codex).",
-    activeNodes: ["gobernanza-daos", "billetera-safe", "estandares-token", "suite-testing", "asistentes-ia"],
+    activeNodes: ["gobernanza-daos", "billetera-safe", "smart-contracts", "suite-testing", "asistentes-ia"],
     instructor: "Nico"
   }
 ];
