@@ -347,9 +347,31 @@ const genDir = path.resolve(rootDir, "docs/diagrams/general");
 const rootDiagramHtml = path.resolve(rootDir, "docs/diagrams/diagrama.html");
 fs.mkdirSync(genDir, { recursive: true });
 fs.writeFileSync(path.resolve(genDir, "diagrama.html"), generalHtml, "utf-8");
+fs.writeFileSync(path.resolve(genDir, "index.html"), generalHtml, "utf-8");
 fs.writeFileSync(rootDiagramHtml, generalHtml, "utf-8");
+
+const rootIndexHtml = path.resolve(rootDir, "docs/diagrams/index.html");
+const redirectIndexHtml = `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=./general/diagrama.html">
+  <title>CEDIA Web3 — Arquitectura del Ecosistema</title>
+  <script>window.location.replace("./general/diagrama.html");</script>
+</head>
+<body style="font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+  <p>Cargando arquitectura interactiva CEDIA Web3... <a href="./general/diagrama.html" style="color: #0cd4ee;">Haga clic aquí si no es redirigido automáticamente</a>.</p>
+</body>
+</html>
+`;
+fs.writeFileSync(rootIndexHtml, redirectIndexHtml, "utf-8");
+fs.writeFileSync(path.resolve(rootDir, "docs/diagrams/.nojekyll"), "", "utf-8");
+
 console.log("   [ok] docs/diagrams/general/diagrama.html");
+console.log("   [ok] docs/diagrams/general/index.html");
 console.log("   [ok] docs/diagrams/diagrama.html");
+console.log("   [ok] docs/diagrams/index.html");
+console.log("   [ok] docs/diagrams/.nojekyll");
 
 console.log("==> 4. Generating 12 Session Versions (Grayscale with Active Class Elements in Color)...");
 sessions.forEach(sess => {
@@ -482,7 +504,8 @@ sessions.forEach(sess => {
 
   const sessHtml = buildHtmlFile(sess.num, sessionBanner, sessionCss);
   fs.writeFileSync(path.resolve(sessDir, "diagrama.html"), sessHtml, "utf-8");
-  console.log(`   [ok] docs/diagrams/sesion${sess.num}/diagrama.html`);
+  fs.writeFileSync(path.resolve(sessDir, "index.html"), sessHtml, "utf-8");
+  console.log(`   [ok] docs/diagrams/sesion${sess.num}/diagrama.html & index.html`);
 });
 
 console.log("==> All 13 diagrams generated and validated successfully!");
