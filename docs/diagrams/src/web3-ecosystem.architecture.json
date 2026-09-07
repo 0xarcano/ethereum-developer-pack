@@ -6,7 +6,7 @@
     "quality_profile": "showcase",
     "viewBox": [
       1640,
-      1340
+      1000
     ]
   },
   "components": [
@@ -17,7 +17,7 @@
       "sublabel": "Navegador Web / Mobile dApp",
       "pos": [
         1060,
-        140
+        100
       ],
       "size": [
         200,
@@ -32,7 +32,7 @@
       "tag": "Firma Digital",
       "pos": [
         610,
-        140
+        100
       ],
       "size": [
         200,
@@ -47,7 +47,7 @@
       "tag": "UI / Web3",
       "pos": [
         610,
-        280
+        210
       ],
       "size": [
         200,
@@ -61,8 +61,8 @@
       "sublabel": "AWS KMS / Google KMS / MPC",
       "tag": "Custodia Cloud",
       "pos": [
-        330,
-        280
+        70,
+        100
       ],
       "size": [
         220,
@@ -77,7 +77,7 @@
       "tag": "DeFi & Web3",
       "pos": [
         835,
-        480
+        340
       ],
       "size": [
         200,
@@ -92,7 +92,7 @@
       "tag": "Coordinación",
       "pos": [
         1060,
-        480
+        340
       ],
       "size": [
         200,
@@ -106,8 +106,8 @@
       "sublabel": "Transacciones Gasless",
       "tag": "ERC-4337",
       "pos": [
-        330,
-        480
+        70,
+        220
       ],
       "size": [
         220,
@@ -122,7 +122,7 @@
       "tag": "Lógica On-Chain",
       "pos": [
         610,
-        680
+        480
       ],
       "size": [
         650,
@@ -137,7 +137,7 @@
       "tag": "JSON-RPC / WS",
       "pos": [
         610,
-        860
+        610
       ],
       "size": [
         200,
@@ -152,7 +152,7 @@
       "tag": "Escalabilidad",
       "pos": [
         835,
-        860
+        610
       ],
       "size": [
         200,
@@ -167,7 +167,7 @@
       "tag": "Interoperabilidad",
       "pos": [
         1060,
-        860
+        610
       ],
       "size": [
         200,
@@ -182,7 +182,7 @@
       "tag": "Capa de Consenso",
       "pos": [
         835,
-        1020
+        730
       ],
       "size": [
         200,
@@ -197,7 +197,7 @@
       "tag": "Motor EVM",
       "pos": [
         835,
-        1180
+        850
       ],
       "size": [
         200,
@@ -211,8 +211,8 @@
       "sublabel": "Chainlink Data Feeds",
       "tag": "Datos Off-chain",
       "pos": [
-        330,
-        680
+        70,
+        340
       ],
       "size": [
         220,
@@ -226,8 +226,8 @@
       "sublabel": "The Graph / Envio (GraphQL)",
       "tag": "Consultas",
       "pos": [
-        330,
-        860
+        70,
+        480
       ],
       "size": [
         220,
@@ -241,8 +241,8 @@
       "sublabel": "ZK Coprocessors",
       "tag": "Zero-Knowledge",
       "pos": [
-        330,
-        980
+        70,
+        610
       ],
       "size": [
         220,
@@ -256,8 +256,8 @@
       "sublabel": "IPFS / Arweave",
       "tag": "Metadatos & Frontends",
       "pos": [
-        330,
-        1100
+        70,
+        730
       ],
       "size": [
         220,
@@ -271,8 +271,8 @@
       "sublabel": "Hardware Distribuido",
       "tag": "Cómputo Hardware",
       "pos": [
-        330,
-        1210
+        70,
+        850
       ],
       "size": [
         220,
@@ -287,7 +287,7 @@
       "tag": "Inspección Tx",
       "pos": [
         1060,
-        280
+        210
       ],
       "size": [
         200,
@@ -302,7 +302,7 @@
       "tag": "Dev & IA",
       "pos": [
         1330,
-        280
+        210
       ],
       "size": [
         260,
@@ -317,7 +317,7 @@
       "tag": "Tooling Web3",
       "pos": [
         1330,
-        480
+        340
       ],
       "size": [
         260,
@@ -332,7 +332,7 @@
       "tag": "SDK Web3 Client",
       "pos": [
         1330,
-        680
+        480
       ],
       "size": [
         260,
@@ -347,7 +347,7 @@
       "tag": "Off-Chain",
       "pos": [
         610,
-        480
+        340
       ],
       "size": [
         200,
@@ -444,7 +444,7 @@
       "labelDy": 24,
       "labelAt": [
         710,
-        412
+        307
       ]
     },
     {
@@ -456,16 +456,16 @@
       "via": [
         [
           710,
-          400
+          300
         ],
         [
           935,
-          400
+          300
         ]
       ],
       "labelAt": [
         820,
-        390
+        290
       ]
     },
     {
@@ -477,37 +477,37 @@
       "via": [
         [
           710,
-          430
+          315
         ],
         [
           1160,
-          430
+          315
         ]
       ],
       "labelAt": [
         1025,
-        420
+        305
       ]
     },
     {
       "from": "frontend-app",
       "to": "relayers-meta-tx",
       "label": "solicitud gasless",
-      "fromSide": "bottom",
-      "toSide": "top",
+      "fromSide": "left",
+      "toSide": "right",
       "via": [
         [
-          710,
-          365
+          450,
+          242
         ],
         [
-          440,
-          365
+          450,
+          252
         ]
       ],
       "labelAt": [
-        540,
-        355
+        470,
+        232
       ]
     },
     {
@@ -528,7 +528,7 @@
       "labelDy": 24,
       "labelAt": [
         935,
-        612
+        442
       ]
     },
     {
@@ -539,7 +539,7 @@
       "toSide": "left",
       "labelAt": [
         823,
-        558
+        418
       ]
     },
     {
@@ -557,9 +557,19 @@
       "fromSide": "bottom",
       "toSide": "top",
       "labelDy": 24,
+      "via": [
+        [
+          1160,
+          442
+        ],
+        [
+          935,
+          442
+        ]
+      ],
       "labelAt": [
         1160,
-        612
+        442
       ]
     },
 
@@ -567,21 +577,21 @@
       "from": "backend-dapp",
       "to": "server-wallets",
       "label": "solicita firma",
-      "fromSide": "top",
-      "toSide": "bottom",
+      "fromSide": "left",
+      "toSide": "right",
       "via": [
         [
-          710,
-          385
+          480,
+          372
         ],
         [
-          440,
-          385
+          480,
+          132
         ]
       ],
       "labelAt": [
-        540,
-        375
+        380,
+        122
       ]
     },
     {
@@ -592,9 +602,17 @@
       "toSide": "right",
       "via": [
         [
-          595,
-          512
+          390,
+          372
+        ],
+        [
+          390,
+          252
         ]
+      ],
+      "labelAt": [
+        390,
+        310
       ]
     },
     {
@@ -602,21 +620,53 @@
       "to": "oraculos",
       "label": "consultas feeds",
       "fromSide": "left",
-      "toSide": "top"
+      "toSide": "right",
+      "labelAt": [
+        450,
+        362
+      ]
     },
     {
       "from": "backend-dapp",
       "to": "indexadores",
       "label": "consultas GraphQL",
       "fromSide": "left",
-      "toSide": "top"
+      "toSide": "right",
+      "via": [
+        [
+          460,
+          372
+        ],
+        [
+          460,
+          512
+        ]
+      ],
+      "labelAt": [
+        460,
+        440
+      ]
     },
     {
       "from": "backend-dapp",
       "to": "almacenamiento-descent",
       "label": "metadatos IPFS",
       "fromSide": "left",
-      "toSide": "top"
+      "toSide": "right",
+      "via": [
+        [
+          510,
+          372
+        ],
+        [
+          510,
+          762
+        ]
+      ],
+      "labelAt": [
+        510,
+        560
+      ]
     },
 
     {
@@ -625,7 +675,20 @@
       "label": "consultas JSON-RPC",
       "fromSide": "right",
       "toSide": "left",
-      "labelDy": 56
+      "via": [
+        [
+          430,
+          512
+        ],
+        [
+          430,
+          642
+        ]
+      ],
+      "labelAt": [
+        360,
+        502
+      ]
     },
     {
       "from": "nodos-rpc",
@@ -651,20 +714,20 @@
       "via": [
         [
           935,
-          800
+          568
         ],
         [
           1048,
-          800
+          568
         ],
         [
           1048,
-          1212
+          882
         ]
       ],
       "labelAt": [
         1048,
-        1120
+        815
       ]
     },
     {
@@ -675,7 +738,7 @@
       "toSide": "right",
       "labelAt": [
         823,
-        938
+        688
       ]
     },
     {
@@ -683,17 +746,10 @@
       "to": "nodos-rpc",
       "label": "consultas JSON-RPC",
       "fromSide": "right",
-      "toSide": "bottom",
-      "via": [
-        [
-          710,
-          1012
-        ]
-      ],
-      "labelDy": -15,
+      "toSide": "left",
       "labelAt": [
-        630,
-        995
+        350,
+        632
       ]
     },
     {
@@ -704,21 +760,21 @@
       "toSide": "top",
       "via": [
         [
-          562,
-          172
+          550,
+          132
         ],
         [
-          562,
-          842
+          550,
+          570
         ],
         [
           710,
-          842
+          570
         ]
       ],
       "labelAt": [
-        515,
-        246
+        550,
+        170
       ]
     },
     {
@@ -727,9 +783,23 @@
       "label": "lecturas directas RPC",
       "fromSide": "left",
       "toSide": "top",
+      "via": [
+        [
+          570,
+          242
+        ],
+        [
+          570,
+          570
+        ],
+        [
+          710,
+          570
+        ]
+      ],
       "labelAt": [
-        550,
-        420
+        570,
+        290
       ]
     },
     {
@@ -738,9 +808,23 @@
       "label": "consultas / txs RPC",
       "fromSide": "left",
       "toSide": "top",
+      "via": [
+        [
+          530,
+          372
+        ],
+        [
+          530,
+          570
+        ],
+        [
+          710,
+          570
+        ]
+      ],
       "labelAt": [
-        685,
-        805
+        530,
+        480
       ]
     },
     {
@@ -748,21 +832,41 @@
       "to": "nodos-rpc",
       "label": "envío de bundles / txs",
       "fromSide": "right",
-      "toSide": "top",
+      "toSide": "left",
+      "via": [
+        [
+          350,
+          252
+        ],
+        [
+          350,
+          642
+        ]
+      ],
       "labelAt": [
-        520,
-        620
+        350,
+        440
       ]
     },
     {
       "from": "oraculos",
       "to": "nodos-rpc",
       "label": "transmisión feeds RPC",
-      "fromSide": "bottom",
-      "toSide": "top",
+      "fromSide": "right",
+      "toSide": "left",
+      "via": [
+        [
+          370,
+          372
+        ],
+        [
+          370,
+          642
+        ]
+      ],
       "labelAt": [
-        564,
-        792
+        370,
+        520
       ]
     },
     {
@@ -789,8 +893,8 @@
       "toSide": "top",
       "labelDy": 24,
       "labelAt": [
-        440,
-        1180
+        180,
+        822
       ]
     },
     {
@@ -802,16 +906,16 @@
       "via": [
         [
           1285,
-          312
+          242
         ],
         [
           1285,
-          1052
+          762
         ]
       ],
       "labelAt": [
         1160,
-        1040
+        750
       ]
     },
     {
@@ -823,7 +927,7 @@
       "labelDy": 24,
       "labelAt": [
         1295,
-        772
+        472
       ]
     },
     {
@@ -835,7 +939,7 @@
       "labelDy": 24,
       "labelAt": [
         1295,
-        580
+        430
       ]
     },
     {
@@ -846,7 +950,7 @@
       "toSide": "bottom",
       "labelAt": [
         935,
-        1132
+        822
       ]
     }
   ],
