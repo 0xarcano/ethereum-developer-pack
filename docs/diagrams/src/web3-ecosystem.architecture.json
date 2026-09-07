@@ -145,13 +145,28 @@
       ]
     },
     {
-      "id": "evm",
-      "type": "backend",
-      "label": "Ethereum Virtual Machine",
-      "sublabel": "Bytecode, Opcodes & Gas",
-      "tag": "Motor EVM",
+      "id": "capa-l2",
+      "type": "cloud",
+      "label": "Capa 2 (L2 Rollups)",
+      "sublabel": "Arbitrum / OP / Base",
+      "tag": "Escalabilidad",
       "pos": [
         835,
+        860
+      ],
+      "size": [
+        200,
+        64
+      ]
+    },
+    {
+      "id": "puentes-crosschain",
+      "type": "messagebus",
+      "label": "Puentes Cross-Chain",
+      "sublabel": "Bridges & Activos",
+      "tag": "Interoperabilidad",
+      "pos": [
+        1060,
         860
       ],
       "size": [
@@ -166,8 +181,23 @@
       "sublabel": "Consenso PoS & Estado Global",
       "tag": "Capa de Consenso",
       "pos": [
-        1060,
-        860
+        835,
+        1020
+      ],
+      "size": [
+        200,
+        64
+      ]
+    },
+    {
+      "id": "evm",
+      "type": "backend",
+      "label": "Ethereum Virtual Machine",
+      "sublabel": "Bytecode, Opcodes & Gas",
+      "tag": "Motor EVM",
+      "pos": [
+        835,
+        1180
       ],
       "size": [
         200,
@@ -231,36 +261,6 @@
       ],
       "size": [
         220,
-        64
-      ]
-    },
-    {
-      "id": "capa-l2",
-      "type": "cloud",
-      "label": "Capa 2 (L2 Rollups)",
-      "sublabel": "Arbitrum / OP / Base",
-      "tag": "Escalabilidad",
-      "pos": [
-        610,
-        1080
-      ],
-      "size": [
-        200,
-        64
-      ]
-    },
-    {
-      "id": "puentes-crosschain",
-      "type": "messagebus",
-      "label": "Puentes Cross-Chain",
-      "sublabel": "Bridges & Activos",
-      "tag": "Interoperabilidad",
-      "pos": [
-        1060,
-        1080
-      ],
-      "size": [
-        200,
         64
       ]
     },
@@ -643,29 +643,45 @@
       "from": "nodos-rpc",
       "to": "evm",
       "label": "ejecución de llamadas",
-      "fromSide": "right",
+      "fromSide": "bottom",
       "toSide": "left",
-      "labelDy": 56
+      "labelDy": 24
     },
     {
       "from": "smart-contracts",
       "to": "evm",
       "label": "ejecución de bytecode",
       "fromSide": "bottom",
-      "toSide": "top",
-      "labelDy": 24,
+      "toSide": "right",
+      "via": [
+        [
+          935,
+          800
+        ],
+        [
+          1048,
+          800
+        ],
+        [
+          1048,
+          1212
+        ]
+      ],
       "labelAt": [
-        935,
-        760
+        1048,
+        1120
       ]
     },
     {
       "from": "capa-l2",
       "to": "nodos-rpc",
       "label": "secuenciador & RPC L2",
-      "fromSide": "top",
-      "toSide": "bottom",
-      "labelDy": -24
+      "fromSide": "left",
+      "toSide": "right",
+      "labelAt": [
+        823,
+        938
+      ]
     },
     {
       "from": "coprocesadores",
@@ -762,17 +778,17 @@
       "from": "puentes-crosschain",
       "to": "red-l1",
       "label": "bloquear / acuñar",
-      "fromSide": "top",
-      "toSide": "bottom",
-      "labelDy": -24
+      "fromSide": "bottom",
+      "toSide": "right",
+      "labelDy": 24
     },
     {
       "from": "capa-l2",
       "to": "puentes-crosschain",
       "label": "depósitos & retiros L2",
-      "fromSide": "bottom",
-      "toSide": "bottom",
-      "labelDy": 24
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": -28
     },
     {
       "from": "almacenamiento-descent",
@@ -822,9 +838,12 @@
       "from": "evm",
       "to": "red-l1",
       "label": "estado global",
-      "fromSide": "right",
-      "toSide": "left",
-      "labelDy": 56
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelAt": [
+        935,
+        1132
+      ]
     },
     {
       "from": "frameworks-dev",
