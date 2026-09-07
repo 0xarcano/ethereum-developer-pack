@@ -70,36 +70,6 @@
       ]
     },
     {
-      "id": "protocolo-aave",
-      "type": "backend",
-      "label": "Protocolo Aave",
-      "sublabel": "Lending, Borrowing & Colateral",
-      "tag": "DeFi Lending",
-      "pos": [
-        40,
-        280
-      ],
-      "size": [
-        190,
-        64
-      ]
-    },
-    {
-      "id": "protocolo-uniswap",
-      "type": "backend",
-      "label": "Protocolo Uniswap",
-      "sublabel": "DEX / AMM & Paridad Tokens",
-      "tag": "Liquidity Pools",
-      "pos": [
-        270,
-        280
-      ],
-      "size": [
-        190,
-        64
-      ]
-    },
-    {
       "id": "gobernanza-daos",
       "type": "backend",
       "label": "Gobernanza & DAOs",
@@ -145,21 +115,6 @@
       ]
     },
     {
-      "id": "estandar-erc20",
-      "type": "database",
-      "label": "Tokens ERC-20",
-      "sublabel": "Fungibles & Acciones",
-      "tag": "Estándar Token",
-      "pos": [
-        270,
-        480
-      ],
-      "size": [
-        190,
-        64
-      ]
-    },
-    {
       "id": "guards-seguridad",
       "type": "security",
       "label": "Guards & Seguridad",
@@ -167,21 +122,6 @@
       "tag": "Seguridad",
       "pos": [
         500,
-        480
-      ],
-      "size": [
-        190,
-        64
-      ]
-    },
-    {
-      "id": "estandar-erc721",
-      "type": "database",
-      "label": "Tokens ERC-721",
-      "sublabel": "Tokens No Fungibles (NFTs)",
-      "tag": "Coleccionables",
-      "pos": [
-        730,
         480
       ],
       "size": [
@@ -428,6 +368,36 @@
         300,
         64
       ]
+    },
+    {
+      "id": "protocolos-defi",
+      "type": "backend",
+      "label": "Protocolos DeFi",
+      "sublabel": "Aave (Lending) & Uniswap (AMM)",
+      "tag": "DeFi",
+      "pos": [
+        40,
+        280
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "estandares-token",
+      "type": "database",
+      "label": "Estándares de Token",
+      "sublabel": "Tokens ERC-20 & NFTs ERC-721",
+      "tag": "Estándar Token",
+      "pos": [
+        270,
+        480
+      ],
+      "size": [
+        190,
+        64
+      ]
     }
   ],
   "boundaries": [
@@ -445,8 +415,7 @@
       "kind": "region",
       "label": "2. Capa de Aplicación y Protocolos DeFi / DAOs",
       "wraps": [
-        "protocolo-aave",
-        "protocolo-uniswap",
+        "protocolos-defi",
         "gobernanza-daos",
         "billetera-safe"
       ]
@@ -456,9 +425,8 @@
       "label": "3. Capa de Smart Contracts y Estándares Solidity",
       "wraps": [
         "smart-contracts",
-        "estandar-erc20",
-        "guards-seguridad",
-        "estandar-erc721"
+        "estandares-token",
+        "guards-seguridad"
       ]
     },
     {
@@ -512,25 +480,33 @@
       "labelDy": 56
     },
     {
-      "from": "server-wallets",
+      "from": "billeteras",
       "to": "frontend-app",
-      "label": "firmas KMS",
-      "fromSide": "left",
-      "toSide": "right",
+      "label": "inyecta proveedor",
+      "fromSide": "right",
+      "toSide": "left",
       "labelDy": 56
     },
     {
-      "from": "protocolo-aave",
-      "to": "smart-contracts",
-      "label": "lending pool",
+      "from": "frontend-app",
+      "to": "gobernanza-daos",
+      "label": "interfaz dApp",
       "fromSide": "bottom",
       "toSide": "top",
       "labelDy": 24
     },
     {
-      "from": "protocolo-uniswap",
-      "to": "estandar-erc20",
-      "label": "swaps AMM",
+      "from": "server-wallets",
+      "to": "billetera-safe",
+      "label": "firmas KMS",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "from": "protocolos-defi",
+      "to": "smart-contracts",
+      "label": "lending & pools",
       "fromSide": "bottom",
       "toSide": "top",
       "labelDy": 24
@@ -553,14 +529,14 @@
     },
     {
       "from": "smart-contracts",
-      "to": "estandar-erc20",
+      "to": "estandares-token",
       "label": "mint / burn",
       "fromSide": "right",
       "toSide": "left",
       "labelDy": 56
     },
     {
-      "from": "estandar-erc20",
+      "from": "estandares-token",
       "to": "guards-seguridad",
       "label": "reglas acceso",
       "fromSide": "right",
@@ -577,7 +553,7 @@
     },
     {
       "from": "oraculos",
-      "to": "estandar-erc20",
+      "to": "estandares-token",
       "label": "price feeds",
       "fromSide": "top",
       "toSide": "bottom",
@@ -585,7 +561,7 @@
     },
     {
       "from": "almacenamiento-descent",
-      "to": "estandar-erc721",
+      "to": "estandares-token",
       "label": "metadata URI",
       "fromSide": "top",
       "toSide": "bottom",

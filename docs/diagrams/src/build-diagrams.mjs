@@ -209,7 +209,7 @@ const sessions = [
     num: 2,
     title: "Sesión 2: Estándares y best-practices",
     desc: "Fundamentos Solidity (votación), Guards de control de acceso, Prevención de Reentrancy, Estándares ERC-20 (fungibles) y ERC-721 (NFTs).",
-    activeNodes: ["smart-contracts", "guards-seguridad", "estandar-erc20", "estandar-erc721"],
+    activeNodes: ["smart-contracts", "guards-seguridad", "estandares-token"],
     instructor: "Nico"
   },
   {
@@ -223,14 +223,14 @@ const sessions = [
     num: 4,
     title: "Sesión 4: Protocolos más conocidos",
     desc: "Protocolo Aave (lending/borrowing & colateral), Protocolo Uniswap (DEX/AMM & pools), Puentes cross-chain (Bridges), Mercados predictivos y Acciones tokenizadas.",
-    activeNodes: ["protocolo-aave", "protocolo-uniswap", "puentes-crosschain", "estandar-erc20"],
+    activeNodes: ["protocolos-defi", "puentes-crosschain", "estandares-token"],
     instructor: "Paul"
   },
   {
     num: 5,
     title: "Sesión 5: Integraciones con otros smart contracts",
     desc: "POO de Solidity (contratos múltiples, herencia e interfaces), consejos de seguridad en llamadas externas, composabilidad e integración real: depositar en Aave.",
-    activeNodes: ["smart-contracts", "protocolo-aave", "guards-seguridad", "puentes-crosschain"],
+    activeNodes: ["smart-contracts", "protocolos-defi", "guards-seguridad", "puentes-crosschain"],
     instructor: "Nico"
   },
   {
@@ -279,7 +279,7 @@ const sessions = [
     num: 12,
     title: "Sesión 12: Presentación de proyectos finales (DAO con tests)",
     desc: "Presentación de proyecto integrador: diseño e implementación de una DAO con tests exhaustivos armados por humanos y contratos asistidos con herramientas de IA (Claude Code / Codex).",
-    activeNodes: ["gobernanza-daos", "billetera-safe", "estandar-erc20", "suite-testing", "asistentes-ia"],
+    activeNodes: ["gobernanza-daos", "billetera-safe", "estandares-token", "suite-testing", "asistentes-ia"],
     instructor: "Nico"
   }
 ];
