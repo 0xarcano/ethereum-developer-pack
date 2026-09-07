@@ -5543,18 +5543,20 @@
         <!-- Connection paths (before components for correct z-order) -->
         <path data-edge-from="usuarios" data-edge-to="billeteras" data-edge-label="conectar" data-edge-key="0" data-composition-points="510,112;535,112" d="M 510 112 L 535 112" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="billeteras" data-edge-to="frontend-app" data-edge-label="inyecta proveedor" data-edge-key="1" data-composition-points="735,112;760,112" d="M 735 112 L 760 112" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="frontend-app" data-edge-to="gobernanza-daos" data-edge-label="interfaz dApp" data-edge-key="2" data-composition-points="860,144;860,212;635,212;635,280" d="M 860 144 L 860 204 Q 860 212 852 212 L 643 212 Q 635 212 635 220 L 635 280" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="server-wallets" data-edge-to="relayers-meta-tx" data-edge-label="firmas KMS" data-edge-key="3" data-composition-points="140,144;140,280" d="M 140 144 L 140 280" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="protocolos-defi" data-edge-to="smart-contracts" data-edge-label="lending &amp; pools" data-edge-key="4" data-composition-points="410,344;410,412;628,412;628,480" d="M 410 344 L 410 404 Q 410 412 418 412 L 620 412 Q 628 412 628 420 L 628 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="gobernanza-daos" data-edge-to="billetera-safe" data-edge-label="ejecución" data-edge-key="5" data-composition-points="735,312;760,312" d="M 735 312 L 760 312" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="6" data-composition-points="642,344;642,480" d="M 642 344 L 642 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="7" data-composition-points="250,512;310,512" d="M 250 512 L 310 512" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="indexadores" data-edge-to="evm" data-edge-label="eventos on-chain" data-edge-key="8" data-composition-points="250,692;310,692" d="M 250 692 L 310 692" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="almacenamiento Web3" data-edge-key="9" data-composition-points="140,944;140,968;887.5,968;887.5,944" d="M 140 944 L 140 960 Q 140 968 148 968 L 879.5 968 Q 887.5 968 887.5 960 L 887.5 944" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="capa-l2" data-edge-to="evm" data-edge-label="ejecutar rollups" data-edge-key="10" data-composition-points="382.5,880;382.5,802;465,802;465,724" d="M 382.5 880 L 382.5 810 Q 382.5 802 390.5 802 L 457 802 Q 465 802 465 794 L 465 724" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="11" data-composition-points="550.5,880;550.5,802;805,802;805,724" d="M 550.5 880 L 550.5 810 Q 550.5 802 558.5 802 L 797 802 Q 805 802 805 794 L 805 724" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="12" data-composition-points="620,692;650,692" d="M 620 692 L 650 692" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="13" data-composition-points="1160,344;1160,480" d="M 1160 344 L 1160 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="frontend-app" data-edge-to="gobernanza-daos" data-edge-label="interfaz dApp" data-edge-key="2" data-composition-points="867,144;867,212;635,212;635,280" d="M 867 144 L 867 204 Q 867 212 859 212 L 643 212 Q 635 212 635 220 L 635 280" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="frontend-app" data-edge-to="relayers-meta-tx" data-edge-label="solicitud gasless" data-edge-key="3" data-composition-points="853,144;853,212;147,212;147,280" d="M 853 144 L 853 204 Q 853 212 845 212 L 155 212 Q 147 212 147 220 L 147 280" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="server-wallets" data-edge-to="relayers-meta-tx" data-edge-label="firmas KMS" data-edge-key="4" data-composition-points="133,144;133,280" d="M 133 144 L 133 280" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="relayers-meta-tx" data-edge-to="smart-contracts" data-edge-label="ejecución gasless" data-edge-key="5" data-composition-points="250,312;274,312;274,456;621,456;621,480" d="M 250 312 L 266 312 Q 274 312 274 320 L 274 448 Q 274 456 282 456 L 613 456 Q 621 456 621 464 L 621 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="protocolos-defi" data-edge-to="smart-contracts" data-edge-label="lending &amp; pools" data-edge-key="6" data-composition-points="410,344;410,412;635,412;635,480" d="M 410 344 L 410 404 Q 410 412 418 412 L 627 412 Q 635 412 635 420 L 635 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="gobernanza-daos" data-edge-to="billetera-safe" data-edge-label="ejecución" data-edge-key="7" data-composition-points="735,312;760,312" d="M 735 312 L 760 312" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="8" data-composition-points="649,344;649,480" d="M 649 344 L 649 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="9" data-composition-points="250,512;310,512" d="M 250 512 L 310 512" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="indexadores" data-edge-to="evm" data-edge-label="eventos on-chain" data-edge-key="10" data-composition-points="250,692;310,692" d="M 250 692 L 310 692" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="almacenamiento Web3" data-edge-key="11" data-composition-points="140,944;140,968;887.5,968;887.5,944" d="M 140 944 L 140 960 Q 140 968 148 968 L 879.5 968 Q 887.5 968 887.5 960 L 887.5 944" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="capa-l2" data-edge-to="evm" data-edge-label="ejecutar rollups" data-edge-key="12" data-composition-points="382.5,880;382.5,802;465,802;465,724" d="M 382.5 880 L 382.5 810 Q 382.5 802 390.5 802 L 457 802 Q 465 802 465 794 L 465 724" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="13" data-composition-points="550.5,880;550.5,802;805,802;805,724" d="M 550.5 880 L 550.5 810 Q 550.5 802 558.5 802 L 797 802 Q 805 802 805 794 L 805 724" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="14" data-composition-points="620,692;650,692" d="M 620 692 L 650 692" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="15" data-composition-points="1160,344;1160,480" d="M 1160 344 L 1160 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 
         <!-- Components -->
         <g id="node-usuarios" data-node-id="usuarios" data-node-label="Usuarios y Clientes" tabindex="0" role="button" aria-label="Focus Usuarios y Clientes, Navegador Web / Mobile dApp, 1. Capa de Interfaz, Identidad y Clientes" aria-pressed="false" data-node-kind="external" data-node-sublabel="Navegador Web / Mobile dApp" data-node-context="1. Capa de Interfaz, Identidad y Clientes">
@@ -5879,50 +5881,58 @@
           <text x="747.5" y="158" class="t-muted" font-size="8" text-anchor="middle">inyecta proveedor</text>
         </g>
         <g data-detail="context" data-edge-from="frontend-app" data-edge-to="gobernanza-daos" data-edge-label="interfaz dApp" data-edge-key="2">
-          <rect x="711.3" y="216" width="72.4" height="14" rx="3" class="c-mask"/>
-          <text x="747.5" y="226" class="t-muted" font-size="8" text-anchor="middle">interfaz dApp</text>
+          <rect x="714.8" y="216" width="72.4" height="14" rx="3" class="c-mask"/>
+          <text x="751" y="226" class="t-muted" font-size="8" text-anchor="middle">interfaz dApp</text>
         </g>
-        <g data-detail="context" data-edge-from="server-wallets" data-edge-to="relayers-meta-tx" data-edge-label="firmas KMS" data-edge-key="3">
-          <rect x="111" y="148" width="58" height="14" rx="3" class="c-mask"/>
-          <text x="140" y="158" class="t-muted" font-size="8" text-anchor="middle">firmas KMS</text>
+        <g data-detail="context" data-edge-from="frontend-app" data-edge-to="relayers-meta-tx" data-edge-label="solicitud gasless" data-edge-key="3">
+          <rect x="454.2" y="216" width="91.6" height="14" rx="3" class="c-mask"/>
+          <text x="500" y="226" class="t-muted" font-size="8" text-anchor="middle">solicitud gasless</text>
         </g>
-        <g data-detail="context" data-edge-from="protocolos-defi" data-edge-to="smart-contracts" data-edge-label="lending &amp; pools" data-edge-key="4">
-          <rect x="478" y="416" width="82" height="14" rx="3" class="c-mask"/>
-          <text x="519" y="426" class="t-muted" font-size="8" text-anchor="middle">lending &amp; pools</text>
+        <g data-detail="context" data-edge-from="server-wallets" data-edge-to="relayers-meta-tx" data-edge-label="firmas KMS" data-edge-key="4">
+          <rect x="104" y="148" width="58" height="14" rx="3" class="c-mask"/>
+          <text x="133" y="158" class="t-muted" font-size="8" text-anchor="middle">firmas KMS</text>
         </g>
-        <g data-detail="context" data-edge-from="gobernanza-daos" data-edge-to="billetera-safe" data-edge-label="ejecución" data-edge-key="5">
+        <g data-detail="context" data-edge-from="relayers-meta-tx" data-edge-to="smart-contracts" data-edge-label="ejecución gasless" data-edge-key="5">
+          <rect x="228.2" y="388" width="91.6" height="14" rx="3" class="c-mask"/>
+          <text x="274" y="398" class="t-muted" font-size="8" text-anchor="middle">ejecución gasless</text>
+        </g>
+        <g data-detail="context" data-edge-from="protocolos-defi" data-edge-to="smart-contracts" data-edge-label="lending &amp; pools" data-edge-key="6">
+          <rect x="481.5" y="416" width="82" height="14" rx="3" class="c-mask"/>
+          <text x="522.5" y="426" class="t-muted" font-size="8" text-anchor="middle">lending &amp; pools</text>
+        </g>
+        <g data-detail="context" data-edge-from="gobernanza-daos" data-edge-to="billetera-safe" data-edge-label="ejecución" data-edge-key="7">
           <rect x="720.9" y="348" width="53.199999999999996" height="14" rx="3" class="c-mask"/>
           <text x="747.5" y="358" class="t-muted" font-size="8" text-anchor="middle">ejecución</text>
         </g>
-        <g data-detail="context" data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="6">
-          <rect x="610.6" y="348" width="62.8" height="14" rx="3" class="c-mask"/>
-          <text x="642" y="358" class="t-muted" font-size="8" text-anchor="middle">admin check</text>
+        <g data-detail="context" data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="8">
+          <rect x="617.6" y="348" width="62.8" height="14" rx="3" class="c-mask"/>
+          <text x="649" y="358" class="t-muted" font-size="8" text-anchor="middle">admin check</text>
         </g>
-        <g data-detail="context" data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="7">
+        <g data-detail="context" data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="9">
           <rect x="248.6" y="548" width="62.8" height="14" rx="3" class="c-mask"/>
           <text x="280" y="558" class="t-muted" font-size="8" text-anchor="middle">price feeds</text>
         </g>
-        <g data-detail="context" data-edge-from="indexadores" data-edge-to="evm" data-edge-label="eventos on-chain" data-edge-key="8">
+        <g data-detail="context" data-edge-from="indexadores" data-edge-to="evm" data-edge-label="eventos on-chain" data-edge-key="10">
           <rect x="236.6" y="728" width="86.8" height="14" rx="3" class="c-mask"/>
           <text x="280" y="738" class="t-muted" font-size="8" text-anchor="middle">eventos on-chain</text>
         </g>
-        <g data-detail="context" data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="almacenamiento Web3" data-edge-key="9">
+        <g data-detail="context" data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="almacenamiento Web3" data-edge-key="11">
           <rect x="463.15" y="972" width="101.2" height="14" rx="3" class="c-mask"/>
           <text x="513.75" y="982" class="t-muted" font-size="8" text-anchor="middle">almacenamiento Web3</text>
         </g>
-        <g data-detail="context" data-edge-from="capa-l2" data-edge-to="evm" data-edge-label="ejecutar rollups" data-edge-key="10">
+        <g data-detail="context" data-edge-from="capa-l2" data-edge-to="evm" data-edge-label="ejecutar rollups" data-edge-key="12">
           <rect x="380.35" y="758" width="86.8" height="14" rx="3" class="c-mask"/>
           <text x="423.75" y="768" class="t-muted" font-size="8" text-anchor="middle">ejecutar rollups</text>
         </g>
-        <g data-detail="context" data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="11">
+        <g data-detail="context" data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="13">
           <rect x="631.95" y="758" width="91.6" height="14" rx="3" class="c-mask"/>
           <text x="677.75" y="768" class="t-muted" font-size="8" text-anchor="middle">bloquear / acuñar</text>
         </g>
-        <g data-detail="context" data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="12">
+        <g data-detail="context" data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="14">
           <rect x="598.8" y="728" width="72.4" height="14" rx="3" class="c-mask"/>
           <text x="635" y="738" class="t-muted" font-size="8" text-anchor="middle">estado global</text>
         </g>
-        <g data-detail="context" data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="13">
+        <g data-detail="context" data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="15">
           <rect x="1126.2" y="348" width="67.6" height="14" rx="3" class="c-mask"/>
           <text x="1160" y="358" class="t-muted" font-size="8" text-anchor="middle">fuzz testing</text>
         </g>

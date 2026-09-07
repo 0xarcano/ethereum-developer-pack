@@ -458,10 +458,26 @@
       "labelDy": 24
     },
     {
+      "from": "frontend-app",
+      "to": "relayers-meta-tx",
+      "label": "solicitud gasless",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
       "from": "server-wallets",
       "to": "relayers-meta-tx",
       "label": "firmas KMS",
       "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "from": "relayers-meta-tx",
+      "to": "smart-contracts",
+      "label": "ejecución gasless",
+      "fromSide": "right",
       "toSide": "top",
       "labelDy": 24
     },

@@ -272,7 +272,7 @@ const sessions = [
     num: 11,
     title: "Sesión 11: Sesión de Dudas y Arquitectura End-to-End",
     desc: "Resolución de dudas técnicas, revisión holística de la arquitectura de una dApp end-to-end (Frontend + Middleware + Smart Contracts + L1/L2) y preparación para el proyecto final.",
-    activeNodes: ["frontend-app", "cliente-web3", "smart-contracts", "indexadores", "oraculos", "capa-l2", "red-l1"],
+    activeNodes: ["frontend-app", "cliente-web3", "smart-contracts", "indexadores", "oraculos", "capa-l2", "red-l1", "relayers-meta-tx", "server-wallets"],
     instructor: "Paul"
   },
   {
