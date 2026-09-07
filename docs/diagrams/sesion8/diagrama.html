@@ -6062,31 +6062,34 @@
         <path data-edge-from="frontend-app" data-edge-to="gobernanza-daos" data-edge-label="votación DAO" data-edge-key="4" data-composition-points="710,344;710,430;1160,430;1160,480" d="M 710 344 L 710 422 Q 710 430 718 430 L 1152 430 Q 1160 430 1160 438 L 1160 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="frontend-app" data-edge-to="relayers-meta-tx" data-edge-label="solicitud gasless" data-edge-key="5" data-composition-points="710,344;710,365;440,365;440,480" d="M 710 344 L 710 357 Q 710 365 702 365 L 448 365 Q 440 365 440 373 L 440 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="server-wallets" data-edge-to="relayers-meta-tx" data-edge-label="firmas KMS" data-edge-key="6" data-composition-points="440,344;440,480" d="M 440 344 L 440 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="relayers-meta-tx" data-edge-to="smart-contracts" data-edge-label="ejecución gasless" data-edge-key="7" data-composition-points="550,512;574,512;574,656;935,656;935,680" d="M 550 512 L 566 512 Q 574 512 574 520 L 574 648 Q 574 656 582 656 L 927 656 Q 935 656 935 664 L 935 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="protocolos-defi" data-edge-to="smart-contracts" data-edge-label="lending &amp; pools" data-edge-key="8" data-composition-points="935,544;935,680" d="M 935 544 L 935 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="protocolos-defi" data-edge-label="integración" data-edge-key="9" data-composition-points="810,512;835,512" d="M 810 512 L 835 512" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="gobernanza-daos" data-edge-to="protocolos-defi" data-edge-label="gobernanza" data-edge-key="10" data-composition-points="1060,512;1035,512" d="M 1060 512 L 1035 512" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="11" data-composition-points="1160,544;1160,612;935,612;935,680" d="M 1160 544 L 1160 604 Q 1160 612 1152 612 L 943 612 Q 935 612 935 620 L 935 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="smart-contracts" data-edge-label="lectura / escritura" data-edge-key="12" data-composition-points="710,544;710,612;935,612;935,680" d="M 710 544 L 710 604 Q 710 612 718 612 L 927 612 Q 935 612 935 620 L 935 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="server-wallets" data-edge-label="solicita firma" data-edge-key="13" data-composition-points="710,480;710,385;440,385;440,344" d="M 710 480 L 710 393 Q 710 385 702 385 L 448 385 Q 440 385 440 377 L 440 344" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="relayers-meta-tx" data-edge-label="meta-tx" data-edge-key="14" data-composition-points="610,512;595,512;550,512" d="M 610 512 L 602.5 512 Q 595 512 587.5 512 L 550 512" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="oraculos" data-edge-label="consultas feeds" data-edge-key="15" data-composition-points="610,498;586,498;586,656;440,656;440,680" d="M 610 498 L 594 498 Q 586 498 586 506 L 586 648 Q 586 656 578 656 L 448 656 Q 440 656 440 664 L 440 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="indexadores" data-edge-label="consultas GraphQL" data-edge-key="16" data-composition-points="610,512;586,512;586,836;440,836;440,860" d="M 610 512 L 594 512 Q 586 512 586 520 L 586 828 Q 586 836 578 836 L 448 836 Q 440 836 440 844 L 440 860" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="almacenamiento-descent" data-edge-label="metadatos IPFS" data-edge-key="17" data-composition-points="610,526;586,526;586,1076;440,1076;440,1100" d="M 610 526 L 594 526 Q 586 526 586 534 L 586 1068 Q 586 1076 578 1076 L 448 1076 Q 440 1076 440 1084 L 440 1100" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="18" data-composition-points="550,712;610,712" d="M 550 712 L 610 712" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="indexadores" data-edge-to="nodos-rpc" data-edge-label="consultas JSON-RPC" data-edge-key="19" data-composition-points="550,892;610,892" d="M 550 892 L 610 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="nodos-rpc" data-edge-to="evm" data-edge-label="ejecución de llamadas" data-edge-key="20" data-composition-points="810,892;835,892" d="M 810 892 L 835 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="smart-contracts" data-edge-to="evm" data-edge-label="ejecución de bytecode" data-edge-key="21" data-composition-points="935,744;935,860" d="M 935 744 L 935 860" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="capa-l2" data-edge-to="nodos-rpc" data-edge-label="secuenciador &amp; RPC L2" data-edge-key="22" data-composition-points="710,1080;710,924" d="M 710 1080 L 710 924" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="coprocesadores" data-edge-to="nodos-rpc" data-edge-label="consultas JSON-RPC" data-edge-key="23" data-composition-points="550,1012;710,1012;710,924" d="M 550 1012 L 702 1012 Q 710 1012 710 1004 L 710 924" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="24" data-composition-points="1160,1080;1160,924" d="M 1160 1080 L 1160 924" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="capa-l2" data-edge-to="puentes-crosschain" data-edge-label="depósitos &amp; retiros L2" data-edge-key="25" data-composition-points="710,1144;710,1168;1160,1168;1160,1144" d="M 710 1144 L 710 1160 Q 710 1168 718 1168 L 1152 1168 Q 1160 1168 1160 1160 L 1160 1144" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="red de hardware" data-edge-key="26" data-composition-points="440,1164;440,1210" d="M 440 1164 L 440 1210" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="exploradores" data-edge-to="red-l1" data-edge-label="inspección de bloques" data-edge-key="27" data-composition-points="1330,1112;1295,1112;1295,892;1260,892" d="M 1330 1112 L 1303 1112 Q 1295 1112 1295 1104 L 1295 900 Q 1295 892 1287 892 L 1260 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="cliente-web3" data-edge-to="smart-contracts" data-edge-label="interacción / ABI" data-edge-key="28" data-composition-points="1330,892;1295,892;1295,712;1260,712" d="M 1330 892 L 1303 892 Q 1295 892 1295 884 L 1295 720 Q 1295 712 1287 712 L 1260 712" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="frameworks-dev" data-edge-to="smart-contracts" data-edge-label="compilación &amp; deploy" data-edge-key="29" data-composition-points="1330,512;1295,512;1295,712;1260,712" d="M 1330 512 L 1303 512 Q 1295 512 1295 520 L 1295 704 Q 1295 712 1287 712 L 1260 712" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="30" data-composition-points="1035,892;1060,892" d="M 1035 892 L 1060 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="31" data-composition-points="1460,544;1460,680" d="M 1460 544 L 1460 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="protocolos-defi" data-edge-to="smart-contracts" data-edge-label="lending &amp; pools" data-edge-key="7" data-composition-points="935,544;935,680" d="M 935 544 L 935 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="protocolos-defi" data-edge-label="integración" data-edge-key="8" data-composition-points="810,512;835,512" d="M 810 512 L 835 512" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="gobernanza-daos" data-edge-to="protocolos-defi" data-edge-label="gobernanza" data-edge-key="9" data-composition-points="1060,512;1035,512" d="M 1060 512 L 1035 512" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="10" data-composition-points="1160,544;1160,612;935,612;935,680" d="M 1160 544 L 1160 604 Q 1160 612 1152 612 L 943 612 Q 935 612 935 620 L 935 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="server-wallets" data-edge-label="solicita firma" data-edge-key="11" data-composition-points="710,480;710,385;440,385;440,344" d="M 710 480 L 710 393 Q 710 385 702 385 L 448 385 Q 440 385 440 377 L 440 344" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="relayers-meta-tx" data-edge-label="meta-tx" data-edge-key="12" data-composition-points="610,512;595,512;550,512" d="M 610 512 L 602.5 512 Q 595 512 587.5 512 L 550 512" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="oraculos" data-edge-label="consultas feeds" data-edge-key="13" data-composition-points="610,498;586,498;586,656;440,656;440,680" d="M 610 498 L 594 498 Q 586 498 586 506 L 586 648 Q 586 656 578 656 L 448 656 Q 440 656 440 664 L 440 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="indexadores" data-edge-label="consultas GraphQL" data-edge-key="14" data-composition-points="610,512;586,512;586,836;440,836;440,860" d="M 610 512 L 594 512 Q 586 512 586 520 L 586 828 Q 586 836 578 836 L 448 836 Q 440 836 440 844 L 440 860" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="almacenamiento-descent" data-edge-label="metadatos IPFS" data-edge-key="15" data-composition-points="610,526;586,526;586,1076;440,1076;440,1100" d="M 610 526 L 594 526 Q 586 526 586 534 L 586 1068 Q 586 1076 578 1076 L 448 1076 Q 440 1076 440 1084 L 440 1100" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="indexadores" data-edge-to="nodos-rpc" data-edge-label="consultas JSON-RPC" data-edge-key="16" data-composition-points="550,892;610,892" d="M 550 892 L 610 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="nodos-rpc" data-edge-to="smart-contracts" data-edge-label="despacho de llamadas &amp; txs" data-edge-key="17" data-composition-points="710,860;710,802;935,802;935,744" d="M 710 860 L 710 810 Q 710 802 718 802 L 927 802 Q 935 802 935 794 L 935 744" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="nodos-rpc" data-edge-to="evm" data-edge-label="ejecución de llamadas" data-edge-key="18" data-composition-points="810,892;835,892" d="M 810 892 L 835 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="smart-contracts" data-edge-to="evm" data-edge-label="ejecución de bytecode" data-edge-key="19" data-composition-points="935,744;935,860" d="M 935 744 L 935 860" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="capa-l2" data-edge-to="nodos-rpc" data-edge-label="secuenciador &amp; RPC L2" data-edge-key="20" data-composition-points="710,1080;710,924" d="M 710 1080 L 710 924" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="coprocesadores" data-edge-to="nodos-rpc" data-edge-label="consultas JSON-RPC" data-edge-key="21" data-composition-points="550,1012;710,1012;710,924" d="M 550 1012 L 702 1012 Q 710 1012 710 1004 L 710 924" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="billeteras" data-edge-to="nodos-rpc" data-edge-label="broadcast transacciones" data-edge-key="22" data-composition-points="935,280;935,256;562,256;562,842;710,842;710,860" d="M 935 280 L 935 264 Q 935 256 927 256 L 570 256 Q 562 256 562 264 L 562 834 Q 562 842 570 842 L 702 842 Q 710 842 710 850 L 710 860" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="frontend-app" data-edge-to="nodos-rpc" data-edge-label="lecturas directas RPC" data-edge-key="23" data-composition-points="610,312;586,312;586,836;710,836;710,860" d="M 610 312 L 594 312 Q 586 312 586 320 L 586 828 Q 586 836 594 836 L 702 836 Q 710 836 710 844 L 710 860" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="nodos-rpc" data-edge-label="consultas / txs RPC" data-edge-key="24" data-composition-points="610,512;586,512;586,836;710,836;710,860" d="M 610 512 L 594 512 Q 586 512 586 520 L 586 828 Q 586 836 594 836 L 702 836 Q 710 836 710 844 L 710 860" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="relayers-meta-tx" data-edge-to="nodos-rpc" data-edge-label="envío de bundles / txs" data-edge-key="25" data-composition-points="550,512;574,512;574,836;710,836;710,860" d="M 550 512 L 566 512 Q 574 512 574 520 L 574 828 Q 574 836 582 836 L 702 836 Q 710 836 710 844 L 710 860" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="oraculos" data-edge-to="nodos-rpc" data-edge-label="transmisión feeds RPC" data-edge-key="26" data-composition-points="440,744;440,802;710,802;710,860" d="M 440 744 L 440 794 Q 440 802 448 802 L 702 802 Q 710 802 710 810 L 710 860" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="27" data-composition-points="1160,1080;1160,924" d="M 1160 1080 L 1160 924" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="capa-l2" data-edge-to="puentes-crosschain" data-edge-label="depósitos &amp; retiros L2" data-edge-key="28" data-composition-points="710,1144;710,1168;1160,1168;1160,1144" d="M 710 1144 L 710 1160 Q 710 1168 718 1168 L 1152 1168 Q 1160 1168 1160 1160 L 1160 1144" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="red de hardware" data-edge-key="29" data-composition-points="440,1164;440,1210" d="M 440 1164 L 440 1210" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="exploradores" data-edge-to="red-l1" data-edge-label="inspección de bloques" data-edge-key="30" data-composition-points="1330,1112;1295,1112;1295,892;1260,892" d="M 1330 1112 L 1303 1112 Q 1295 1112 1295 1104 L 1295 900 Q 1295 892 1287 892 L 1260 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="cliente-web3" data-edge-to="smart-contracts" data-edge-label="interacción / ABI" data-edge-key="31" data-composition-points="1330,892;1295,892;1295,712;1260,712" d="M 1330 892 L 1303 892 Q 1295 892 1295 884 L 1295 720 Q 1295 712 1287 712 L 1260 712" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="frameworks-dev" data-edge-to="smart-contracts" data-edge-label="compilación &amp; deploy" data-edge-key="32" data-composition-points="1330,512;1295,512;1295,712;1260,712" d="M 1330 512 L 1303 512 Q 1295 512 1295 520 L 1295 704 Q 1295 712 1287 712 L 1260 712" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="33" data-composition-points="1035,892;1060,892" d="M 1035 892 L 1060 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="34" data-composition-points="1460,544;1460,680" d="M 1460 544 L 1460 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 
         <!-- Components -->
         <g id="node-usuarios" data-node-id="usuarios" data-node-label="Usuarios y Clientes" tabindex="0" role="button" aria-label="Focus Usuarios y Clientes, Navegador Web / Mobile dApp, 4. Capa de Acceso e Interfaz de Usuario" aria-pressed="false" data-node-kind="external" data-node-sublabel="Navegador Web / Mobile dApp" data-node-context="4. Capa de Acceso e Interfaz de Usuario">
@@ -6428,103 +6431,115 @@
           <rect x="411" y="348" width="58" height="14" rx="3" class="c-mask"/>
           <text x="440" y="358" class="t-muted" font-size="8" text-anchor="middle">firmas KMS</text>
         </g>
-        <g data-detail="context" data-edge-from="relayers-meta-tx" data-edge-to="smart-contracts" data-edge-label="ejecución gasless" data-edge-key="7">
-          <rect x="514.2" y="625" width="91.6" height="14" rx="3" class="c-mask"/>
-          <text x="560" y="635" class="t-muted" font-size="8" text-anchor="middle">ejecución gasless</text>
-        </g>
-        <g data-detail="context" data-edge-from="protocolos-defi" data-edge-to="smart-contracts" data-edge-label="lending &amp; pools" data-edge-key="8">
+        <g data-detail="context" data-edge-from="protocolos-defi" data-edge-to="smart-contracts" data-edge-label="lending &amp; pools" data-edge-key="7">
           <rect x="894" y="602" width="82" height="14" rx="3" class="c-mask"/>
           <text x="935" y="612" class="t-muted" font-size="8" text-anchor="middle">lending &amp; pools</text>
         </g>
-        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="protocolos-defi" data-edge-label="integración" data-edge-key="9">
+        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="protocolos-defi" data-edge-label="integración" data-edge-key="8">
           <rect x="791.1" y="464" width="62.8" height="14" rx="3" class="c-mask"/>
           <text x="822.5" y="474" class="t-muted" font-size="8" text-anchor="middle">integración</text>
         </g>
-        <g data-detail="context" data-edge-from="gobernanza-daos" data-edge-to="protocolos-defi" data-edge-label="gobernanza" data-edge-key="10">
+        <g data-detail="context" data-edge-from="gobernanza-daos" data-edge-to="protocolos-defi" data-edge-label="gobernanza" data-edge-key="9">
           <rect x="1018.5" y="464" width="58" height="14" rx="3" class="c-mask"/>
           <text x="1047.5" y="474" class="t-muted" font-size="8" text-anchor="middle">gobernanza</text>
         </g>
-        <g data-detail="context" data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="11">
+        <g data-detail="context" data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="10">
           <rect x="1128.6" y="602" width="62.8" height="14" rx="3" class="c-mask"/>
           <text x="1160" y="612" class="t-muted" font-size="8" text-anchor="middle">admin check</text>
         </g>
-        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="smart-contracts" data-edge-label="lectura / escritura" data-edge-key="12">
-          <rect x="659.4" y="602" width="101.2" height="14" rx="3" class="c-mask"/>
-          <text x="710" y="612" class="t-muted" font-size="8" text-anchor="middle">lectura / escritura</text>
-        </g>
-        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="server-wallets" data-edge-label="solicita firma" data-edge-key="13">
+        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="server-wallets" data-edge-label="solicita firma" data-edge-key="11">
           <rect x="501.4" y="365" width="77.2" height="14" rx="3" class="c-mask"/>
           <text x="540" y="375" class="t-muted" font-size="8" text-anchor="middle">solicita firma</text>
         </g>
-        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="relayers-meta-tx" data-edge-label="meta-tx" data-edge-key="14">
+        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="relayers-meta-tx" data-edge-label="meta-tx" data-edge-key="12">
           <rect x="550.7" y="492" width="43.6" height="14" rx="3" class="c-mask"/>
           <text x="572.5" y="502" class="t-muted" font-size="8" text-anchor="middle">meta-tx</text>
         </g>
-        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="oraculos" data-edge-label="consultas feeds" data-edge-key="15">
+        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="oraculos" data-edge-label="consultas feeds" data-edge-key="13">
           <rect x="545" y="557" width="82" height="14" rx="3" class="c-mask"/>
           <text x="586" y="567" class="t-muted" font-size="8" text-anchor="middle">consultas feeds</text>
         </g>
-        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="indexadores" data-edge-label="consultas GraphQL" data-edge-key="16">
+        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="indexadores" data-edge-label="consultas GraphQL" data-edge-key="14">
           <rect x="540.2" y="654" width="91.6" height="14" rx="3" class="c-mask"/>
           <text x="586" y="664" class="t-muted" font-size="8" text-anchor="middle">consultas GraphQL</text>
         </g>
-        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="almacenamiento-descent" data-edge-label="metadatos IPFS" data-edge-key="17">
+        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="almacenamiento-descent" data-edge-label="metadatos IPFS" data-edge-key="15">
           <rect x="547.4" y="781" width="77.2" height="14" rx="3" class="c-mask"/>
           <text x="586" y="791" class="t-muted" font-size="8" text-anchor="middle">metadatos IPFS</text>
         </g>
-        <g data-detail="context" data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="18">
-          <rect x="548.6" y="748" width="62.8" height="14" rx="3" class="c-mask"/>
-          <text x="580" y="758" class="t-muted" font-size="8" text-anchor="middle">price feeds</text>
-        </g>
-        <g data-detail="context" data-edge-from="indexadores" data-edge-to="nodos-rpc" data-edge-label="consultas JSON-RPC" data-edge-key="19">
+        <g data-detail="context" data-edge-from="indexadores" data-edge-to="nodos-rpc" data-edge-label="consultas JSON-RPC" data-edge-key="16">
           <rect x="531.8" y="928" width="96.39999999999999" height="14" rx="3" class="c-mask"/>
           <text x="580" y="938" class="t-muted" font-size="8" text-anchor="middle">consultas JSON-RPC</text>
         </g>
-        <g data-detail="context" data-edge-from="nodos-rpc" data-edge-to="evm" data-edge-label="ejecución de llamadas" data-edge-key="20">
+        <g data-detail="context" data-edge-from="nodos-rpc" data-edge-to="smart-contracts" data-edge-label="despacho de llamadas &amp; txs" data-edge-key="17">
+          <rect x="755.1" y="782" width="134.8" height="14" rx="3" class="c-mask"/>
+          <text x="822.5" y="792" class="t-muted" font-size="8" text-anchor="middle">despacho de llamadas &amp; txs</text>
+        </g>
+        <g data-detail="context" data-edge-from="nodos-rpc" data-edge-to="evm" data-edge-label="ejecución de llamadas" data-edge-key="18">
           <rect x="767.1" y="928" width="110.8" height="14" rx="3" class="c-mask"/>
           <text x="822.5" y="938" class="t-muted" font-size="8" text-anchor="middle">ejecución de llamadas</text>
         </g>
-        <g data-detail="context" data-edge-from="smart-contracts" data-edge-to="evm" data-edge-label="ejecución de bytecode" data-edge-key="21">
+        <g data-detail="context" data-edge-from="smart-contracts" data-edge-to="evm" data-edge-label="ejecución de bytecode" data-edge-key="19">
           <rect x="879.6" y="750" width="110.8" height="14" rx="3" class="c-mask"/>
           <text x="935" y="760" class="t-muted" font-size="8" text-anchor="middle">ejecución de bytecode</text>
         </g>
-        <g data-detail="context" data-edge-from="capa-l2" data-edge-to="nodos-rpc" data-edge-label="secuenciador &amp; RPC L2" data-edge-key="22">
+        <g data-detail="context" data-edge-from="capa-l2" data-edge-to="nodos-rpc" data-edge-label="secuenciador &amp; RPC L2" data-edge-key="20">
           <rect x="654.6" y="1036" width="110.8" height="14" rx="3" class="c-mask"/>
           <text x="710" y="1046" class="t-muted" font-size="8" text-anchor="middle">secuenciador &amp; RPC L2</text>
         </g>
-        <g data-detail="context" data-edge-from="coprocesadores" data-edge-to="nodos-rpc" data-edge-label="consultas JSON-RPC" data-edge-key="23">
+        <g data-detail="context" data-edge-from="coprocesadores" data-edge-to="nodos-rpc" data-edge-label="consultas JSON-RPC" data-edge-key="21">
           <rect x="581.8" y="985" width="96.39999999999999" height="14" rx="3" class="c-mask"/>
           <text x="630" y="995" class="t-muted" font-size="8" text-anchor="middle">consultas JSON-RPC</text>
         </g>
-        <g data-detail="context" data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="24">
+        <g data-detail="context" data-edge-from="billeteras" data-edge-to="nodos-rpc" data-edge-label="broadcast transacciones" data-edge-key="22">
+          <rect x="689.8" y="236" width="120.39999999999999" height="14" rx="3" class="c-mask"/>
+          <text x="750" y="246" class="t-muted" font-size="8" text-anchor="middle">broadcast transacciones</text>
+        </g>
+        <g data-detail="context" data-edge-from="frontend-app" data-edge-to="nodos-rpc" data-edge-label="lecturas directas RPC" data-edge-key="23">
+          <rect x="494.6" y="410" width="110.8" height="14" rx="3" class="c-mask"/>
+          <text x="550" y="420" class="t-muted" font-size="8" text-anchor="middle">lecturas directas RPC</text>
+        </g>
+        <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="nodos-rpc" data-edge-label="consultas / txs RPC" data-edge-key="24">
+          <rect x="634.4" y="795" width="101.2" height="14" rx="3" class="c-mask"/>
+          <text x="685" y="805" class="t-muted" font-size="8" text-anchor="middle">consultas / txs RPC</text>
+        </g>
+        <g data-detail="context" data-edge-from="relayers-meta-tx" data-edge-to="nodos-rpc" data-edge-label="envío de bundles / txs" data-edge-key="25">
+          <rect x="462.2" y="610" width="115.6" height="14" rx="3" class="c-mask"/>
+          <text x="520" y="620" class="t-muted" font-size="8" text-anchor="middle">envío de bundles / txs</text>
+        </g>
+        <g data-detail="context" data-edge-from="oraculos" data-edge-to="nodos-rpc" data-edge-label="transmisión feeds RPC" data-edge-key="26">
+          <rect x="508.6" y="782" width="110.8" height="14" rx="3" class="c-mask"/>
+          <text x="564" y="792" class="t-muted" font-size="8" text-anchor="middle">transmisión feeds RPC</text>
+        </g>
+        <g data-detail="context" data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="27">
           <rect x="1114.2" y="1036" width="91.6" height="14" rx="3" class="c-mask"/>
           <text x="1160" y="1046" class="t-muted" font-size="8" text-anchor="middle">bloquear / acuñar</text>
         </g>
-        <g data-detail="context" data-edge-from="capa-l2" data-edge-to="puentes-crosschain" data-edge-label="depósitos &amp; retiros L2" data-edge-key="25">
+        <g data-detail="context" data-edge-from="capa-l2" data-edge-to="puentes-crosschain" data-edge-label="depósitos &amp; retiros L2" data-edge-key="28">
           <rect x="877.2" y="1172" width="115.6" height="14" rx="3" class="c-mask"/>
           <text x="935" y="1182" class="t-muted" font-size="8" text-anchor="middle">depósitos &amp; retiros L2</text>
         </g>
-        <g data-detail="context" data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="red de hardware" data-edge-key="26">
+        <g data-detail="context" data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="red de hardware" data-edge-key="29">
           <rect x="399" y="1170" width="82" height="14" rx="3" class="c-mask"/>
           <text x="440" y="1180" class="t-muted" font-size="8" text-anchor="middle">red de hardware</text>
         </g>
-        <g data-detail="context" data-edge-from="exploradores" data-edge-to="red-l1" data-edge-label="inspección de bloques" data-edge-key="27">
+        <g data-detail="context" data-edge-from="exploradores" data-edge-to="red-l1" data-edge-label="inspección de bloques" data-edge-key="30">
           <rect x="1239.6" y="1038" width="110.8" height="14" rx="3" class="c-mask"/>
           <text x="1295" y="1048" class="t-muted" font-size="8" text-anchor="middle">inspección de bloques</text>
         </g>
-        <g data-detail="context" data-edge-from="cliente-web3" data-edge-to="smart-contracts" data-edge-label="interacción / ABI" data-edge-key="28">
+        <g data-detail="context" data-edge-from="cliente-web3" data-edge-to="smart-contracts" data-edge-label="interacción / ABI" data-edge-key="31">
           <rect x="1249.2" y="762" width="91.6" height="14" rx="3" class="c-mask"/>
           <text x="1295" y="772" class="t-muted" font-size="8" text-anchor="middle">interacción / ABI</text>
         </g>
-        <g data-detail="context" data-edge-from="frameworks-dev" data-edge-to="smart-contracts" data-edge-label="compilación &amp; deploy" data-edge-key="29">
+        <g data-detail="context" data-edge-from="frameworks-dev" data-edge-to="smart-contracts" data-edge-label="compilación &amp; deploy" data-edge-key="32">
           <rect x="1242" y="570" width="106" height="14" rx="3" class="c-mask"/>
           <text x="1295" y="580" class="t-muted" font-size="8" text-anchor="middle">compilación &amp; deploy</text>
         </g>
-        <g data-detail="context" data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="30">
+        <g data-detail="context" data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="33">
           <rect x="1011.3" y="928" width="72.4" height="14" rx="3" class="c-mask"/>
           <text x="1047.5" y="938" class="t-muted" font-size="8" text-anchor="middle">estado global</text>
         </g>
-        <g data-detail="context" data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="31">
+        <g data-detail="context" data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="34">
           <rect x="1426.2" y="548" width="67.6" height="14" rx="3" class="c-mask"/>
           <text x="1460" y="558" class="t-muted" font-size="8" text-anchor="middle">fuzz testing</text>
         </g>

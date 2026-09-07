@@ -526,18 +526,7 @@
       "toSide": "top",
       "labelDy": 24
     },
-    {
-      "from": "relayers-meta-tx",
-      "to": "smart-contracts",
-      "label": "ejecución gasless",
-      "fromSide": "right",
-      "toSide": "top",
-      "labelDy": 24,
-      "labelAt": [
-        560,
-        635
-      ]
-    },
+
     {
       "from": "protocolos-defi",
       "to": "smart-contracts",
@@ -578,18 +567,7 @@
         612
       ]
     },
-    {
-      "from": "backend-dapp",
-      "to": "smart-contracts",
-      "label": "lectura / escritura",
-      "toSide": "top",
-      "fromSide": "bottom",
-      "labelDy": 24,
-      "labelAt": [
-        710,
-        612
-      ]
-    },
+
     {
       "from": "backend-dapp",
       "to": "server-wallets",
@@ -645,14 +623,7 @@
       "fromSide": "left",
       "toSide": "top"
     },
-    {
-      "from": "oraculos",
-      "to": "smart-contracts",
-      "label": "price feeds",
-      "fromSide": "right",
-      "toSide": "left",
-      "labelDy": 56
-    },
+
     {
       "from": "indexadores",
       "to": "nodos-rpc",
@@ -660,6 +631,13 @@
       "fromSide": "right",
       "toSide": "left",
       "labelDy": 56
+    },
+    {
+      "from": "nodos-rpc",
+      "to": "smart-contracts",
+      "label": "despacho de llamadas & txs",
+      "fromSide": "top",
+      "toSide": "bottom"
     },
     {
       "from": "nodos-rpc",
@@ -705,6 +683,79 @@
       "labelAt": [
         630,
         995
+      ]
+    },
+    {
+      "from": "billeteras",
+      "to": "nodos-rpc",
+      "label": "broadcast transacciones",
+      "fromSide": "top",
+      "toSide": "top",
+      "via": [
+        [
+          935,
+          256
+        ],
+        [
+          562,
+          256
+        ],
+        [
+          562,
+          842
+        ],
+        [
+          710,
+          842
+        ]
+      ],
+      "labelAt": [
+        750,
+        246
+      ]
+    },
+    {
+      "from": "frontend-app",
+      "to": "nodos-rpc",
+      "label": "lecturas directas RPC",
+      "fromSide": "left",
+      "toSide": "top",
+      "labelAt": [
+        550,
+        420
+      ]
+    },
+    {
+      "from": "backend-dapp",
+      "to": "nodos-rpc",
+      "label": "consultas / txs RPC",
+      "fromSide": "left",
+      "toSide": "top",
+      "labelAt": [
+        685,
+        805
+      ]
+    },
+    {
+      "from": "relayers-meta-tx",
+      "to": "nodos-rpc",
+      "label": "envío de bundles / txs",
+      "fromSide": "right",
+      "toSide": "top",
+      "labelAt": [
+        520,
+        620
+      ]
+    },
+    {
+      "from": "oraculos",
+      "to": "nodos-rpc",
+      "label": "transmisión feeds RPC",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        564,
+        792
       ]
     },
     {
