@@ -16,7 +16,7 @@
       "label": "Usuarios y Clientes",
       "sublabel": "Navegador Web / Mobile dApp",
       "pos": [
-        610,
+        1060,
         280
       ],
       "size": [
@@ -46,7 +46,7 @@
       "sublabel": "React + Wagmi Hooks",
       "tag": "UI / Web3",
       "pos": [
-        1060,
+        610,
         280
       ],
       "size": [
@@ -91,7 +91,7 @@
       "sublabel": "Aragon, Snapshot & Tally",
       "tag": "Coordinación",
       "pos": [
-        610,
+        1060,
         480
       ],
       "size": [
@@ -346,7 +346,7 @@
       "sublabel": "API REST, GraphQL",
       "tag": "Off-Chain",
       "pos": [
-        1060,
+        610,
         480
       ],
       "size": [
@@ -360,9 +360,9 @@
       "kind": "region",
       "label": "4. Capa de Acceso e Interfaz de Usuario",
       "wraps": [
-        "usuarios",
+        "frontend-app",
         "billeteras",
-        "frontend-app"
+        "usuarios"
       ]
     },
     {
@@ -381,9 +381,9 @@
       "label": "2. Capa de Protocolo y Lógica",
       "wraps": [
         "smart-contracts",
+        "backend-dapp",
         "protocolos-defi",
-        "gobernanza-daos",
-        "backend-dapp"
+        "gobernanza-daos"
       ]
     },
     {
@@ -415,17 +415,29 @@
       "from": "usuarios",
       "to": "billeteras",
       "label": "conectar",
-      "fromSide": "right",
-      "toSide": "left",
+      "fromSide": "left",
+      "toSide": "right",
       "labelDy": 56
     },
     {
       "from": "billeteras",
       "to": "frontend-app",
       "label": "inyecta proveedor",
-      "fromSide": "right",
-      "toSide": "left",
+      "fromSide": "left",
+      "toSide": "right",
       "labelDy": 56
+    },
+    {
+      "from": "frontend-app",
+      "to": "backend-dapp",
+      "label": "peticiones API",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24,
+      "labelAt": [
+        710,
+        412
+      ]
     },
     {
       "from": "frontend-app",
@@ -435,17 +447,17 @@
       "toSide": "top",
       "via": [
         [
-          1160,
-          410
+          710,
+          400
         ],
         [
           935,
-          410
+          400
         ]
       ],
       "labelAt": [
-        1025,
-        400
+        820,
+        390
       ]
     },
     {
@@ -456,17 +468,17 @@
       "toSide": "top",
       "via": [
         [
-          1160,
-          375
+          710,
+          430
         ],
         [
-          710,
-          375
+          1160,
+          430
         ]
       ],
       "labelAt": [
-        660,
-        430
+        1025,
+        420
       ]
     },
     {
@@ -477,7 +489,7 @@
       "toSide": "top",
       "via": [
         [
-          1160,
+          710,
           365
         ],
         [
@@ -486,7 +498,7 @@
         ]
       ],
       "labelAt": [
-        650,
+        540,
         355
       ]
     },
@@ -516,20 +528,24 @@
       "label": "lending & pools",
       "fromSide": "bottom",
       "toSide": "top",
-      "labelDy": 24
-    },
-    {
-      "from": "gobernanza-daos",
-      "to": "protocolos-defi",
-      "label": "gobernanza",
-      "fromSide": "right",
-      "toSide": "left",
-      "labelDy": -28
+      "labelDy": 24,
+      "labelAt": [
+        935,
+        612
+      ]
     },
     {
       "from": "backend-dapp",
       "to": "protocolos-defi",
       "label": "integración",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": -28
+    },
+    {
+      "from": "gobernanza-daos",
+      "to": "protocolos-defi",
+      "label": "gobernanza",
       "fromSide": "left",
       "toSide": "right",
       "labelDy": -28
@@ -540,7 +556,65 @@
       "label": "admin check",
       "fromSide": "bottom",
       "toSide": "top",
-      "labelDy": 24
+      "labelDy": 24,
+      "labelAt": [
+        1160,
+        612
+      ]
+    },
+    {
+      "from": "backend-dapp",
+      "to": "smart-contracts",
+      "label": "lectura / escritura",
+      "toSide": "top",
+      "fromSide": "bottom",
+      "labelDy": 24,
+      "labelAt": [
+        710,
+        612
+      ]
+    },
+    {
+      "from": "backend-dapp",
+      "to": "server-wallets",
+      "label": "solicita firma",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "via": [
+        [
+          710,
+          385
+        ],
+        [
+          440,
+          385
+        ]
+      ],
+      "labelAt": [
+        540,
+        375
+      ]
+    },
+    {
+      "from": "backend-dapp",
+      "to": "oraculos",
+      "label": "consultas feeds",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "from": "backend-dapp",
+      "to": "indexadores",
+      "label": "consultas GraphQL",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "from": "backend-dapp",
+      "to": "almacenamiento-descent",
+      "label": "metadatos IPFS",
+      "fromSide": "left",
+      "toSide": "top"
     },
     {
       "from": "oraculos",
@@ -597,51 +671,6 @@
       "fromSide": "bottom",
       "toSide": "top",
       "labelDy": 24
-    },
-    {
-      "from": "frontend-app",
-      "to": "backend-dapp",
-      "label": "peticiones API",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "labelDy": 24,
-      "labelAt": [
-        1160,
-        412
-      ]
-    },
-    {
-      "from": "backend-dapp",
-      "to": "server-wallets",
-      "label": "solicita firma",
-      "fromSide": "top",
-      "toSide": "bottom",
-      "via": [
-        [
-          1160,
-          385
-        ],
-        [
-          440,
-          385
-        ]
-      ],
-      "labelAt": [
-        540,
-        375
-      ]
-    },
-    {
-      "from": "backend-dapp",
-      "to": "smart-contracts",
-      "label": "lectura / escritura",
-      "toSide": "top",
-      "fromSide": "bottom",
-      "labelDy": 24,
-      "labelAt": [
-        1160,
-        612
-      ]
     }
   ],
   "cards": [
