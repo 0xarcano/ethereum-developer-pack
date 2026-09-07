@@ -2,7 +2,7 @@
   "schema_version": 1,
   "diagram_type": "architecture",
   "meta": {
-    "title": "Ecosistema Web3: Arquitectura en Capas \u2014 Ethereum Developer Pack (CEDIA)",
+    "title": "Ecosistema Web3: Arquitectura en Capas — Ethereum Developer Pack (CEDIA)",
     "quality_profile": "showcase",
     "viewBox": [
       1640,
@@ -87,9 +87,9 @@
     {
       "id": "gobernanza-daos",
       "type": "backend",
-      "label": "Gobernanza & Coordinaci\u00f3n",
+      "label": "Gobernanza & Coordinación",
       "sublabel": "DAOs, Aragon, Snapshot & Tally",
-      "tag": "Coordinaci\u00f3n",
+      "tag": "Coordinación",
       "pos": [
         835,
         480
@@ -134,7 +134,7 @@
       "type": "backend",
       "label": "Smart Contracts",
       "sublabel": "Solidity OOP, Tokens ERC-20/721 & Guards",
-      "tag": "L\u00f3gica On-Chain",
+      "tag": "Lógica On-Chain",
       "pos": [
         610,
         680
@@ -177,7 +177,7 @@
     {
       "id": "oraculos",
       "type": "cloud",
-      "label": "Or\u00e1culos Descentralizados",
+      "label": "Oráculos Descentralizados",
       "sublabel": "Chainlink Data Feeds",
       "tag": "Datos Off-chain",
       "pos": [
@@ -269,7 +269,7 @@
       "type": "cloud",
       "label": "Redes DePIN",
       "sublabel": "Hardware Distribuido",
-      "tag": "C\u00f3mputo Hardware",
+      "tag": "Cómputo Hardware",
       "pos": [
         1115,
         1080
@@ -327,7 +327,7 @@
     {
       "id": "cliente-web3",
       "type": "frontend",
-      "label": "Cliente Web3 & Librer\u00edas",
+      "label": "Cliente Web3 & Librerías",
       "sublabel": "Viem & Ethers.js",
       "tag": "RPC Provider",
       "pos": [
@@ -344,7 +344,7 @@
       "type": "external",
       "label": "Exploradores & Deploy",
       "sublabel": "Etherscan & Remix QuickApp",
-      "tag": "Inspecci\u00f3n Tx",
+      "tag": "Inspección Tx",
       "pos": [
         1330,
         1080
@@ -361,8 +361,8 @@
       "sublabel": "API REST, GraphQL",
       "tag": "Capa Intermedia",
       "pos": [
-        30,
-        240
+        1060,
+        380
       ],
       "size": [
         200,
@@ -382,13 +382,6 @@
     },
     {
       "kind": "region",
-      "label": "4. Capa Backend",
-      "wraps": [
-        "backend-dapp"
-      ]
-    },
-    {
-      "kind": "region",
       "label": "3. Capa de Datos y Servicios Aux. (On/Off-Chain)",
       "wraps": [
         "server-wallets",
@@ -400,12 +393,13 @@
     },
     {
       "kind": "region",
-      "label": "2. Capa de Protocolo y L\u00f3gica (On-Chain)",
+      "label": "2. Capa de Protocolo y Lógica",
       "wraps": [
         "smart-contracts",
         "protocolos-defi",
         "gobernanza-daos",
-        "billetera-safe"
+        "billetera-safe",
+        "backend-dapp"
       ]
     },
     {
@@ -455,7 +449,21 @@
       "label": "interfaz dApp",
       "fromSide": "bottom",
       "toSide": "top",
-      "labelDy": 24
+      "labelDy": 24,
+      "via": [
+        [
+          1160,
+          360
+        ],
+        [
+          935,
+          360
+        ]
+      ],
+      "labelAt": [
+        1048,
+        360
+      ]
     },
     {
       "from": "frontend-app",
@@ -463,7 +471,21 @@
       "label": "solicitud gasless",
       "fromSide": "bottom",
       "toSide": "top",
-      "labelDy": 24
+      "labelDy": 24,
+      "via": [
+        [
+          1160,
+          362
+        ],
+        [
+          440,
+          362
+        ]
+      ],
+      "labelAt": [
+        500,
+        370
+      ]
     },
     {
       "from": "server-wallets",
@@ -476,7 +498,7 @@
     {
       "from": "relayers-meta-tx",
       "to": "smart-contracts",
-      "label": "ejecuci\u00f3n gasless",
+      "label": "ejecución gasless",
       "fromSide": "right",
       "toSide": "top",
       "labelDy": 24
@@ -492,7 +514,7 @@
     {
       "from": "gobernanza-daos",
       "to": "billetera-safe",
-      "label": "ejecuci\u00f3n",
+      "label": "ejecución",
       "fromSide": "right",
       "toSide": "left",
       "labelDy": 56
@@ -540,7 +562,7 @@
     {
       "from": "puentes-crosschain",
       "to": "red-l1",
-      "label": "bloquear / acu\u00f1ar",
+      "label": "bloquear / acuñar",
       "fromSide": "top",
       "toSide": "bottom",
       "labelDy": -24
@@ -565,64 +587,63 @@
       "from": "frontend-app",
       "to": "backend-dapp",
       "label": "peticiones API",
-      "fromSide": "top",
+      "fromSide": "bottom",
       "toSide": "top",
-      "via": [
-        [
-          1160,
-          100
-        ],
-        [
-          130,
-          100
-        ]
-      ],
       "labelAt": [
-        645,
-        90
+        1180,
+        362
       ]
     },
     {
       "from": "backend-dapp",
       "to": "server-wallets",
       "label": "solicita firma",
-      "fromSide": "right",
-      "toSide": "left",
+      "fromSide": "left",
+      "toSide": "bottom",
       "via": [
         [
-          290,
-          272
+          1040,
+          412
         ],
         [
-          290,
-          312
+          440,
+          412
+        ],
+        [
+          440,
+          344
         ]
       ],
-      "labelAt": [
-        260,
-        318
-      ]
+      "labelDy": 10
     },
     {
       "from": "backend-dapp",
       "to": "smart-contracts",
       "label": "lectura / escritura",
-      "fromSide": "bottom",
-      "toSide": "bottom",
       "via": [
         [
-          130,
-          800
+          1160,
+          460
+        ],
+        [
+          1047,
+          460
+        ],
+        [
+          1047,
+          600
         ],
         [
           935,
-          800
+          600
         ]
       ],
       "labelAt": [
-        420,
-        790
-      ]
+        1104,
+        458
+      ],
+      "toSide": "top",
+      "fromSide": "bottom"
     }
   ],
   "cards": [
@@ -630,17 +651,17 @@
       "dot": "cyan",
       "title": "Interfaz & Identidad",
       "items": [
-        "Clientes interact\u00faan v\u00eda Web3/Mobile",
+        "Clientes interactúan vía Web3/Mobile",
         "Billeteras EOA gestionan llaves y firmas del usuario",
-        "React y Wagmi proporcionan hooks de conexi\u00f3n"
+        "React y Wagmi proporcionan hooks de conexión"
       ]
     },
     {
       "dot": "violet",
-      "title": "Capa Aplicaci\u00f3n",
+      "title": "Capa Aplicación",
       "items": [
         "Protocolos DeFi, AMMs, Lending, Predicciones & RWAs",
-        "Gobernanza descentralizada, DAOs y coordinaci\u00f3n on/off-chain",
+        "Gobernanza descentralizada, DAOs y coordinación on/off-chain",
         "Custodia multifirma y control de acceso con Safe"
       ]
     },
@@ -658,7 +679,7 @@
       "dot": "rose",
       "title": "Red Base & Escalabilidad",
       "items": [
-        "Smart Contracts con est\u00e1ndares ERC-20, ERC-721 y Guards",
+        "Smart Contracts con estándares ERC-20, ERC-721 y Guards",
         "EVM ejecuta bytecode sobre el consenso PoS de Ethereum",
         "L2 Rollups reducen costo de gas con alta velocidad",
         "Puentes Cross-Chain y Co-procesadores ZK"
