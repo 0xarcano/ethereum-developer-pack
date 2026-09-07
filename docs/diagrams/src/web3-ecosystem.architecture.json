@@ -77,10 +77,10 @@
       "tag": "DeFi & Web3",
       "pos": [
         610,
-        480
+        555
       ],
       "size": [
-        140,
+        200,
         64
       ]
     },
@@ -91,11 +91,11 @@
       "sublabel": "Aragon, Snapshot & Tally",
       "tag": "Coordinación",
       "pos": [
-        780,
-        480
+        835,
+        555
       ],
       "size": [
-        140,
+        200,
         64
       ]
     },
@@ -106,11 +106,11 @@
       "sublabel": "Safe / Multifirma",
       "tag": "Wallets",
       "pos": [
-        950,
-        480
+        835,
+        430
       ],
       "size": [
-        140,
+        200,
         64
       ]
     },
@@ -361,11 +361,11 @@
       "sublabel": "API REST, GraphQL",
       "tag": "Off-Chain",
       "pos": [
-        1120,
-        480
+        1060,
+        430
       ],
       "size": [
-        140,
+        200,
         64
       ]
     }
@@ -452,16 +452,24 @@
       "via": [
         [
           1160,
-          390
+          375
         ],
         [
-          850,
-          390
+          750,
+          375
+        ],
+        [
+          750,
+          520
+        ],
+        [
+          935,
+          520
         ]
       ],
       "labelAt": [
-        900,
-        400
+        840,
+        510
       ]
     },
     {
@@ -473,16 +481,16 @@
       "via": [
         [
           1160,
-          370
+          365
         ],
         [
           440,
-          370
+          365
         ]
       ],
       "labelAt": [
         650,
-        360
+        355
       ]
     },
     {
@@ -499,7 +507,11 @@
       "label": "ejecución gasless",
       "fromSide": "right",
       "toSide": "top",
-      "labelDy": 24
+      "labelDy": 24,
+      "labelAt": [
+        560,
+        635
+      ]
     },
     {
       "from": "protocolos-defi",
@@ -513,11 +525,11 @@
       "from": "gobernanza-daos",
       "to": "billetera-safe",
       "label": "ejecución",
-      "fromSide": "right",
-      "toSide": "left",
+      "fromSide": "top",
+      "toSide": "bottom",
       "labelAt": [
-        935,
-        465
+        965,
+        525
       ]
     },
     {
@@ -592,8 +604,8 @@
       "toSide": "top",
       "labelDy": 24,
       "labelAt": [
-        1150,
-        380
+        1160,
+        395
       ]
     },
     {
@@ -604,17 +616,17 @@
       "toSide": "bottom",
       "via": [
         [
-          1190,
-          430
+          1160,
+          385
         ],
         [
           440,
-          430
+          385
         ]
       ],
       "labelAt": [
-        750,
-        420
+        580,
+        375
       ]
     },
     {
@@ -623,7 +635,10 @@
       "label": "lectura / escritura",
       "toSide": "top",
       "fromSide": "bottom",
-      "labelDy": 24
+      "labelAt": [
+        1160,
+        610
+      ]
     }
   ],
   "cards": [

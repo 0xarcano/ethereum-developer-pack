@@ -5034,7 +5034,7 @@
 
         <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="1" data-composition-frame-label="3. Capa de Datos y Servicios Aux. (On/Off-Chain)" x="278.6386952774194" y="234" width="322.72260944516125" height="930" rx="12" class="c-region" stroke-width="1"/>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="2" data-composition-frame-label="2. Capa de Protocolo y Lógica" x="580" y="450" width="710" height="314" rx="12" class="c-region" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="2" data-composition-frame-label="2. Capa de Protocolo y Lógica" x="580" y="400" width="710" height="364" rx="12" class="c-region" stroke-width="1"/>
 
         <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="3" data-composition-frame-label="1. Capa de Infraestructura y Red (On-Chain)" x="580" y="830" width="710" height="334" rx="12" class="c-region" stroke-width="1"/>
 
@@ -5043,13 +5043,13 @@
         <!-- Connection paths (before components for correct z-order) -->
         <path data-edge-from="usuarios" data-edge-to="billeteras" data-edge-label="conectar" data-edge-key="0" data-composition-points="810,312;835,312" d="M 810 312 L 835 312" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="billeteras" data-edge-to="frontend-app" data-edge-label="inyecta proveedor" data-edge-key="1" data-composition-points="1035,312;1060,312" d="M 1035 312 L 1060 312" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="frontend-app" data-edge-to="gobernanza-daos" data-edge-label="interfaz dApp" data-edge-key="2" data-composition-points="1160,344;1160,390;850,390;850,480" d="M 1160 344 L 1160 382 Q 1160 390 1152 390 L 858 390 Q 850 390 850 398 L 850 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="frontend-app" data-edge-to="relayers-meta-tx" data-edge-label="solicitud gasless" data-edge-key="3" data-composition-points="1160,344;1160,370;440,370;440,480" d="M 1160 344 L 1160 362 Q 1160 370 1152 370 L 448 370 Q 440 370 440 378 L 440 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="frontend-app" data-edge-to="gobernanza-daos" data-edge-label="interfaz dApp" data-edge-key="2" data-composition-points="1160,344;1160,375;750,375;750,520;935,520;935,555" d="M 1160 344 L 1160 367 Q 1160 375 1152 375 L 758 375 Q 750 375 750 383 L 750 512 Q 750 520 758 520 L 927 520 Q 935 520 935 528 L 935 555" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="frontend-app" data-edge-to="relayers-meta-tx" data-edge-label="solicitud gasless" data-edge-key="3" data-composition-points="1160,344;1160,365;440,365;440,480" d="M 1160 344 L 1160 357 Q 1160 365 1152 365 L 448 365 Q 440 365 440 373 L 440 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="server-wallets" data-edge-to="relayers-meta-tx" data-edge-label="firmas KMS" data-edge-key="4" data-composition-points="440,344;440,480" d="M 440 344 L 440 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="relayers-meta-tx" data-edge-to="smart-contracts" data-edge-label="ejecución gasless" data-edge-key="5" data-composition-points="550,512;574,512;574,656;914,656;914,680" d="M 550 512 L 566 512 Q 574 512 574 520 L 574 648 Q 574 656 582 656 L 906 656 Q 914 656 914 664 L 914 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="protocolos-defi" data-edge-to="smart-contracts" data-edge-label="lending &amp; pools" data-edge-key="6" data-composition-points="680,544;680,612;928,612;928,680" d="M 680 544 L 680 604 Q 680 612 688 612 L 920 612 Q 928 612 928 620 L 928 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="gobernanza-daos" data-edge-to="billetera-safe" data-edge-label="ejecución" data-edge-key="7" data-composition-points="920,512;950,512" d="M 920 512 L 950 512" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="8" data-composition-points="850,544;850,612;942,612;942,680" d="M 850 544 L 850 604 Q 850 612 858 612 L 934 612 Q 942 612 942 620 L 942 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="relayers-meta-tx" data-edge-to="smart-contracts" data-edge-label="ejecución gasless" data-edge-key="5" data-composition-points="550,512;574,512;574,656;935,656;935,680" d="M 550 512 L 566 512 Q 574 512 574 520 L 574 648 Q 574 656 582 656 L 927 656 Q 935 656 935 664 L 935 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="protocolos-defi" data-edge-to="smart-contracts" data-edge-label="lending &amp; pools" data-edge-key="6" data-composition-points="710,619;710,649.5;928,649.5;928,680" d="M 710 619 L 710 641.5 Q 710 649.5 718 649.5 L 920 649.5 Q 928 649.5 928 657.5 L 928 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="gobernanza-daos" data-edge-to="billetera-safe" data-edge-label="ejecución" data-edge-key="7" data-composition-points="935,555;935,494" d="M 935 555 L 935 494" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="8" data-composition-points="942,619;942,680" d="M 942 619 L 942 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="9" data-composition-points="550,712;610,712" d="M 550 712 L 610 712" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="indexadores" data-edge-to="evm" data-edge-label="eventos on-chain" data-edge-key="10" data-composition-points="550,892;610,892" d="M 550 892 L 610 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="almacenamiento-descent" data-edge-to="depin" data-edge-label="almacenamiento Web3" data-edge-key="11" data-composition-points="440,1144;440,1168;1187.5,1168;1187.5,1144" d="M 440 1144 L 440 1160 Q 440 1168 448 1168 L 1179.5 1168 Q 1187.5 1168 1187.5 1160 L 1187.5 1144" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
@@ -5057,9 +5057,9 @@
         <path data-edge-from="puentes-crosschain" data-edge-to="red-l1" data-edge-label="bloquear / acuñar" data-edge-key="13" data-composition-points="850.5,1080;850.5,1002;1105,1002;1105,924" d="M 850.5 1080 L 850.5 1010 Q 850.5 1002 858.5 1002 L 1097 1002 Q 1105 1002 1105 994 L 1105 924" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="evm" data-edge-to="red-l1" data-edge-label="estado global" data-edge-key="14" data-composition-points="920,892;950,892" d="M 920 892 L 950 892" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         <path data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="15" data-composition-points="1460,544;1460,680" d="M 1460 544 L 1460 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="frontend-app" data-edge-to="backend-dapp" data-edge-label="peticiones API" data-edge-key="16" data-composition-points="1160,344;1160,412;1190,412;1190,480" d="M 1160 344 L 1160 404 Q 1160 412 1168 412 L 1182 412 Q 1190 412 1190 420 L 1190 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="server-wallets" data-edge-label="solicita firma" data-edge-key="17" data-composition-points="1190,480;1190,430;440,430;440,344" d="M 1190 480 L 1190 438 Q 1190 430 1182 430 L 448 430 Q 440 430 440 422 L 440 344" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="backend-dapp" data-edge-to="smart-contracts" data-edge-label="lectura / escritura" data-edge-key="18" data-composition-points="1190,544;1190,612;956,612;956,680" d="M 1190 544 L 1190 604 Q 1190 612 1182 612 L 964 612 Q 956 612 956 620 L 956 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="frontend-app" data-edge-to="backend-dapp" data-edge-label="peticiones API" data-edge-key="16" data-composition-points="1160,344;1160,430" d="M 1160 344 L 1160 430" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="server-wallets" data-edge-label="solicita firma" data-edge-key="17" data-composition-points="1160,430;1160,385;440,385;440,344" d="M 1160 430 L 1160 393 Q 1160 385 1152 385 L 448 385 Q 440 385 440 377 L 440 344" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="backend-dapp" data-edge-to="smart-contracts" data-edge-label="lectura / escritura" data-edge-key="18" data-composition-points="1160,494;1160,656;935,656;935,680" d="M 1160 494 L 1160 648 Q 1160 656 1152 656 L 943 656 Q 935 656 935 664 L 935 680" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 
         <!-- Components -->
         <g id="node-usuarios" data-node-id="usuarios" data-node-label="Usuarios y Clientes" tabindex="0" role="button" aria-label="Focus Usuarios y Clientes, Navegador Web / Mobile dApp, 5. Capa de Acceso, Usuario e Interfaz (Off-Chain)" aria-pressed="false" data-node-kind="external" data-node-sublabel="Navegador Web / Mobile dApp" data-node-context="5. Capa de Acceso, Usuario e Interfaz (Off-Chain)">
@@ -5117,39 +5117,39 @@
 
         <g id="node-protocolos-defi" data-node-id="protocolos-defi" data-node-label="Protocols" tabindex="0" role="button" aria-label="Focus Protocols, Uniswap, Aave &amp; Curve, 2. Capa de Protocolo y Lógica" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Uniswap, Aave &amp; Curve" data-node-tag="DeFi &amp; Web3" data-node-context="2. Capa de Protocolo y Lógica">
           <title>Protocols · Uniswap, Aave &amp; Curve · 2. Capa de Protocolo y Lógica · DeFi &amp; Web3</title>
-          <rect x="610" y="480" width="140" height="64" rx="6" class="c-mask"/>
-          <rect x="610" y="480" width="140" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(616 486) scale(0.6875)">
+          <rect x="610" y="555" width="200" height="64" rx="6" class="c-mask"/>
+          <rect x="610" y="555" width="200" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(616 561) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="680" y="510" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Protocols</text>
-        <text data-detail="context" x="680" y="526" class="t-muted" font-size="9" text-anchor="middle">Uniswap, Aave &amp; Curve</text>
-        <text data-detail="fine" x="680" y="536" class="t-backend" font-size="7" text-anchor="middle">DeFi &amp; Web3</text>
+          <text data-node-label="" data-detail-anchor="" x="710" y="585" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Protocols</text>
+        <text data-detail="context" x="710" y="601" class="t-muted" font-size="9" text-anchor="middle">Uniswap, Aave &amp; Curve</text>
+        <text data-detail="fine" x="710" y="611" class="t-backend" font-size="7" text-anchor="middle">DeFi &amp; Web3</text>
         </g>
 
         <g id="node-gobernanza-daos" data-node-id="gobernanza-daos" data-node-label="Gobernanza &amp; DAOs" tabindex="0" role="button" aria-label="Focus Gobernanza &amp; DAOs, Aragon, Snapshot &amp; Tally, 2. Capa de Protocolo y Lógica" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Aragon, Snapshot &amp; Tally" data-node-tag="Coordinación" data-node-context="2. Capa de Protocolo y Lógica">
           <title>Gobernanza &amp; DAOs · Aragon, Snapshot &amp; Tally · 2. Capa de Protocolo y Lógica · Coordinación</title>
-          <rect x="780" y="480" width="140" height="64" rx="6" class="c-mask"/>
-          <rect x="780" y="480" width="140" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(786 486) scale(0.6875)">
+          <rect x="835" y="555" width="200" height="64" rx="6" class="c-mask"/>
+          <rect x="835" y="555" width="200" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(841 561) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="850" y="510" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Gobernanza &amp; DAOs</text>
-        <text data-detail="context" x="850" y="526" class="t-muted" font-size="9" text-anchor="middle">Aragon, Snapshot &amp; Tally</text>
-        <text data-detail="fine" x="850" y="536" class="t-backend" font-size="7" text-anchor="middle">Coordinación</text>
+          <text data-node-label="" data-detail-anchor="" x="935" y="585" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Gobernanza &amp; DAOs</text>
+        <text data-detail="context" x="935" y="601" class="t-muted" font-size="9" text-anchor="middle">Aragon, Snapshot &amp; Tally</text>
+        <text data-detail="fine" x="935" y="611" class="t-backend" font-size="7" text-anchor="middle">Coordinación</text>
         </g>
 
         <g id="node-billetera-safe" data-node-id="billetera-safe" data-node-label="Multi-Signature" tabindex="0" role="button" aria-label="Focus Multi-Signature, Safe / Multifirma, 2. Capa de Protocolo y Lógica" aria-pressed="false" data-node-kind="security" data-node-sublabel="Safe / Multifirma" data-node-tag="Wallets" data-node-context="2. Capa de Protocolo y Lógica">
           <title>Multi-Signature · Safe / Multifirma · 2. Capa de Protocolo y Lógica · Wallets</title>
-          <rect x="950" y="480" width="140" height="64" rx="6" class="c-mask"/>
-          <rect x="950" y="480" width="140" height="64" rx="6" class="c-security" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(956 486) scale(0.6875)">
+          <rect x="835" y="430" width="200" height="64" rx="6" class="c-mask"/>
+          <rect x="835" y="430" width="200" height="64" rx="6" class="c-security" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(841 436) scale(0.6875)">
             <path d="M8 2.2 13 4v3.5c0 3.1-1.8 5.4-5 6.5-3.2-1.1-5-3.4-5-6.5V4Z"/>
             <path d="m5.8 8 1.5 1.5 3-3"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="1020" y="510" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Multi-Signature</text>
-        <text data-detail="context" x="1020" y="526" class="t-muted" font-size="9" text-anchor="middle">Safe / Multifirma</text>
-        <text data-detail="fine" x="1020" y="536" class="t-security" font-size="7" text-anchor="middle">Wallets</text>
+          <text data-node-label="" data-detail-anchor="" x="935" y="460" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Multi-Signature</text>
+        <text data-detail="context" x="935" y="476" class="t-muted" font-size="9" text-anchor="middle">Safe / Multifirma</text>
+        <text data-detail="fine" x="935" y="486" class="t-security" font-size="7" text-anchor="middle">Wallets</text>
         </g>
 
         <g id="node-relayers-meta-tx" data-node-id="relayers-meta-tx" data-node-label="Relayers &amp; Meta-Tx" tabindex="0" role="button" aria-label="Focus Relayers &amp; Meta-Tx, Transacciones Gasless, 3. Capa de Datos y Servicios Aux. (On/Off-Chain)" aria-pressed="false" data-node-kind="messagebus" data-node-sublabel="Transacciones Gasless" data-node-tag="ERC-4337" data-node-context="3. Capa de Datos y Servicios Aux. (On/Off-Chain)">
@@ -5363,14 +5363,14 @@
 
         <g id="node-backend-dapp" data-node-id="backend-dapp" data-node-label="Backend dApp" tabindex="0" role="button" aria-label="Focus Backend dApp, API REST, GraphQL, 2. Capa de Protocolo y Lógica" aria-pressed="false" data-node-kind="backend" data-node-sublabel="API REST, GraphQL" data-node-tag="Off-Chain" data-node-context="2. Capa de Protocolo y Lógica">
           <title>Backend dApp · API REST, GraphQL · 2. Capa de Protocolo y Lógica · Off-Chain</title>
-          <rect x="1120" y="480" width="140" height="64" rx="6" class="c-mask"/>
-          <rect x="1120" y="480" width="140" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(1126 486) scale(0.6875)">
+          <rect x="1060" y="430" width="200" height="64" rx="6" class="c-mask"/>
+          <rect x="1060" y="430" width="200" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(1066 436) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="1190" y="510" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Backend dApp</text>
-        <text data-detail="context" x="1190" y="526" class="t-muted" font-size="9" text-anchor="middle">API REST, GraphQL</text>
-        <text data-detail="fine" x="1190" y="536" class="t-backend" font-size="7" text-anchor="middle">Off-Chain</text>
+          <text data-node-label="" data-detail-anchor="" x="1160" y="460" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Backend dApp</text>
+        <text data-detail="context" x="1160" y="476" class="t-muted" font-size="9" text-anchor="middle">API REST, GraphQL</text>
+        <text data-detail="fine" x="1160" y="486" class="t-backend" font-size="7" text-anchor="middle">Off-Chain</text>
         </g>
 
         <!-- Connection labels -->
@@ -5383,32 +5383,32 @@
           <text x="1047.5" y="358" class="t-muted" font-size="8" text-anchor="middle">inyecta proveedor</text>
         </g>
         <g data-detail="context" data-edge-from="frontend-app" data-edge-to="gobernanza-daos" data-edge-label="interfaz dApp" data-edge-key="2">
-          <rect x="863.8" y="390" width="72.4" height="14" rx="3" class="c-mask"/>
-          <text x="900" y="400" class="t-muted" font-size="8" text-anchor="middle">interfaz dApp</text>
+          <rect x="803.8" y="500" width="72.4" height="14" rx="3" class="c-mask"/>
+          <text x="840" y="510" class="t-muted" font-size="8" text-anchor="middle">interfaz dApp</text>
         </g>
         <g data-detail="context" data-edge-from="frontend-app" data-edge-to="relayers-meta-tx" data-edge-label="solicitud gasless" data-edge-key="3">
-          <rect x="604.2" y="350" width="91.6" height="14" rx="3" class="c-mask"/>
-          <text x="650" y="360" class="t-muted" font-size="8" text-anchor="middle">solicitud gasless</text>
+          <rect x="604.2" y="345" width="91.6" height="14" rx="3" class="c-mask"/>
+          <text x="650" y="355" class="t-muted" font-size="8" text-anchor="middle">solicitud gasless</text>
         </g>
         <g data-detail="context" data-edge-from="server-wallets" data-edge-to="relayers-meta-tx" data-edge-label="firmas KMS" data-edge-key="4">
           <rect x="411" y="348" width="58" height="14" rx="3" class="c-mask"/>
           <text x="440" y="358" class="t-muted" font-size="8" text-anchor="middle">firmas KMS</text>
         </g>
         <g data-detail="context" data-edge-from="relayers-meta-tx" data-edge-to="smart-contracts" data-edge-label="ejecución gasless" data-edge-key="5">
-          <rect x="528.2" y="588" width="91.6" height="14" rx="3" class="c-mask"/>
-          <text x="574" y="598" class="t-muted" font-size="8" text-anchor="middle">ejecución gasless</text>
+          <rect x="514.2" y="625" width="91.6" height="14" rx="3" class="c-mask"/>
+          <text x="560" y="635" class="t-muted" font-size="8" text-anchor="middle">ejecución gasless</text>
         </g>
         <g data-detail="context" data-edge-from="protocolos-defi" data-edge-to="smart-contracts" data-edge-label="lending &amp; pools" data-edge-key="6">
-          <rect x="763" y="616" width="82" height="14" rx="3" class="c-mask"/>
-          <text x="804" y="626" class="t-muted" font-size="8" text-anchor="middle">lending &amp; pools</text>
+          <rect x="778" y="653.5" width="82" height="14" rx="3" class="c-mask"/>
+          <text x="819" y="663.5" class="t-muted" font-size="8" text-anchor="middle">lending &amp; pools</text>
         </g>
         <g data-detail="context" data-edge-from="gobernanza-daos" data-edge-to="billetera-safe" data-edge-label="ejecución" data-edge-key="7">
-          <rect x="908.4" y="455" width="53.199999999999996" height="14" rx="3" class="c-mask"/>
-          <text x="935" y="465" class="t-muted" font-size="8" text-anchor="middle">ejecución</text>
+          <rect x="938.4" y="515" width="53.199999999999996" height="14" rx="3" class="c-mask"/>
+          <text x="965" y="525" class="t-muted" font-size="8" text-anchor="middle">ejecución</text>
         </g>
         <g data-detail="context" data-edge-from="gobernanza-daos" data-edge-to="smart-contracts" data-edge-label="admin check" data-edge-key="8">
-          <rect x="864.6" y="616" width="62.8" height="14" rx="3" class="c-mask"/>
-          <text x="896" y="626" class="t-muted" font-size="8" text-anchor="middle">admin check</text>
+          <rect x="910.6" y="623" width="62.8" height="14" rx="3" class="c-mask"/>
+          <text x="942" y="633" class="t-muted" font-size="8" text-anchor="middle">admin check</text>
         </g>
         <g data-detail="context" data-edge-from="oraculos" data-edge-to="smart-contracts" data-edge-label="price feeds" data-edge-key="9">
           <rect x="548.6" y="748" width="62.8" height="14" rx="3" class="c-mask"/>
@@ -5439,16 +5439,16 @@
           <text x="1460" y="558" class="t-muted" font-size="8" text-anchor="middle">fuzz testing</text>
         </g>
         <g data-detail="context" data-edge-from="frontend-app" data-edge-to="backend-dapp" data-edge-label="peticiones API" data-edge-key="16">
-          <rect x="1111.4" y="370" width="77.2" height="14" rx="3" class="c-mask"/>
-          <text x="1150" y="380" class="t-muted" font-size="8" text-anchor="middle">peticiones API</text>
+          <rect x="1121.4" y="385" width="77.2" height="14" rx="3" class="c-mask"/>
+          <text x="1160" y="395" class="t-muted" font-size="8" text-anchor="middle">peticiones API</text>
         </g>
         <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="server-wallets" data-edge-label="solicita firma" data-edge-key="17">
-          <rect x="711.4" y="410" width="77.2" height="14" rx="3" class="c-mask"/>
-          <text x="750" y="420" class="t-muted" font-size="8" text-anchor="middle">solicita firma</text>
+          <rect x="541.4" y="365" width="77.2" height="14" rx="3" class="c-mask"/>
+          <text x="580" y="375" class="t-muted" font-size="8" text-anchor="middle">solicita firma</text>
         </g>
         <g data-detail="context" data-edge-from="backend-dapp" data-edge-to="smart-contracts" data-edge-label="lectura / escritura" data-edge-key="18">
-          <rect x="1022.4" y="616" width="101.2" height="14" rx="3" class="c-mask"/>
-          <text x="1073" y="626" class="t-muted" font-size="8" text-anchor="middle">lectura / escritura</text>
+          <rect x="1109.4" y="600" width="101.2" height="14" rx="3" class="c-mask"/>
+          <text x="1160" y="610" class="t-muted" font-size="8" text-anchor="middle">lectura / escritura</text>
         </g>
 
         <!-- Boundary labels (foreground masks keep routes out of titles) -->
@@ -5463,8 +5463,8 @@
         </g>
 
         <g data-graph-role="structural-frame-label" data-composition-frame-id="2" data-composition-frame-kind="region" data-composition-frame-label="2. Capa de Protocolo y Lógica">
-          <rect data-graph-role="structural-frame-label-mask" x="584" y="458" width="194.10324320645162" height="18" rx="3" class="c-mask"/>
-          <text data-boundary-label="" x="588" y="472.5806461612903" class="t-cloud" font-size="10.580646161290323" font-weight="600">2. Capa de Protocolo y Lógica</text>
+          <rect data-graph-role="structural-frame-label-mask" x="584" y="408" width="194.10324320645162" height="18" rx="3" class="c-mask"/>
+          <text data-boundary-label="" x="588" y="422.5806461612903" class="t-cloud" font-size="10.580646161290323" font-weight="600">2. Capa de Protocolo y Lógica</text>
         </g>
 
         <g data-graph-role="structural-frame-label" data-composition-frame-id="3" data-composition-frame-kind="region" data-composition-frame-label="1. Capa de Infraestructura y Red (On-Chain)">
