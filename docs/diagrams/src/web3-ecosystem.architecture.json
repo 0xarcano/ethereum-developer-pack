@@ -2,7 +2,7 @@
   "schema_version": 1,
   "diagram_type": "architecture",
   "meta": {
-    "title": "Ecosistema Web3: Arquitectura en Capas — Ethereum Developer Pack (CEDIA)",
+    "title": "Ecosistema Web3: Arquitectura en Capas \u2014 Ethereum Developer Pack (CEDIA)",
     "quality_profile": "showcase",
     "viewBox": [
       1340,
@@ -87,9 +87,9 @@
     {
       "id": "gobernanza-daos",
       "type": "backend",
-      "label": "Gobernanza & Coordinación",
+      "label": "Gobernanza & Coordinaci\u00f3n",
       "sublabel": "DAOs, Aragon, Snapshot & Tally",
-      "tag": "Coordinación",
+      "tag": "Coordinaci\u00f3n",
       "pos": [
         535,
         280
@@ -134,7 +134,7 @@
       "type": "backend",
       "label": "Smart Contracts",
       "sublabel": "Solidity OOP, Tokens ERC-20/721 & Guards",
-      "tag": "Lógica On-Chain",
+      "tag": "L\u00f3gica On-Chain",
       "pos": [
         310,
         480
@@ -177,7 +177,7 @@
     {
       "id": "oraculos",
       "type": "cloud",
-      "label": "Oráculos Descentralizados",
+      "label": "Or\u00e1culos Descentralizados",
       "sublabel": "Chainlink Data Feeds",
       "tag": "Datos Off-chain",
       "pos": [
@@ -269,7 +269,7 @@
       "type": "cloud",
       "label": "Redes DePIN",
       "sublabel": "Hardware Distribuido",
-      "tag": "Cómputo Hardware",
+      "tag": "C\u00f3mputo Hardware",
       "pos": [
         815,
         880
@@ -327,7 +327,7 @@
     {
       "id": "cliente-web3",
       "type": "frontend",
-      "label": "Cliente Web3 & Librerías",
+      "label": "Cliente Web3 & Librer\u00edas",
       "sublabel": "Viem & Ethers.js",
       "tag": "RPC Provider",
       "pos": [
@@ -344,7 +344,7 @@
       "type": "external",
       "label": "Exploradores & Deploy",
       "sublabel": "Etherscan & Remix QuickApp",
-      "tag": "Inspección Tx",
+      "tag": "Inspecci\u00f3n Tx",
       "pos": [
         1030,
         880
@@ -358,7 +358,7 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "1. Capa de Interfaz, Identidad y Clientes",
+      "label": "4. Capa de Acceso, Usuario e Interfaz (Off-Chain)",
       "wraps": [
         "usuarios",
         "billeteras",
@@ -367,16 +367,7 @@
     },
     {
       "kind": "region",
-      "label": "2. Capa Aplicación",
-      "wraps": [
-        "protocolos-defi",
-        "gobernanza-daos",
-        "billetera-safe"
-      ]
-    },
-    {
-      "kind": "region",
-      "label": "4. Capa de Servicios Auxiliares y Middleware",
+      "label": "3. Capa de Datos y Servicios Aux. (On/Off-Chain)",
       "wraps": [
         "server-wallets",
         "relayers-meta-tx",
@@ -387,17 +378,20 @@
     },
     {
       "kind": "region",
-      "label": "6. Capa Base de Red y Ejecución",
+      "label": "2. Capa de Protocolo y L\u00f3gica (On-Chain)",
       "wraps": [
         "smart-contracts",
-        "evm",
-        "red-l1"
+        "protocolos-defi",
+        "gobernanza-daos",
+        "billetera-safe"
       ]
     },
     {
       "kind": "region",
-      "label": "5. Capa de Escalabilidad, Interoperabilidad y Cómputo",
+      "label": "1. Capa de Infraestructura y Red (On-Chain)",
       "wraps": [
+        "evm",
+        "red-l1",
         "capa-l2",
         "puentes-crosschain",
         "coprocesadores",
@@ -460,7 +454,7 @@
     {
       "from": "relayers-meta-tx",
       "to": "smart-contracts",
-      "label": "ejecución gasless",
+      "label": "ejecuci\u00f3n gasless",
       "fromSide": "right",
       "toSide": "top",
       "labelDy": 24
@@ -476,7 +470,7 @@
     {
       "from": "gobernanza-daos",
       "to": "billetera-safe",
-      "label": "ejecución",
+      "label": "ejecuci\u00f3n",
       "fromSide": "right",
       "toSide": "left",
       "labelDy": 56
@@ -524,7 +518,7 @@
     {
       "from": "puentes-crosschain",
       "to": "red-l1",
-      "label": "bloquear / acuñar",
+      "label": "bloquear / acu\u00f1ar",
       "fromSide": "top",
       "toSide": "bottom",
       "labelDy": -24
@@ -551,17 +545,17 @@
       "dot": "cyan",
       "title": "Interfaz & Identidad",
       "items": [
-        "Clientes interactúan vía Web3/Mobile",
+        "Clientes interact\u00faan v\u00eda Web3/Mobile",
         "Billeteras EOA gestionan llaves y firmas del usuario",
-        "React y Wagmi proporcionan hooks de conexión"
+        "React y Wagmi proporcionan hooks de conexi\u00f3n"
       ]
     },
     {
       "dot": "violet",
-      "title": "Capa Aplicación",
+      "title": "Capa Aplicaci\u00f3n",
       "items": [
         "Protocolos DeFi, AMMs, Lending, Predicciones & RWAs",
-        "Gobernanza descentralizada, DAOs y coordinación on/off-chain",
+        "Gobernanza descentralizada, DAOs y coordinaci\u00f3n on/off-chain",
         "Custodia multifirma y control de acceso con Safe"
       ]
     },
@@ -579,7 +573,7 @@
       "dot": "rose",
       "title": "Red Base & Escalabilidad",
       "items": [
-        "Smart Contracts con estándares ERC-20, ERC-721 y Guards",
+        "Smart Contracts con est\u00e1ndares ERC-20, ERC-721 y Guards",
         "EVM ejecuta bytecode sobre el consenso PoS de Ethereum",
         "L2 Rollups reducen costo de gas con alta velocidad",
         "Puentes Cross-Chain y Co-procesadores ZK"

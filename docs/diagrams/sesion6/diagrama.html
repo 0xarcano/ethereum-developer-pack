@@ -5846,17 +5846,15 @@
         <rect width="100%" height="100%" fill="url(#grid)" />
 
         <!-- Boundaries (behind everything) -->
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="0" data-composition-frame-label="1. Capa de Interfaz, Identidad y Clientes" x="280" y="50" width="710" height="114" rx="12" class="c-region" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="0" data-composition-frame-label="4. Capa de Acceso, Usuario e Interfaz (Off-Chain)" x="280" y="50" width="710" height="114" rx="12" class="c-region" stroke-width="1"/>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="1" data-composition-frame-label="2. Capa Aplicación" x="280" y="250" width="710" height="114" rx="12" class="c-region" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="1" data-composition-frame-label="3. Capa de Datos y Servicios Aux. (On/Off-Chain)" x="0" y="50" width="280" height="914" rx="12" class="c-region" stroke-width="1"/>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="2" data-composition-frame-label="4. Capa de Servicios Auxiliares y Middleware" x="0" y="50" width="280" height="914" rx="12" class="c-region" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="2" data-composition-frame-label="2. Capa de Protocolo y Lógica (On-Chain)" x="280" y="250" width="710" height="314" rx="12" class="c-region" stroke-width="1"/>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="3" data-composition-frame-label="6. Capa Base de Red y Ejecución" x="280" y="450" width="710" height="294" rx="12" class="c-region" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="3" data-composition-frame-label="1. Capa de Infraestructura y Red (On-Chain)" x="280" y="630" width="710" height="334" rx="12" class="c-region" stroke-width="1"/>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="region" data-composition-frame-id="4" data-composition-frame-label="5. Capa de Escalabilidad, Interoperabilidad y Cómputo" x="280" y="850" width="710" height="114" rx="12" class="c-region" stroke-width="1"/>
-
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="security-group" data-composition-frame-id="5" data-composition-frame-label="Herramientas de Desarrollo, Testing e IA" x="1000" y="50" width="320" height="914" rx="8" class="c-security-group" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="security-group" data-composition-frame-id="4" data-composition-frame-label="Herramientas de Desarrollo, Testing e IA" x="1000" y="50" width="320" height="914" rx="8" class="c-security-group" stroke-width="1"/>
 
         <!-- Connection paths (before components for correct z-order) -->
         <path data-edge-from="usuarios" data-edge-to="billeteras" data-edge-label="conectar" data-edge-key="0" data-composition-points="510,112;535,112" d="M 510 112 L 535 112" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
@@ -5877,8 +5875,8 @@
         <path data-edge-from="frameworks-dev" data-edge-to="suite-testing" data-edge-label="fuzz testing" data-edge-key="15" data-composition-points="1160,344;1160,480" d="M 1160 344 L 1160 480" class="a-default" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 
         <!-- Components -->
-        <g id="node-usuarios" data-node-id="usuarios" data-node-label="Usuarios y Clientes" tabindex="0" role="button" aria-label="Focus Usuarios y Clientes, Navegador Web / Mobile dApp, 1. Capa de Interfaz, Identidad y Clientes" aria-pressed="false" data-node-kind="external" data-node-sublabel="Navegador Web / Mobile dApp" data-node-context="1. Capa de Interfaz, Identidad y Clientes">
-          <title>Usuarios y Clientes · Navegador Web / Mobile dApp · 1. Capa de Interfaz, Identidad y Clientes</title>
+        <g id="node-usuarios" data-node-id="usuarios" data-node-label="Usuarios y Clientes" tabindex="0" role="button" aria-label="Focus Usuarios y Clientes, Navegador Web / Mobile dApp, 4. Capa de Acceso, Usuario e Interfaz (Off-Chain)" aria-pressed="false" data-node-kind="external" data-node-sublabel="Navegador Web / Mobile dApp" data-node-context="4. Capa de Acceso, Usuario e Interfaz (Off-Chain)">
+          <title>Usuarios y Clientes · Navegador Web / Mobile dApp · 4. Capa de Acceso, Usuario e Interfaz (Off-Chain)</title>
           <rect x="310" y="80" width="200" height="64" rx="6" class="c-mask"/>
           <rect x="310" y="80" width="200" height="64" rx="6" class="c-external" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="external" class="semantic-sigil s-external" transform="translate(316 86) scale(0.6875)">
@@ -5889,8 +5887,8 @@
         <text data-detail="context" x="410" y="126" class="t-muted" font-size="9" text-anchor="middle">Navegador Web / Mobile dApp</text>
         </g>
 
-        <g id="node-billeteras" data-node-id="billeteras" data-node-label="Billeteras (EOA)" tabindex="0" role="button" aria-label="Focus Billeteras (EOA), MetaMask / Rabby (Identidad), 1. Capa de Interfaz, Identidad y Clientes" aria-pressed="false" data-node-kind="security" data-node-sublabel="MetaMask / Rabby (Identidad)" data-node-tag="Firma Digital" data-node-context="1. Capa de Interfaz, Identidad y Clientes">
-          <title>Billeteras (EOA) · MetaMask / Rabby (Identidad) · 1. Capa de Interfaz, Identidad y Clientes · Firma Digital</title>
+        <g id="node-billeteras" data-node-id="billeteras" data-node-label="Billeteras (EOA)" tabindex="0" role="button" aria-label="Focus Billeteras (EOA), MetaMask / Rabby (Identidad), 4. Capa de Acceso, Usuario e Interfaz (Off-Chain)" aria-pressed="false" data-node-kind="security" data-node-sublabel="MetaMask / Rabby (Identidad)" data-node-tag="Firma Digital" data-node-context="4. Capa de Acceso, Usuario e Interfaz (Off-Chain)">
+          <title>Billeteras (EOA) · MetaMask / Rabby (Identidad) · 4. Capa de Acceso, Usuario e Interfaz (Off-Chain) · Firma Digital</title>
           <rect x="535" y="80" width="200" height="64" rx="6" class="c-mask"/>
           <rect x="535" y="80" width="200" height="64" rx="6" class="c-security" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(541 86) scale(0.6875)">
@@ -5902,8 +5900,8 @@
         <text data-detail="fine" x="635" y="136" class="t-security" font-size="7" text-anchor="middle">Firma Digital</text>
         </g>
 
-        <g id="node-frontend-app" data-node-id="frontend-app" data-node-label="Frontend dApp" tabindex="0" role="button" aria-label="Focus Frontend dApp, React + Wagmi Hooks, 1. Capa de Interfaz, Identidad y Clientes" aria-pressed="false" data-node-kind="frontend" data-node-sublabel="React + Wagmi Hooks" data-node-tag="UI / Web3" data-node-context="1. Capa de Interfaz, Identidad y Clientes">
-          <title>Frontend dApp · React + Wagmi Hooks · 1. Capa de Interfaz, Identidad y Clientes · UI / Web3</title>
+        <g id="node-frontend-app" data-node-id="frontend-app" data-node-label="Frontend dApp" tabindex="0" role="button" aria-label="Focus Frontend dApp, React + Wagmi Hooks, 4. Capa de Acceso, Usuario e Interfaz (Off-Chain)" aria-pressed="false" data-node-kind="frontend" data-node-sublabel="React + Wagmi Hooks" data-node-tag="UI / Web3" data-node-context="4. Capa de Acceso, Usuario e Interfaz (Off-Chain)">
+          <title>Frontend dApp · React + Wagmi Hooks · 4. Capa de Acceso, Usuario e Interfaz (Off-Chain) · UI / Web3</title>
           <rect x="760" y="80" width="200" height="64" rx="6" class="c-mask"/>
           <rect x="760" y="80" width="200" height="64" rx="6" class="c-frontend" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="frontend" class="semantic-sigil s-frontend" transform="translate(766 86) scale(0.6875)">
@@ -5917,8 +5915,8 @@
         <text data-detail="fine" x="860" y="136" class="t-frontend" font-size="7" text-anchor="middle">UI / Web3</text>
         </g>
 
-        <g id="node-server-wallets" data-node-id="server-wallets" data-node-label="Server Wallets" tabindex="0" role="button" aria-label="Focus Server Wallets, AWS KMS / Google KMS / MPC, 4. Capa de Servicios Auxiliares y Middleware" aria-pressed="false" data-node-kind="security" data-node-sublabel="AWS KMS / Google KMS / MPC" data-node-tag="Custodia Cloud" data-node-context="4. Capa de Servicios Auxiliares y Middleware">
-          <title>Server Wallets · AWS KMS / Google KMS / MPC · 4. Capa de Servicios Auxiliares y Middleware · Custodia Cloud</title>
+        <g id="node-server-wallets" data-node-id="server-wallets" data-node-label="Server Wallets" tabindex="0" role="button" aria-label="Focus Server Wallets, AWS KMS / Google KMS / MPC, 3. Capa de Datos y Servicios Aux. (On/Off-Chain)" aria-pressed="false" data-node-kind="security" data-node-sublabel="AWS KMS / Google KMS / MPC" data-node-tag="Custodia Cloud" data-node-context="3. Capa de Datos y Servicios Aux. (On/Off-Chain)">
+          <title>Server Wallets · AWS KMS / Google KMS / MPC · 3. Capa de Datos y Servicios Aux. (On/Off-Chain) · Custodia Cloud</title>
           <rect x="30" y="80" width="220" height="64" rx="6" class="c-mask"/>
           <rect x="30" y="80" width="220" height="64" rx="6" class="c-security" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(36 86) scale(0.6875)">
@@ -5930,8 +5928,8 @@
         <text data-detail="fine" x="140" y="136" class="t-security" font-size="7" text-anchor="middle">Custodia Cloud</text>
         </g>
 
-        <g id="node-protocolos-defi" data-node-id="protocolos-defi" data-node-label="Protocols" tabindex="0" role="button" aria-label="Focus Protocols, Uniswap, Aave, Curve &amp; Polymarket, 2. Capa Aplicación" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Uniswap, Aave, Curve &amp; Polymarket" data-node-tag="DeFi &amp; Web3" data-node-context="2. Capa Aplicación">
-          <title>Protocols · Uniswap, Aave, Curve &amp; Polymarket · 2. Capa Aplicación · DeFi &amp; Web3</title>
+        <g id="node-protocolos-defi" data-node-id="protocolos-defi" data-node-label="Protocols" tabindex="0" role="button" aria-label="Focus Protocols, Uniswap, Aave, Curve &amp; Polymarket, 2. Capa de Protocolo y Lógica (On-Chain)" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Uniswap, Aave, Curve &amp; Polymarket" data-node-tag="DeFi &amp; Web3" data-node-context="2. Capa de Protocolo y Lógica (On-Chain)">
+          <title>Protocols · Uniswap, Aave, Curve &amp; Polymarket · 2. Capa de Protocolo y Lógica (On-Chain) · DeFi &amp; Web3</title>
           <rect x="310" y="280" width="200" height="64" rx="6" class="c-mask"/>
           <rect x="310" y="280" width="200" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(316 286) scale(0.6875)">
@@ -5942,8 +5940,8 @@
         <text data-detail="fine" x="410" y="336" class="t-backend" font-size="7" text-anchor="middle">DeFi &amp; Web3</text>
         </g>
 
-        <g id="node-gobernanza-daos" data-node-id="gobernanza-daos" data-node-label="Gobernanza &amp; Coordinación" tabindex="0" role="button" aria-label="Focus Gobernanza &amp; Coordinación, DAOs, Aragon, Snapshot &amp; Tally, 2. Capa Aplicación" aria-pressed="false" data-node-kind="backend" data-node-sublabel="DAOs, Aragon, Snapshot &amp; Tally" data-node-tag="Coordinación" data-node-context="2. Capa Aplicación">
-          <title>Gobernanza &amp; Coordinación · DAOs, Aragon, Snapshot &amp; Tally · 2. Capa Aplicación · Coordinación</title>
+        <g id="node-gobernanza-daos" data-node-id="gobernanza-daos" data-node-label="Gobernanza &amp; Coordinación" tabindex="0" role="button" aria-label="Focus Gobernanza &amp; Coordinación, DAOs, Aragon, Snapshot &amp; Tally, 2. Capa de Protocolo y Lógica (On-Chain)" aria-pressed="false" data-node-kind="backend" data-node-sublabel="DAOs, Aragon, Snapshot &amp; Tally" data-node-tag="Coordinación" data-node-context="2. Capa de Protocolo y Lógica (On-Chain)">
+          <title>Gobernanza &amp; Coordinación · DAOs, Aragon, Snapshot &amp; Tally · 2. Capa de Protocolo y Lógica (On-Chain) · Coordinación</title>
           <rect x="535" y="280" width="200" height="64" rx="6" class="c-mask"/>
           <rect x="535" y="280" width="200" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(541 286) scale(0.6875)">
@@ -5954,8 +5952,8 @@
         <text data-detail="fine" x="635" y="336" class="t-backend" font-size="7" text-anchor="middle">Coordinación</text>
         </g>
 
-        <g id="node-billetera-safe" data-node-id="billetera-safe" data-node-label="Safe Multi-Signature" tabindex="0" role="button" aria-label="Focus Safe Multi-Signature, Gnosis Safe (Multifirma), 2. Capa Aplicación" aria-pressed="false" data-node-kind="security" data-node-sublabel="Gnosis Safe (Multifirma)" data-node-tag="Control Acceso" data-node-context="2. Capa Aplicación">
-          <title>Safe Multi-Signature · Gnosis Safe (Multifirma) · 2. Capa Aplicación · Control Acceso</title>
+        <g id="node-billetera-safe" data-node-id="billetera-safe" data-node-label="Safe Multi-Signature" tabindex="0" role="button" aria-label="Focus Safe Multi-Signature, Gnosis Safe (Multifirma), 2. Capa de Protocolo y Lógica (On-Chain)" aria-pressed="false" data-node-kind="security" data-node-sublabel="Gnosis Safe (Multifirma)" data-node-tag="Control Acceso" data-node-context="2. Capa de Protocolo y Lógica (On-Chain)">
+          <title>Safe Multi-Signature · Gnosis Safe (Multifirma) · 2. Capa de Protocolo y Lógica (On-Chain) · Control Acceso</title>
           <rect x="760" y="280" width="200" height="64" rx="6" class="c-mask"/>
           <rect x="760" y="280" width="200" height="64" rx="6" class="c-security" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(766 286) scale(0.6875)">
@@ -5967,8 +5965,8 @@
         <text data-detail="fine" x="860" y="336" class="t-security" font-size="7" text-anchor="middle">Control Acceso</text>
         </g>
 
-        <g id="node-relayers-meta-tx" data-node-id="relayers-meta-tx" data-node-label="Relayers &amp; Meta-Tx" tabindex="0" role="button" aria-label="Focus Relayers &amp; Meta-Tx, Transacciones Gasless, 4. Capa de Servicios Auxiliares y Middleware" aria-pressed="false" data-node-kind="messagebus" data-node-sublabel="Transacciones Gasless" data-node-tag="ERC-4337" data-node-context="4. Capa de Servicios Auxiliares y Middleware">
-          <title>Relayers &amp; Meta-Tx · Transacciones Gasless · 4. Capa de Servicios Auxiliares y Middleware · ERC-4337</title>
+        <g id="node-relayers-meta-tx" data-node-id="relayers-meta-tx" data-node-label="Relayers &amp; Meta-Tx" tabindex="0" role="button" aria-label="Focus Relayers &amp; Meta-Tx, Transacciones Gasless, 3. Capa de Datos y Servicios Aux. (On/Off-Chain)" aria-pressed="false" data-node-kind="messagebus" data-node-sublabel="Transacciones Gasless" data-node-tag="ERC-4337" data-node-context="3. Capa de Datos y Servicios Aux. (On/Off-Chain)">
+          <title>Relayers &amp; Meta-Tx · Transacciones Gasless · 3. Capa de Datos y Servicios Aux. (On/Off-Chain) · ERC-4337</title>
           <rect x="30" y="280" width="220" height="64" rx="6" class="c-mask"/>
           <rect x="30" y="280" width="220" height="64" rx="6" class="c-messagebus" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="messagebus" class="semantic-sigil s-messagebus" transform="translate(36 286) scale(0.6875)">
@@ -5982,8 +5980,8 @@
         <text data-detail="fine" x="140" y="336" class="t-messagebus" font-size="7" text-anchor="middle">ERC-4337</text>
         </g>
 
-        <g id="node-smart-contracts" data-node-id="smart-contracts" data-node-label="Smart Contracts" tabindex="0" role="button" aria-label="Focus Smart Contracts, Solidity OOP, Tokens ERC-20/721 &amp; Guards, 6. Capa Base de Red y Ejecución" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Solidity OOP, Tokens ERC-20/721 &amp; Guards" data-node-tag="Lógica On-Chain" data-node-context="6. Capa Base de Red y Ejecución">
-          <title>Smart Contracts · Solidity OOP, Tokens ERC-20/721 &amp; Guards · 6. Capa Base de Red y Ejecución · Lógica On-Chain</title>
+        <g id="node-smart-contracts" data-node-id="smart-contracts" data-node-label="Smart Contracts" tabindex="0" role="button" aria-label="Focus Smart Contracts, Solidity OOP, Tokens ERC-20/721 &amp; Guards, 2. Capa de Protocolo y Lógica (On-Chain)" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Solidity OOP, Tokens ERC-20/721 &amp; Guards" data-node-tag="Lógica On-Chain" data-node-context="2. Capa de Protocolo y Lógica (On-Chain)">
+          <title>Smart Contracts · Solidity OOP, Tokens ERC-20/721 &amp; Guards · 2. Capa de Protocolo y Lógica (On-Chain) · Lógica On-Chain</title>
           <rect x="310" y="480" width="650" height="64" rx="6" class="c-mask"/>
           <rect x="310" y="480" width="650" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(316 486) scale(0.6875)">
@@ -5994,8 +5992,8 @@
         <text data-detail="fine" x="635" y="536" class="t-backend" font-size="7" text-anchor="middle">Lógica On-Chain</text>
         </g>
 
-        <g id="node-evm" data-node-id="evm" data-node-label="Ethereum Virtual Machine" tabindex="0" role="button" aria-label="Focus Ethereum Virtual Machine, Bytecode, Opcodes &amp; Gas (Read vs Write), 6. Capa Base de Red y Ejecución" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Bytecode, Opcodes &amp; Gas (Read vs Write)" data-node-tag="Motor EVM" data-node-context="6. Capa Base de Red y Ejecución">
-          <title>Ethereum Virtual Machine · Bytecode, Opcodes &amp; Gas (Read vs Write) · 6. Capa Base de Red y Ejecución · Motor EVM</title>
+        <g id="node-evm" data-node-id="evm" data-node-label="Ethereum Virtual Machine" tabindex="0" role="button" aria-label="Focus Ethereum Virtual Machine, Bytecode, Opcodes &amp; Gas (Read vs Write), 1. Capa de Infraestructura y Red (On-Chain)" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Bytecode, Opcodes &amp; Gas (Read vs Write)" data-node-tag="Motor EVM" data-node-context="1. Capa de Infraestructura y Red (On-Chain)">
+          <title>Ethereum Virtual Machine · Bytecode, Opcodes &amp; Gas (Read vs Write) · 1. Capa de Infraestructura y Red (On-Chain) · Motor EVM</title>
           <rect x="310" y="660" width="310" height="64" rx="6" class="c-mask"/>
           <rect x="310" y="660" width="310" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(316 666) scale(0.6875)">
@@ -6006,8 +6004,8 @@
         <text data-detail="fine" x="465" y="716" class="t-backend" font-size="7" text-anchor="middle">Motor EVM</text>
         </g>
 
-        <g id="node-red-l1" data-node-id="red-l1" data-node-label="Red L1 &amp; Sepolia Testnet" tabindex="0" role="button" aria-label="Focus Red L1 &amp; Sepolia Testnet, Consenso PoS &amp; Estado Global Blockchain, 6. Capa Base de Red y Ejecución" aria-pressed="false" data-node-kind="database" data-node-sublabel="Consenso PoS &amp; Estado Global Blockchain" data-node-tag="Capa de Consenso" data-node-context="6. Capa Base de Red y Ejecución">
-          <title>Red L1 &amp; Sepolia Testnet · Consenso PoS &amp; Estado Global Blockchain · 6. Capa Base de Red y Ejecución · Capa de Consenso</title>
+        <g id="node-red-l1" data-node-id="red-l1" data-node-label="Red L1 &amp; Sepolia Testnet" tabindex="0" role="button" aria-label="Focus Red L1 &amp; Sepolia Testnet, Consenso PoS &amp; Estado Global Blockchain, 1. Capa de Infraestructura y Red (On-Chain)" aria-pressed="false" data-node-kind="database" data-node-sublabel="Consenso PoS &amp; Estado Global Blockchain" data-node-tag="Capa de Consenso" data-node-context="1. Capa de Infraestructura y Red (On-Chain)">
+          <title>Red L1 &amp; Sepolia Testnet · Consenso PoS &amp; Estado Global Blockchain · 1. Capa de Infraestructura y Red (On-Chain) · Capa de Consenso</title>
           <rect x="650" y="660" width="310" height="64" rx="6" class="c-mask"/>
           <rect x="650" y="660" width="310" height="64" rx="6" class="c-database" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(656 666) scale(0.6875)">
@@ -6019,8 +6017,8 @@
         <text data-detail="fine" x="805" y="716" class="t-database" font-size="7" text-anchor="middle">Capa de Consenso</text>
         </g>
 
-        <g id="node-oraculos" data-node-id="oraculos" data-node-label="Oráculos Descentralizados" tabindex="0" role="button" aria-label="Focus Oráculos Descentralizados, Chainlink Data Feeds, 4. Capa de Servicios Auxiliares y Middleware" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="Chainlink Data Feeds" data-node-tag="Datos Off-chain" data-node-context="4. Capa de Servicios Auxiliares y Middleware">
-          <title>Oráculos Descentralizados · Chainlink Data Feeds · 4. Capa de Servicios Auxiliares y Middleware · Datos Off-chain</title>
+        <g id="node-oraculos" data-node-id="oraculos" data-node-label="Oráculos Descentralizados" tabindex="0" role="button" aria-label="Focus Oráculos Descentralizados, Chainlink Data Feeds, 3. Capa de Datos y Servicios Aux. (On/Off-Chain)" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="Chainlink Data Feeds" data-node-tag="Datos Off-chain" data-node-context="3. Capa de Datos y Servicios Aux. (On/Off-Chain)">
+          <title>Oráculos Descentralizados · Chainlink Data Feeds · 3. Capa de Datos y Servicios Aux. (On/Off-Chain) · Datos Off-chain</title>
           <rect x="30" y="480" width="220" height="64" rx="6" class="c-mask"/>
           <rect x="30" y="480" width="220" height="64" rx="6" class="c-cloud" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="cloud" class="semantic-sigil s-cloud" transform="translate(36 486) scale(0.6875)">
@@ -6031,8 +6029,8 @@
         <text data-detail="fine" x="140" y="536" class="t-cloud" font-size="7" text-anchor="middle">Datos Off-chain</text>
         </g>
 
-        <g id="node-indexadores" data-node-id="indexadores" data-node-label="Indexadores de Datos" tabindex="0" role="button" aria-label="Focus Indexadores de Datos, The Graph / Envio (GraphQL), 4. Capa de Servicios Auxiliares y Middleware" aria-pressed="false" data-node-kind="database" data-node-sublabel="The Graph / Envio (GraphQL)" data-node-tag="Consultas" data-node-context="4. Capa de Servicios Auxiliares y Middleware">
-          <title>Indexadores de Datos · The Graph / Envio (GraphQL) · 4. Capa de Servicios Auxiliares y Middleware · Consultas</title>
+        <g id="node-indexadores" data-node-id="indexadores" data-node-label="Indexadores de Datos" tabindex="0" role="button" aria-label="Focus Indexadores de Datos, The Graph / Envio (GraphQL), 3. Capa de Datos y Servicios Aux. (On/Off-Chain)" aria-pressed="false" data-node-kind="database" data-node-sublabel="The Graph / Envio (GraphQL)" data-node-tag="Consultas" data-node-context="3. Capa de Datos y Servicios Aux. (On/Off-Chain)">
+          <title>Indexadores de Datos · The Graph / Envio (GraphQL) · 3. Capa de Datos y Servicios Aux. (On/Off-Chain) · Consultas</title>
           <rect x="30" y="660" width="220" height="64" rx="6" class="c-mask"/>
           <rect x="30" y="660" width="220" height="64" rx="6" class="c-database" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(36 666) scale(0.6875)">
@@ -6044,8 +6042,8 @@
         <text data-detail="fine" x="140" y="716" class="t-database" font-size="7" text-anchor="middle">Consultas</text>
         </g>
 
-        <g id="node-almacenamiento-descent" data-node-id="almacenamiento-descent" data-node-label="IPFS / Arweave" tabindex="0" role="button" aria-label="Focus IPFS / Arweave, Metadatos &amp; Frontends, 4. Capa de Servicios Auxiliares y Middleware" aria-pressed="false" data-node-kind="database" data-node-sublabel="Metadatos &amp; Frontends" data-node-tag="Descentralizado" data-node-context="4. Capa de Servicios Auxiliares y Middleware">
-          <title>IPFS / Arweave · Metadatos &amp; Frontends · 4. Capa de Servicios Auxiliares y Middleware · Descentralizado</title>
+        <g id="node-almacenamiento-descent" data-node-id="almacenamiento-descent" data-node-label="IPFS / Arweave" tabindex="0" role="button" aria-label="Focus IPFS / Arweave, Metadatos &amp; Frontends, 3. Capa de Datos y Servicios Aux. (On/Off-Chain)" aria-pressed="false" data-node-kind="database" data-node-sublabel="Metadatos &amp; Frontends" data-node-tag="Descentralizado" data-node-context="3. Capa de Datos y Servicios Aux. (On/Off-Chain)">
+          <title>IPFS / Arweave · Metadatos &amp; Frontends · 3. Capa de Datos y Servicios Aux. (On/Off-Chain) · Descentralizado</title>
           <rect x="30" y="880" width="220" height="64" rx="6" class="c-mask"/>
           <rect x="30" y="880" width="220" height="64" rx="6" class="c-database" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(36 886) scale(0.6875)">
@@ -6057,8 +6055,8 @@
         <text data-detail="fine" x="140" y="936" class="t-database" font-size="7" text-anchor="middle">Descentralizado</text>
         </g>
 
-        <g id="node-capa-l2" data-node-id="capa-l2" data-node-label="Capa 2 (L2 Rollups)" tabindex="0" role="button" aria-label="Focus Capa 2 (L2 Rollups), Arbitrum / OP / Base, 5. Capa de Escalabilidad, Interoperabilidad y Cómputo" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="Arbitrum / OP / Base" data-node-tag="Escalabilidad" data-node-context="5. Capa de Escalabilidad, Interoperabilidad y Cómputo">
-          <title>Capa 2 (L2 Rollups) · Arbitrum / OP / Base · 5. Capa de Escalabilidad, Interoperabilidad y Cómputo · Escalabilidad</title>
+        <g id="node-capa-l2" data-node-id="capa-l2" data-node-label="Capa 2 (L2 Rollups)" tabindex="0" role="button" aria-label="Focus Capa 2 (L2 Rollups), Arbitrum / OP / Base, 1. Capa de Infraestructura y Red (On-Chain)" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="Arbitrum / OP / Base" data-node-tag="Escalabilidad" data-node-context="1. Capa de Infraestructura y Red (On-Chain)">
+          <title>Capa 2 (L2 Rollups) · Arbitrum / OP / Base · 1. Capa de Infraestructura y Red (On-Chain) · Escalabilidad</title>
           <rect x="310" y="880" width="145" height="64" rx="6" class="c-mask"/>
           <rect x="310" y="880" width="145" height="64" rx="6" class="c-cloud" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="cloud" class="semantic-sigil s-cloud" transform="translate(316 886) scale(0.6875)">
@@ -6069,8 +6067,8 @@
         <text data-detail="fine" x="382.5" y="936" class="t-cloud" font-size="7" text-anchor="middle">Escalabilidad</text>
         </g>
 
-        <g id="node-puentes-crosschain" data-node-id="puentes-crosschain" data-node-label="Puentes Cross-Chain" tabindex="0" role="button" aria-label="Focus Puentes Cross-Chain, Bridges &amp; Activos, 5. Capa de Escalabilidad, Interoperabilidad y Cómputo" aria-pressed="false" data-node-kind="messagebus" data-node-sublabel="Bridges &amp; Activos" data-node-tag="Interoperabilidad" data-node-context="5. Capa de Escalabilidad, Interoperabilidad y Cómputo">
-          <title>Puentes Cross-Chain · Bridges &amp; Activos · 5. Capa de Escalabilidad, Interoperabilidad y Cómputo · Interoperabilidad</title>
+        <g id="node-puentes-crosschain" data-node-id="puentes-crosschain" data-node-label="Puentes Cross-Chain" tabindex="0" role="button" aria-label="Focus Puentes Cross-Chain, Bridges &amp; Activos, 1. Capa de Infraestructura y Red (On-Chain)" aria-pressed="false" data-node-kind="messagebus" data-node-sublabel="Bridges &amp; Activos" data-node-tag="Interoperabilidad" data-node-context="1. Capa de Infraestructura y Red (On-Chain)">
+          <title>Puentes Cross-Chain · Bridges &amp; Activos · 1. Capa de Infraestructura y Red (On-Chain) · Interoperabilidad</title>
           <rect x="478" y="880" width="145" height="64" rx="6" class="c-mask"/>
           <rect x="478" y="880" width="145" height="64" rx="6" class="c-messagebus" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="messagebus" class="semantic-sigil s-messagebus" transform="translate(484 886) scale(0.6875)">
@@ -6084,8 +6082,8 @@
         <text data-detail="fine" x="550.5" y="936" class="t-messagebus" font-size="7" text-anchor="middle">Interoperabilidad</text>
         </g>
 
-        <g id="node-coprocesadores" data-node-id="coprocesadores" data-node-label="Co-procesadores Cripto" tabindex="0" role="button" aria-label="Focus Co-procesadores Cripto, ZK Coprocessors, 5. Capa de Escalabilidad, Interoperabilidad y Cómputo" aria-pressed="false" data-node-kind="backend" data-node-sublabel="ZK Coprocessors" data-node-tag="Zero-Knowledge" data-node-context="5. Capa de Escalabilidad, Interoperabilidad y Cómputo">
-          <title>Co-procesadores Cripto · ZK Coprocessors · 5. Capa de Escalabilidad, Interoperabilidad y Cómputo · Zero-Knowledge</title>
+        <g id="node-coprocesadores" data-node-id="coprocesadores" data-node-label="Co-procesadores Cripto" tabindex="0" role="button" aria-label="Focus Co-procesadores Cripto, ZK Coprocessors, 1. Capa de Infraestructura y Red (On-Chain)" aria-pressed="false" data-node-kind="backend" data-node-sublabel="ZK Coprocessors" data-node-tag="Zero-Knowledge" data-node-context="1. Capa de Infraestructura y Red (On-Chain)">
+          <title>Co-procesadores Cripto · ZK Coprocessors · 1. Capa de Infraestructura y Red (On-Chain) · Zero-Knowledge</title>
           <rect x="646" y="880" width="145" height="64" rx="6" class="c-mask"/>
           <rect x="646" y="880" width="145" height="64" rx="6" class="c-backend" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(652 886) scale(0.6875)">
@@ -6096,8 +6094,8 @@
         <text data-detail="fine" x="718.5" y="936" class="t-backend" font-size="7" text-anchor="middle">Zero-Knowledge</text>
         </g>
 
-        <g id="node-depin" data-node-id="depin" data-node-label="Redes DePIN" tabindex="0" role="button" aria-label="Focus Redes DePIN, Hardware Distribuido, 5. Capa de Escalabilidad, Interoperabilidad y Cómputo" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="Hardware Distribuido" data-node-tag="Cómputo Hardware" data-node-context="5. Capa de Escalabilidad, Interoperabilidad y Cómputo">
-          <title>Redes DePIN · Hardware Distribuido · 5. Capa de Escalabilidad, Interoperabilidad y Cómputo · Cómputo Hardware</title>
+        <g id="node-depin" data-node-id="depin" data-node-label="Redes DePIN" tabindex="0" role="button" aria-label="Focus Redes DePIN, Hardware Distribuido, 1. Capa de Infraestructura y Red (On-Chain)" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="Hardware Distribuido" data-node-tag="Cómputo Hardware" data-node-context="1. Capa de Infraestructura y Red (On-Chain)">
+          <title>Redes DePIN · Hardware Distribuido · 1. Capa de Infraestructura y Red (On-Chain) · Cómputo Hardware</title>
           <rect x="815" y="880" width="145" height="64" rx="6" class="c-mask"/>
           <rect x="815" y="880" width="145" height="64" rx="6" class="c-cloud" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="cloud" class="semantic-sigil s-cloud" transform="translate(821 886) scale(0.6875)">
@@ -6243,32 +6241,27 @@
         </g>
 
         <!-- Boundary labels (foreground masks keep routes out of titles) -->
-        <g data-graph-role="structural-frame-label" data-composition-frame-id="0" data-composition-frame-kind="region" data-composition-frame-label="1. Capa de Interfaz, Identidad y Clientes">
-          <rect data-graph-role="structural-frame-label-mask" x="284" y="60" width="231.4" height="16" rx="3" class="c-mask"/>
-          <text data-boundary-label="" x="288" y="73" class="t-cloud" font-size="9" font-weight="600">1. Capa de Interfaz, Identidad y Clientes</text>
+        <g data-graph-role="structural-frame-label" data-composition-frame-id="0" data-composition-frame-kind="region" data-composition-frame-label="4. Capa de Acceso, Usuario e Interfaz (Off-Chain)">
+          <rect data-graph-role="structural-frame-label-mask" x="284" y="60" width="274.59999999999997" height="16" rx="3" class="c-mask"/>
+          <text data-boundary-label="" x="288" y="73" class="t-cloud" font-size="9" font-weight="600">4. Capa de Acceso, Usuario e Interfaz (Off-Chain)</text>
         </g>
 
-        <g data-graph-role="structural-frame-label" data-composition-frame-id="1" data-composition-frame-kind="region" data-composition-frame-label="2. Capa Aplicación">
-          <rect data-graph-role="structural-frame-label-mask" x="284" y="260" width="107.2" height="16" rx="3" class="c-mask"/>
-          <text data-boundary-label="" x="288" y="273" class="t-cloud" font-size="9" font-weight="600">2. Capa Aplicación</text>
+        <g data-graph-role="structural-frame-label" data-composition-frame-id="1" data-composition-frame-kind="region" data-composition-frame-label="3. Capa de Datos y Servicios Aux. (On/Off-Chain)">
+          <rect data-graph-role="structural-frame-label-mask" x="4" y="60" width="269.2" height="16" rx="3" class="c-mask"/>
+          <text data-boundary-label="" x="8" y="73" class="t-cloud" font-size="9" font-weight="600">3. Capa de Datos y Servicios Aux. (On/Off-Chain)</text>
         </g>
 
-        <g data-graph-role="structural-frame-label" data-composition-frame-id="2" data-composition-frame-kind="region" data-composition-frame-label="4. Capa de Servicios Auxiliares y Middleware">
-          <rect data-graph-role="structural-frame-label-mask" x="4" y="60" width="247.6" height="16" rx="3" class="c-mask"/>
-          <text data-boundary-label="" x="8" y="73" class="t-cloud" font-size="9" font-weight="600">4. Capa de Servicios Auxiliares y Middleware</text>
+        <g data-graph-role="structural-frame-label" data-composition-frame-id="2" data-composition-frame-kind="region" data-composition-frame-label="2. Capa de Protocolo y Lógica (On-Chain)">
+          <rect data-graph-role="structural-frame-label-mask" x="284" y="260" width="226" height="16" rx="3" class="c-mask"/>
+          <text data-boundary-label="" x="288" y="273" class="t-cloud" font-size="9" font-weight="600">2. Capa de Protocolo y Lógica (On-Chain)</text>
         </g>
 
-        <g data-graph-role="structural-frame-label" data-composition-frame-id="3" data-composition-frame-kind="region" data-composition-frame-label="6. Capa Base de Red y Ejecución">
-          <rect data-graph-role="structural-frame-label-mask" x="284" y="460" width="177.4" height="16" rx="3" class="c-mask"/>
-          <text data-boundary-label="" x="288" y="473" class="t-cloud" font-size="9" font-weight="600">6. Capa Base de Red y Ejecución</text>
+        <g data-graph-role="structural-frame-label" data-composition-frame-id="3" data-composition-frame-kind="region" data-composition-frame-label="1. Capa de Infraestructura y Red (On-Chain)">
+          <rect data-graph-role="structural-frame-label-mask" x="284" y="640" width="242.2" height="16" rx="3" class="c-mask"/>
+          <text data-boundary-label="" x="288" y="653" class="t-cloud" font-size="9" font-weight="600">1. Capa de Infraestructura y Red (On-Chain)</text>
         </g>
 
-        <g data-graph-role="structural-frame-label" data-composition-frame-id="4" data-composition-frame-kind="region" data-composition-frame-label="5. Capa de Escalabilidad, Interoperabilidad y Cómputo">
-          <rect data-graph-role="structural-frame-label-mask" x="284" y="860" width="296.2" height="16" rx="3" class="c-mask"/>
-          <text data-boundary-label="" x="288" y="873" class="t-cloud" font-size="9" font-weight="600">5. Capa de Escalabilidad, Interoperabilidad y Cómputo</text>
-        </g>
-
-        <g data-graph-role="structural-frame-label" data-composition-frame-id="5" data-composition-frame-kind="security-group" data-composition-frame-label="Herramientas de Desarrollo, Testing e IA">
+        <g data-graph-role="structural-frame-label" data-composition-frame-id="4" data-composition-frame-kind="security-group" data-composition-frame-label="Herramientas de Desarrollo, Testing e IA">
           <rect data-graph-role="structural-frame-label-mask" x="1004" y="60" width="226" height="16" rx="3" class="c-mask"/>
           <text data-boundary-label="" x="1008" y="73" class="t-security" font-size="9" font-weight="600">Herramientas de Desarrollo, Testing e IA</text>
         </g>
