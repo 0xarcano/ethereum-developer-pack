@@ -202,7 +202,7 @@ const sessions = [
     num: 1,
     title: "Sesión 1: Introducción y recapitulación de conceptos blockchain",
     desc: "Arquitectura blockchain, Mecanismos de consenso (PoW/PoS), EVM, Billeteras como identidad, Introducción a smart contracts (gas, read vs write, gobierno).",
-    activeNodes: ["billeteras", "evm", "red-l1", "smart-contracts", "usuarios"],
+    activeNodes: ["billeteras", "evm", "nodos-rpc", "red-l1", "smart-contracts", "usuarios"],
     instructor: "Nico"
   },
   {
@@ -216,14 +216,14 @@ const sessions = [
     num: 3,
     title: "Sesión 3: Herramientas de desarrollo blockchain",
     desc: "IDEs de desarrollo (Remix, VS Code), Frameworks (Foundry, Hardhat), Frontend cliente (Viem, Ethers.js), Interacción con contratos (Remix Deploy/QuickApp, Etherscan).",
-    activeNodes: ["ides", "frameworks-dev", "cliente-web3", "exploradores", "smart-contracts"],
+    activeNodes: ["ides", "frameworks-dev", "cliente-web3", "nodos-rpc", "exploradores", "smart-contracts", "red-l1"],
     instructor: "Paul"
   },
   {
     num: 4,
     title: "Sesión 4: Protocolos más conocidos",
     desc: "Protocolo Aave (lending/borrowing & colateral), Protocolo Uniswap (DEX/AMM & pools), Puentes cross-chain (Bridges), Mercados predictivos y Acciones tokenizadas.",
-    activeNodes: ["protocolos-defi", "puentes-crosschain", "smart-contracts"],
+    activeNodes: ["protocolos-defi", "puentes-crosschain", "smart-contracts", "red-l1"],
     instructor: "Paul"
   },
   {
@@ -237,28 +237,28 @@ const sessions = [
     num: 6,
     title: "Sesión 6: Gobernanza, L2s y co-procesadores",
     desc: "Admin guards, Estructura de DAOs, Aragon / DaoHaus DAO Toolkit, Safe multi-signature; Capa 2 (L2 Rollups y reducción de gas), Co-procesadores criptográficos (ZK coprocessors).",
-    activeNodes: ["gobernanza-daos", "billeteras", "smart-contracts", "capa-l2", "coprocesadores"],
+    activeNodes: ["gobernanza-daos", "billeteras", "smart-contracts", "capa-l2", "coprocesadores", "evm", "nodos-rpc"],
     instructor: "Nico"
   },
   {
     num: 7,
     title: "Sesión 7: Smart Contracts con Foundry",
     desc: "Framework Foundry (Forge, Anvil, Cast), versiones de Solidity, configuración del compilador y optimización de bytecode.",
-    activeNodes: ["frameworks-dev", "smart-contracts", "suite-testing"],
+    activeNodes: ["frameworks-dev", "nodos-rpc", "smart-contracts", "suite-testing", "evm"],
     instructor: "Paul"
   },
   {
     num: 8,
     title: "Sesión 8: Frontend Web3",
     desc: "React, integración con Viem + Wagmi, conexión de billeteras, manejo de estado reactivo y best practices de UX/UI en dApps.",
-    activeNodes: ["frontend-app", "cliente-web3", "billeteras", "usuarios"],
+    activeNodes: ["frontend-app", "cliente-web3", "nodos-rpc", "billeteras", "usuarios", "smart-contracts"],
     instructor: "Paul"
   },
   {
     num: 9,
     title: "Sesión 9: Backend auxiliar y servicios descentralizados",
     desc: "Indexadores (The Graph / Envio), Oráculos (Chainlink), Almacenamiento descentralizado (IPFS / Arweave), Relayers y Meta-transacciones (ERC-4337), Server Wallets (KMS / MPC) y DePIN.",
-    activeNodes: ["indexadores", "oraculos", "almacenamiento-descent", "relayers-meta-tx", "server-wallets", "depin"],
+    activeNodes: ["indexadores", "nodos-rpc", "oraculos", "almacenamiento-descent", "relayers-meta-tx", "server-wallets", "depin"],
     instructor: "Paul"
   },
   {
@@ -272,7 +272,7 @@ const sessions = [
     num: 11,
     title: "Sesión 11: Sesión de Dudas y Arquitectura End-to-End",
     desc: "Resolución de dudas técnicas, revisión holística de la arquitectura de una dApp end-to-end (Frontend + Middleware + Smart Contracts + L1/L2) y preparación para el proyecto final.",
-    activeNodes: ["frontend-app", "cliente-web3", "smart-contracts", "indexadores", "oraculos", "capa-l2", "red-l1", "relayers-meta-tx", "server-wallets"],
+    activeNodes: ["frontend-app", "cliente-web3", "nodos-rpc", "smart-contracts", "indexadores", "oraculos", "capa-l2", "red-l1", "relayers-meta-tx", "server-wallets", "evm", "puentes-crosschain", "coprocesadores"],
     instructor: "Paul"
   },
   {

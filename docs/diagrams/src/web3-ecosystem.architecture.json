@@ -130,32 +130,47 @@
       ]
     },
     {
-      "id": "evm",
-      "type": "backend",
-      "label": "Ethereum Virtual Machine",
-      "sublabel": "Bytecode, Opcodes & Gas (Read vs Write)",
-      "tag": "Motor EVM",
+      "id": "nodos-rpc",
+      "type": "cloud",
+      "label": "Nodos RPC & Gateways",
+      "sublabel": "Infura, Alchemy & Anvil",
+      "tag": "JSON-RPC / WS",
       "pos": [
         610,
         860
       ],
       "size": [
-        310,
+        200,
+        64
+      ]
+    },
+    {
+      "id": "evm",
+      "type": "backend",
+      "label": "Ethereum Virtual Machine",
+      "sublabel": "Bytecode, Opcodes & Gas",
+      "tag": "Motor EVM",
+      "pos": [
+        835,
+        860
+      ],
+      "size": [
+        200,
         64
       ]
     },
     {
       "id": "red-l1",
       "type": "database",
-      "label": "Red L1 & Sepolia Testnet",
-      "sublabel": "Consenso PoS & Estado Global Blockchain",
+      "label": "Red L1 & Sepolia",
+      "sublabel": "Consenso PoS & Estado Global",
       "tag": "Capa de Consenso",
       "pos": [
-        950,
+        1060,
         860
       ],
       "size": [
-        310,
+        200,
         64
       ]
     },
@@ -190,6 +205,21 @@
       ]
     },
     {
+      "id": "coprocesadores",
+      "type": "backend",
+      "label": "Co-procesadores Cripto",
+      "sublabel": "ZK Coprocessors",
+      "tag": "Zero-Knowledge",
+      "pos": [
+        330,
+        980
+      ],
+      "size": [
+        220,
+        64
+      ]
+    },
+    {
       "id": "almacenamiento-descent",
       "type": "database",
       "label": "Almacenamiento Decentralizado",
@@ -197,7 +227,7 @@
       "tag": "Metadatos & Frontends",
       "pos": [
         330,
-        1080
+        1100
       ],
       "size": [
         220,
@@ -215,7 +245,7 @@
         1080
       ],
       "size": [
-        145,
+        200,
         64
       ]
     },
@@ -226,26 +256,11 @@
       "sublabel": "Bridges & Activos",
       "tag": "Interoperabilidad",
       "pos": [
-        778,
+        1060,
         1080
       ],
       "size": [
-        145,
-        64
-      ]
-    },
-    {
-      "id": "coprocesadores",
-      "type": "backend",
-      "label": "Co-procesadores Cripto",
-      "sublabel": "ZK Coprocessors",
-      "tag": "Zero-Knowledge",
-      "pos": [
-        946,
-        1080
-      ],
-      "size": [
-        145,
+        200,
         64
       ]
     },
@@ -256,11 +271,11 @@
       "sublabel": "Hardware Distribuido",
       "tag": "Cómputo Hardware",
       "pos": [
-        1115,
-        1080
+        330,
+        1210
       ],
       "size": [
-        145,
+        220,
         64
       ]
     },
@@ -314,7 +329,7 @@
       "type": "frontend",
       "label": "Cliente Web3 & Librerías",
       "sublabel": "Viem & Ethers.js",
-      "tag": "RPC Provider",
+      "tag": "SDK Web3 Client",
       "pos": [
         1330,
         860
@@ -373,7 +388,9 @@
         "relayers-meta-tx",
         "oraculos",
         "indexadores",
-        "almacenamiento-descent"
+        "coprocesadores",
+        "almacenamiento-descent",
+        "depin"
       ]
     },
     {
@@ -390,12 +407,11 @@
       "kind": "region",
       "label": "1. Capa de Infraestructura y Red",
       "wraps": [
+        "nodos-rpc",
         "evm",
         "red-l1",
         "capa-l2",
-        "puentes-crosschain",
-        "coprocesadores",
-        "depin"
+        "puentes-crosschain"
       ]
     },
     {
@@ -639,27 +655,57 @@
     },
     {
       "from": "indexadores",
-      "to": "evm",
-      "label": "eventos on-chain",
+      "to": "nodos-rpc",
+      "label": "consultas JSON-RPC",
       "fromSide": "right",
       "toSide": "left",
       "labelDy": 56
     },
     {
-      "from": "almacenamiento-descent",
-      "to": "depin",
-      "label": "almacenamiento Web3",
+      "from": "nodos-rpc",
+      "to": "evm",
+      "label": "ejecución de llamadas",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 56
+    },
+    {
+      "from": "smart-contracts",
+      "to": "evm",
+      "label": "ejecución de bytecode",
       "fromSide": "bottom",
-      "toSide": "bottom",
-      "labelDy": 24
+      "toSide": "top",
+      "labelDy": 24,
+      "labelAt": [
+        935,
+        760
+      ]
     },
     {
       "from": "capa-l2",
-      "to": "evm",
-      "label": "ejecutar rollups",
+      "to": "nodos-rpc",
+      "label": "secuenciador & RPC L2",
       "fromSide": "top",
       "toSide": "bottom",
       "labelDy": -24
+    },
+    {
+      "from": "coprocesadores",
+      "to": "nodos-rpc",
+      "label": "consultas JSON-RPC",
+      "fromSide": "right",
+      "toSide": "bottom",
+      "via": [
+        [
+          710,
+          1012
+        ]
+      ],
+      "labelDy": -15,
+      "labelAt": [
+        630,
+        995
+      ]
     },
     {
       "from": "puentes-crosschain",
@@ -668,6 +714,58 @@
       "fromSide": "top",
       "toSide": "bottom",
       "labelDy": -24
+    },
+    {
+      "from": "capa-l2",
+      "to": "puentes-crosschain",
+      "label": "depósitos & retiros L2",
+      "fromSide": "bottom",
+      "toSide": "bottom",
+      "labelDy": 24
+    },
+    {
+      "from": "almacenamiento-descent",
+      "to": "depin",
+      "label": "red de hardware",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24,
+      "labelAt": [
+        440,
+        1180
+      ]
+    },
+    {
+      "from": "exploradores",
+      "to": "red-l1",
+      "label": "inspección de bloques",
+      "fromSide": "left",
+      "toSide": "right",
+      "labelDy": 56
+    },
+    {
+      "from": "cliente-web3",
+      "to": "smart-contracts",
+      "label": "interacción / ABI",
+      "fromSide": "left",
+      "toSide": "right",
+      "labelDy": 24,
+      "labelAt": [
+        1295,
+        772
+      ]
+    },
+    {
+      "from": "frameworks-dev",
+      "to": "smart-contracts",
+      "label": "compilación & deploy",
+      "fromSide": "left",
+      "toSide": "right",
+      "labelDy": 24,
+      "labelAt": [
+        1295,
+        580
+      ]
     },
     {
       "from": "evm",
@@ -711,18 +809,21 @@
       "items": [
         "Server Wallets (KMS / MPC) y Relayers ERC-4337",
         "The Graph indexa eventos en consultas GraphQL",
+        "Co-procesadores ZK computan pruebas sobre estado histórico",
         "Chainlink conecta feeds de datos externos",
-        "IPFS almacena metadatos y activos descentralizados"
+        "IPFS almacena metadatos y activos descentralizados",
+        "Redes DePIN aportan cómputo y almacenamiento físico distribuido"
       ]
     },
     {
       "dot": "rose",
       "title": "Red Base & Escalabilidad",
       "items": [
+        "Nodos RPC & Gateways (Infura/Alchemy/Anvil) exponen API JSON-RPC",
         "Smart Contracts con estándares ERC-20, ERC-721 y Guards",
         "EVM ejecuta bytecode sobre el consenso PoS de Ethereum",
         "L2 Rollups reducen costo de gas con alta velocidad",
-        "Puentes Cross-Chain y Co-procesadores ZK"
+        "Puentes Cross-Chain para interoperabilidad"
       ]
     }
   ]
