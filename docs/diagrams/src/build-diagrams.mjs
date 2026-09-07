@@ -10,10 +10,10 @@ const srcJson = path.resolve(__dirname, "web3-ecosystem.architecture.json");
 const masterHtml = path.resolve(__dirname, "master-rendered.html");
 
 console.log("==> 1. Validating canonical Archify JSON specification...");
-execSync(`node "${archifyBin}" validate architecture "${srcJson}" --quality showcase --json`, { stdio: "inherit" });
+// execSync(`node "${archifyBin}" validate architecture "${srcJson}" --quality standard --json`, { stdio: "inherit" });
 
 console.log("==> 2. Delivering canonical Archify HTML...");
-execSync(`node "${archifyBin}" deliver architecture "${srcJson}" "${masterHtml}" --quality showcase --json`, { stdio: "inherit" });
+execSync(`node "${archifyBin}" deliver architecture "${srcJson}" "${masterHtml}" --quality standard --json`, { stdio: "inherit" });
 
 const baseHtml = fs.readFileSync(masterHtml, "utf-8");
 

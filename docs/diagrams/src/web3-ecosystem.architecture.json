@@ -5,8 +5,8 @@
     "title": "Ecosistema Web3: Arquitectura en Capas \u2014 Ethereum Developer Pack (CEDIA)",
     "quality_profile": "showcase",
     "viewBox": [
-      1340,
-      1140
+      1640,
+      1340
     ]
   },
   "components": [
@@ -16,8 +16,8 @@
       "label": "Usuarios y Clientes",
       "sublabel": "Navegador Web / Mobile dApp",
       "pos": [
-        310,
-        80
+        610,
+        280
       ],
       "size": [
         200,
@@ -31,8 +31,8 @@
       "sublabel": "MetaMask / Rabby (Identidad)",
       "tag": "Firma Digital",
       "pos": [
-        535,
-        80
+        835,
+        280
       ],
       "size": [
         200,
@@ -46,8 +46,8 @@
       "sublabel": "React + Wagmi Hooks",
       "tag": "UI / Web3",
       "pos": [
-        760,
-        80
+        1060,
+        280
       ],
       "size": [
         200,
@@ -61,8 +61,8 @@
       "sublabel": "AWS KMS / Google KMS / MPC",
       "tag": "Custodia Cloud",
       "pos": [
-        30,
-        80
+        330,
+        280
       ],
       "size": [
         220,
@@ -76,8 +76,8 @@
       "sublabel": "Uniswap, Aave, Curve & Polymarket",
       "tag": "DeFi & Web3",
       "pos": [
-        310,
-        280
+        610,
+        480
       ],
       "size": [
         200,
@@ -91,8 +91,8 @@
       "sublabel": "DAOs, Aragon, Snapshot & Tally",
       "tag": "Coordinaci\u00f3n",
       "pos": [
-        535,
-        280
+        835,
+        480
       ],
       "size": [
         200,
@@ -106,8 +106,8 @@
       "sublabel": "Gnosis Safe (Multifirma)",
       "tag": "Control Acceso",
       "pos": [
-        760,
-        280
+        1060,
+        480
       ],
       "size": [
         200,
@@ -121,8 +121,8 @@
       "sublabel": "Transacciones Gasless",
       "tag": "ERC-4337",
       "pos": [
-        30,
-        280
+        330,
+        480
       ],
       "size": [
         220,
@@ -136,8 +136,8 @@
       "sublabel": "Solidity OOP, Tokens ERC-20/721 & Guards",
       "tag": "L\u00f3gica On-Chain",
       "pos": [
-        310,
-        480
+        610,
+        680
       ],
       "size": [
         650,
@@ -151,8 +151,8 @@
       "sublabel": "Bytecode, Opcodes & Gas (Read vs Write)",
       "tag": "Motor EVM",
       "pos": [
-        310,
-        660
+        610,
+        860
       ],
       "size": [
         310,
@@ -166,8 +166,8 @@
       "sublabel": "Consenso PoS & Estado Global Blockchain",
       "tag": "Capa de Consenso",
       "pos": [
-        650,
-        660
+        950,
+        860
       ],
       "size": [
         310,
@@ -181,8 +181,8 @@
       "sublabel": "Chainlink Data Feeds",
       "tag": "Datos Off-chain",
       "pos": [
-        30,
-        480
+        330,
+        680
       ],
       "size": [
         220,
@@ -196,8 +196,8 @@
       "sublabel": "The Graph / Envio (GraphQL)",
       "tag": "Consultas",
       "pos": [
-        30,
-        660
+        330,
+        860
       ],
       "size": [
         220,
@@ -211,8 +211,8 @@
       "sublabel": "Metadatos & Frontends",
       "tag": "Descentralizado",
       "pos": [
-        30,
-        880
+        330,
+        1080
       ],
       "size": [
         220,
@@ -226,8 +226,8 @@
       "sublabel": "Arbitrum / OP / Base",
       "tag": "Escalabilidad",
       "pos": [
-        310,
-        880
+        610,
+        1080
       ],
       "size": [
         145,
@@ -241,8 +241,8 @@
       "sublabel": "Bridges & Activos",
       "tag": "Interoperabilidad",
       "pos": [
-        478,
-        880
+        778,
+        1080
       ],
       "size": [
         145,
@@ -256,8 +256,8 @@
       "sublabel": "ZK Coprocessors",
       "tag": "Zero-Knowledge",
       "pos": [
-        646,
-        880
+        946,
+        1080
       ],
       "size": [
         145,
@@ -271,8 +271,8 @@
       "sublabel": "Hardware Distribuido",
       "tag": "C\u00f3mputo Hardware",
       "pos": [
-        815,
-        880
+        1115,
+        1080
       ],
       "size": [
         145,
@@ -286,8 +286,8 @@
       "sublabel": "Remix, VS Code, Claude Code & Codex",
       "tag": "Dev & IA",
       "pos": [
-        1030,
-        80
+        1330,
+        280
       ],
       "size": [
         260,
@@ -301,8 +301,8 @@
       "sublabel": "Foundry (Forge/Cast/Anvil) & Hardhat",
       "tag": "Tooling Web3",
       "pos": [
-        1030,
-        280
+        1330,
+        480
       ],
       "size": [
         260,
@@ -316,8 +316,8 @@
       "sublabel": "Unit Tests, Fuzzing & Edge Cases",
       "tag": "Forge Test",
       "pos": [
-        1030,
-        480
+        1330,
+        680
       ],
       "size": [
         260,
@@ -331,8 +331,8 @@
       "sublabel": "Viem & Ethers.js",
       "tag": "RPC Provider",
       "pos": [
-        1030,
-        660
+        1330,
+        860
       ],
       "size": [
         260,
@@ -346,11 +346,26 @@
       "sublabel": "Etherscan & Remix QuickApp",
       "tag": "Inspecci\u00f3n Tx",
       "pos": [
-        1030,
-        880
+        1330,
+        1080
       ],
       "size": [
         260,
+        64
+      ]
+    },
+    {
+      "id": "backend-dapp",
+      "type": "backend",
+      "label": "Backend dApp (Off-Chain)",
+      "sublabel": "API REST, GraphQL",
+      "tag": "Capa Intermedia",
+      "pos": [
+        30,
+        240
+      ],
+      "size": [
+        200,
         64
       ]
     }
@@ -358,11 +373,18 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "4. Capa de Acceso, Usuario e Interfaz (Off-Chain)",
+      "label": "5. Capa de Acceso, Usuario e Interfaz (Off-Chain)",
       "wraps": [
         "usuarios",
         "billeteras",
         "frontend-app"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "4. Capa Backend",
+      "wraps": [
+        "backend-dapp"
       ]
     },
     {
@@ -538,6 +560,69 @@
       "fromSide": "bottom",
       "toSide": "top",
       "labelDy": 24
+    },
+    {
+      "from": "frontend-app",
+      "to": "backend-dapp",
+      "label": "peticiones API",
+      "fromSide": "top",
+      "toSide": "top",
+      "via": [
+        [
+          1160,
+          100
+        ],
+        [
+          130,
+          100
+        ]
+      ],
+      "labelAt": [
+        645,
+        90
+      ]
+    },
+    {
+      "from": "backend-dapp",
+      "to": "server-wallets",
+      "label": "solicita firma",
+      "fromSide": "right",
+      "toSide": "left",
+      "via": [
+        [
+          290,
+          272
+        ],
+        [
+          290,
+          312
+        ]
+      ],
+      "labelAt": [
+        260,
+        318
+      ]
+    },
+    {
+      "from": "backend-dapp",
+      "to": "smart-contracts",
+      "label": "lectura / escritura",
+      "fromSide": "bottom",
+      "toSide": "bottom",
+      "via": [
+        [
+          130,
+          800
+        ],
+        [
+          935,
+          800
+        ]
+      ],
+      "labelAt": [
+        420,
+        790
+      ]
     }
   ],
   "cards": [
