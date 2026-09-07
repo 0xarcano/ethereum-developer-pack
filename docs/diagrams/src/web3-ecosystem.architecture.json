@@ -5,7 +5,7 @@
     "title": "Ecosistema Web3: Arquitectura en Capas — Ethereum Developer Pack (CEDIA)",
     "quality_profile": "showcase",
     "viewBox": [
-      1640,
+      1680,
       1000
     ]
   },
@@ -16,7 +16,7 @@
       "label": "Usuarios y Clientes",
       "sublabel": "Navegador Web / Mobile dApp",
       "pos": [
-        1060,
+        835,
         100
       ],
       "size": [
@@ -31,8 +31,8 @@
       "sublabel": "MetaMask, Rabby & Safe",
       "tag": "Firma Digital",
       "pos": [
-        610,
-        100
+        835,
+        210
       ],
       "size": [
         200,
@@ -295,9 +295,24 @@
       ]
     },
     {
+      "id": "desarrollador",
+      "type": "external",
+      "label": "Desarrollador",
+      "sublabel": "Smart Contracts & dApps",
+      "tag": "Dev Web3",
+      "pos": [
+        1330,
+        100
+      ],
+      "size": [
+        260,
+        64
+      ]
+    },
+    {
       "id": "ides",
       "type": "frontend",
-      "label": "IDEs & Asistentes IA",
+      "label": "IDE, Terminal & Asistentes IA",
       "sublabel": "Remix, VS Code, Claude Code & Codex",
       "tag": "Dev & IA",
       "pos": [
@@ -310,11 +325,11 @@
       ]
     },
     {
-      "id": "frameworks-dev",
-      "type": "backend",
-      "label": "Frameworks de Desarrollo",
-      "sublabel": "Foundry (Forge/Cast/Anvil) & Hardhat",
-      "tag": "Tooling Web3",
+      "id": "cliente-web3",
+      "type": "frontend",
+      "label": "Cliente Web3 & Librerías",
+      "sublabel": "Viem & Ethers.js",
+      "tag": "SDK Web3 Client",
       "pos": [
         1330,
         340
@@ -325,11 +340,11 @@
       ]
     },
     {
-      "id": "cliente-web3",
-      "type": "frontend",
-      "label": "Cliente Web3 & Librerías",
-      "sublabel": "Viem & Ethers.js",
-      "tag": "SDK Web3 Client",
+      "id": "frameworks-dev",
+      "type": "backend",
+      "label": "Frameworks de Desarrollo",
+      "sublabel": "Foundry (Forge/Cast/Anvil) & Hardhat",
+      "tag": "Tooling Web3",
       "pos": [
         1330,
         480
@@ -362,7 +377,6 @@
       "wraps": [
         "frontend-app",
         "billeteras",
-        "usuarios",
         "exploradores"
       ]
     },
@@ -415,25 +429,37 @@
       "from": "usuarios",
       "to": "billeteras",
       "label": "conectar",
-      "fromSide": "left",
-      "toSide": "right",
-      "labelDy": -14
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
     },
     {
       "from": "usuarios",
       "to": "exploradores",
       "label": "inspección de txs",
-      "fromSide": "bottom",
+      "fromSide": "right",
       "toSide": "top",
-      "labelDy": 24
+      "via": [
+        [
+          1160,
+          132
+        ]
+      ],
+      "labelAt": [
+        1100,
+        122
+      ]
     },
     {
       "from": "billeteras",
       "to": "frontend-app",
       "label": "inyecta proveedor",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "labelDy": 24
+      "fromSide": "left",
+      "toSide": "right",
+      "labelAt": [
+        822,
+        292
+      ]
     },
     {
       "from": "frontend-app",
@@ -756,12 +782,16 @@
       "from": "billeteras",
       "to": "nodos-rpc",
       "label": "broadcast transacciones",
-      "fromSide": "left",
+      "fromSide": "bottom",
       "toSide": "top",
       "via": [
         [
+          935,
+          328
+        ],
+        [
           550,
-          132
+          328
         ],
         [
           550,
@@ -774,7 +804,7 @@
       ],
       "labelAt": [
         550,
-        170
+        450
       ]
     },
     {
@@ -919,15 +949,65 @@
       ]
     },
     {
-      "from": "cliente-web3",
-      "to": "smart-contracts",
-      "label": "interacción / ABI",
-      "fromSide": "left",
+      "from": "desarrollador",
+      "to": "ides",
+      "label": "código & prompts",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "from": "ides",
+      "to": "cliente-web3",
+      "label": "scripts & SDK",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "from": "ides",
+      "to": "frameworks-dev",
+      "label": "comandos & tests",
+      "fromSide": "right",
       "toSide": "right",
-      "labelDy": 24,
+      "via": [
+        [
+          1640,
+          242
+        ],
+        [
+          1640,
+          512
+        ]
+      ],
       "labelAt": [
-        1295,
-        472
+        1640,
+        440
+      ]
+    },
+    {
+      "from": "cliente-web3",
+      "to": "frontend-app",
+      "label": "provee SDK & hooks",
+      "fromSide": "left",
+      "toSide": "bottom",
+      "via": [
+        [
+          1295,
+          372
+        ],
+        [
+          1295,
+          285
+        ],
+        [
+          710,
+          285
+        ]
+      ],
+      "labelAt": [
+        980,
+        290
       ]
     },
     {
@@ -936,10 +1016,9 @@
       "label": "compilación & deploy",
       "fromSide": "left",
       "toSide": "right",
-      "labelDy": 24,
       "labelAt": [
         1295,
-        430
+        462
       ]
     },
     {

@@ -15,10 +15,46 @@ console.log("==> 1. Validating canonical Archify JSON specification...");
 console.log("==> 2. Delivering canonical Archify HTML...");
 execSync(`node "${archifyBin}" deliver architecture "${srcJson}" "${masterHtml}" --quality standard --json`, { stdio: "inherit" });
 
-const baseHtml = fs.readFileSync(masterHtml, "utf-8");
+const rawBaseHtml = fs.readFileSync(masterHtml, "utf-8");
+
+// Increase font size 1 point of all SVG text elements
+const baseHtml = rawBaseHtml.replace(/<text([^>]*?)font-size="([0-9.]+)"([^>]*?)>/g, (match, before, size, after) => {
+  const newSize = parseFloat(size) + 1;
+  const formatted = newSize % 1 === 0 ? newSize.toString() : newSize.toFixed(2);
+  return `<text${before}font-size="${formatted}"${after}>`;
+});
 
 // CEDIA Brand CSS Theme Injections
 const cediaThemeCss = `
+  /* ==========================================================
+     FONT SIZE OVERRIDES (+1 point for all text labels)
+     ========================================================== */
+  svg text.t-primary,
+  svg [data-node-label] {
+    font-size: 12px !important;
+  }
+  svg text.t-muted,
+  svg [data-detail="context"] {
+    font-size: 10px !important;
+  }
+  svg text[data-detail="fine"] {
+    font-size: 8px !important;
+  }
+  svg [data-edge-label] text,
+  svg .edge-label text,
+  svg g[data-detail="context"] text {
+    font-size: 9px !important;
+  }
+  svg [data-boundary-label] {
+    font-size: 12px !important;
+  }
+  .card-title {
+    font-size: 14px !important;
+  }
+  .card-list li {
+    font-size: 12px !important;
+  }
+
   /* ==========================================================
      CEDIA INSTITUTIONAL PALETTE OVERRIDES
      Corporación Ecuatoriana para el Desarrollo de la Investigación y la Academia
@@ -121,7 +157,7 @@ const cediaThemeCss = `
     backdrop-filter: blur(12px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     font-family: system-ui, -apple-system, sans-serif;
-    font-size: 11px;
+    font-size: 12px;
     max-width: 90vw;
   }
   .cedia-nav-title {
@@ -164,7 +200,7 @@ const cediaThemeCss = `
     display: inline-block;
     padding: 4px 10px;
     border-radius: 9999px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     background: #0170b9;
@@ -173,7 +209,7 @@ const cediaThemeCss = `
     white-space: nowrap;
   }
   .cedia-banner-text {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text);
     font-weight: 500;
   }
@@ -216,7 +252,7 @@ const sessions = [
     num: 3,
     title: "Sesión 3: Herramientas de desarrollo blockchain",
     desc: "IDEs de desarrollo (Remix, VS Code), Frameworks (Foundry, Hardhat), Frontend cliente (Viem, Ethers.js), Interacción con contratos (Remix Deploy/QuickApp, Etherscan).",
-    activeNodes: ["ides", "frameworks-dev", "cliente-web3", "nodos-rpc", "exploradores", "smart-contracts", "red-l1"],
+    activeNodes: ["desarrollador", "ides", "frameworks-dev", "cliente-web3", "nodos-rpc", "exploradores", "smart-contracts", "red-l1"],
     instructor: "Paul"
   },
   {
@@ -279,7 +315,7 @@ const sessions = [
     num: 12,
     title: "Sesión 12: Presentación de proyectos finales (DAO con tests)",
     desc: "Presentación de proyecto integrador: diseño e implementación de una DAO con tests exhaustivos armados por humanos y contratos asistidos con herramientas de IA (Claude Code / Codex).",
-    activeNodes: ["gobernanza-daos", "billeteras", "smart-contracts", "ides"],
+    activeNodes: ["gobernanza-daos", "billeteras", "smart-contracts", "ides", "desarrollador"],
     instructor: "Nico"
   }
 ];
@@ -438,7 +474,7 @@ sessions.forEach(sess => {
         <span class="cedia-badge-pill">Clase ${sess.num}</span>
         <div style="display: flex; flex-direction: column; gap: 2px;">
           <span class="cedia-banner-text" style="font-weight: 700; color: var(--frontend-stroke);">${sess.title} (Instructor: ${sess.instructor})</span>
-          <span style="font-size: 11px; color: var(--text-muted);">${sess.desc} — <em>Elementos de esta clase destacados en colores CEDIA; el resto en escala de grises.</em></span>
+          <span style="font-size: 12px; color: var(--text-muted);">${sess.desc} — <em>Elementos de esta clase destacados en colores CEDIA; el resto en escala de grises.</em></span>
         </div>
       </div>
     </div>
