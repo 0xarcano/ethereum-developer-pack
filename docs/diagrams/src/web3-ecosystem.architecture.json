@@ -27,8 +27,8 @@
     {
       "id": "billeteras",
       "type": "security",
-      "label": "Billeteras (EOA)",
-      "sublabel": "MetaMask / Rabby (Identidad)",
+      "label": "Billeteras & Multi-Signature",
+      "sublabel": "MetaMask, Rabby & Safe",
       "tag": "Firma Digital",
       "pos": [
         835,
@@ -72,12 +72,12 @@
     {
       "id": "protocolos-defi",
       "type": "backend",
-      "label": "Protocols",
+      "label": "Protocolos",
       "sublabel": "Uniswap, Aave & Curve",
       "tag": "DeFi & Web3",
       "pos": [
-        610,
-        555
+        835,
+        480
       ],
       "size": [
         200,
@@ -91,23 +91,8 @@
       "sublabel": "Aragon, Snapshot & Tally",
       "tag": "Coordinación",
       "pos": [
-        835,
-        555
-      ],
-      "size": [
-        200,
-        64
-      ]
-    },
-    {
-      "id": "billetera-safe",
-      "type": "security",
-      "label": "Multi-Signature",
-      "sublabel": "Safe / Multifirma",
-      "tag": "Wallets",
-      "pos": [
-        835,
-        430
+        610,
+        480
       ],
       "size": [
         200,
@@ -362,7 +347,7 @@
       "tag": "Off-Chain",
       "pos": [
         1060,
-        430
+        480
       ],
       "size": [
         200,
@@ -373,7 +358,7 @@
   "boundaries": [
     {
       "kind": "region",
-      "label": "5. Capa de Acceso, Usuario e Interfaz (Off-Chain)",
+      "label": "4. Capa de Acceso e Interfaz de Usuario",
       "wraps": [
         "usuarios",
         "billeteras",
@@ -382,7 +367,7 @@
     },
     {
       "kind": "region",
-      "label": "3. Capa de Datos y Servicios Aux. (On/Off-Chain)",
+      "label": "3. Capa de Datos y Servicios Aux",
       "wraps": [
         "server-wallets",
         "relayers-meta-tx",
@@ -398,13 +383,12 @@
         "smart-contracts",
         "protocolos-defi",
         "gobernanza-daos",
-        "billetera-safe",
         "backend-dapp"
       ]
     },
     {
       "kind": "region",
-      "label": "1. Capa de Infraestructura y Red (On-Chain)",
+      "label": "1. Capa de Infraestructura y Red",
       "wraps": [
         "evm",
         "red-l1",
@@ -445,8 +429,29 @@
     },
     {
       "from": "frontend-app",
-      "to": "gobernanza-daos",
+      "to": "protocolos-defi",
       "label": "interfaz dApp",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "via": [
+        [
+          1160,
+          410
+        ],
+        [
+          935,
+          410
+        ]
+      ],
+      "labelAt": [
+        1025,
+        400
+      ]
+    },
+    {
+      "from": "frontend-app",
+      "to": "gobernanza-daos",
+      "label": "votación DAO",
       "fromSide": "bottom",
       "toSide": "top",
       "via": [
@@ -455,21 +460,13 @@
           375
         ],
         [
-          750,
+          710,
           375
-        ],
-        [
-          750,
-          520
-        ],
-        [
-          935,
-          520
         ]
       ],
       "labelAt": [
-        840,
-        510
+        660,
+        430
       ]
     },
     {
@@ -523,14 +520,19 @@
     },
     {
       "from": "gobernanza-daos",
-      "to": "billetera-safe",
-      "label": "ejecución",
-      "fromSide": "top",
-      "toSide": "bottom",
-      "labelAt": [
-        965,
-        525
-      ]
+      "to": "protocolos-defi",
+      "label": "gobernanza",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": -28
+    },
+    {
+      "from": "backend-dapp",
+      "to": "protocolos-defi",
+      "label": "integración",
+      "fromSide": "left",
+      "toSide": "right",
+      "labelDy": -28
     },
     {
       "from": "gobernanza-daos",
@@ -605,7 +607,7 @@
       "labelDy": 24,
       "labelAt": [
         1160,
-        395
+        412
       ]
     },
     {
@@ -625,7 +627,7 @@
         ]
       ],
       "labelAt": [
-        580,
+        540,
         375
       ]
     },
@@ -635,9 +637,10 @@
       "label": "lectura / escritura",
       "toSide": "top",
       "fromSide": "bottom",
+      "labelDy": 24,
       "labelAt": [
         1160,
-        610
+        612
       ]
     }
   ],
@@ -647,7 +650,7 @@
       "title": "Interfaz & Identidad",
       "items": [
         "Clientes interactúan vía Web3/Mobile",
-        "Billeteras EOA gestionan llaves y firmas del usuario",
+        "Billeteras EOA y Multi-Signature (Safe) gestionan firmas",
         "React y Wagmi proporcionan hooks de conexión"
       ]
     },
@@ -655,9 +658,9 @@
       "dot": "violet",
       "title": "Capa Aplicación",
       "items": [
-        "Protocolos DeFi, AMMs, Lending, Predicciones & RWAs",
         "Gobernanza descentralizada, DAOs y coordinación on/off-chain",
-        "Custodia multifirma y control de acceso con Multi-Signature (Safe)"
+        "Protocolos DeFi, AMMs, Lending, Predicciones & RWAs",
+        "Backend dApp para servicios off-chain e integración API"
       ]
     },
     {

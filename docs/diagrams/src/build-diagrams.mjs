@@ -237,7 +237,7 @@ const sessions = [
     num: 6,
     title: "Sesión 6: Gobernanza, L2s y co-procesadores",
     desc: "Admin guards, Estructura de DAOs, Aragon / DaoHaus DAO Toolkit, Safe multi-signature; Capa 2 (L2 Rollups y reducción de gas), Co-procesadores criptográficos (ZK coprocessors).",
-    activeNodes: ["gobernanza-daos", "billetera-safe", "smart-contracts", "capa-l2", "coprocesadores"],
+    activeNodes: ["gobernanza-daos", "billeteras", "smart-contracts", "capa-l2", "coprocesadores"],
     instructor: "Nico"
   },
   {
@@ -279,7 +279,7 @@ const sessions = [
     num: 12,
     title: "Sesión 12: Presentación de proyectos finales (DAO con tests)",
     desc: "Presentación de proyecto integrador: diseño e implementación de una DAO con tests exhaustivos armados por humanos y contratos asistidos con herramientas de IA (Claude Code / Codex).",
-    activeNodes: ["gobernanza-daos", "billetera-safe", "smart-contracts", "suite-testing", "ides"],
+    activeNodes: ["gobernanza-daos", "billeteras", "smart-contracts", "suite-testing", "ides"],
     instructor: "Nico"
   }
 ];
