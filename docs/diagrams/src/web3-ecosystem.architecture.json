@@ -1,0 +1,665 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Ecosistema Web3: Arquitectura en Capas — Ethereum Developer Pack (CEDIA)",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1340,
+      1260
+    ]
+  },
+  "components": [
+    {
+      "id": "usuarios",
+      "type": "external",
+      "label": "Usuarios y Clientes",
+      "sublabel": "Navegador Web / Mobile dApp",
+      "pos": [
+        40,
+        80
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "billeteras",
+      "type": "security",
+      "label": "Billeteras (EOA)",
+      "sublabel": "MetaMask / Rabby (Identidad)",
+      "tag": "Firma Digital",
+      "pos": [
+        270,
+        80
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "frontend-app",
+      "type": "frontend",
+      "label": "Frontend dApp",
+      "sublabel": "React + Wagmi Hooks",
+      "tag": "UI / Web3",
+      "pos": [
+        500,
+        80
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "server-wallets",
+      "type": "security",
+      "label": "Server Wallets",
+      "sublabel": "AWS KMS / Google KMS / MPC",
+      "tag": "Custodia Cloud",
+      "pos": [
+        730,
+        80
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "protocolo-aave",
+      "type": "backend",
+      "label": "Protocolo Aave",
+      "sublabel": "Lending, Borrowing & Colateral",
+      "tag": "DeFi Lending",
+      "pos": [
+        40,
+        280
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "protocolo-uniswap",
+      "type": "backend",
+      "label": "Protocolo Uniswap",
+      "sublabel": "DEX / AMM & Paridad Tokens",
+      "tag": "Liquidity Pools",
+      "pos": [
+        270,
+        280
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "gobernanza-daos",
+      "type": "backend",
+      "label": "Gobernanza & DAOs",
+      "sublabel": "Aragon / DaoHaus DAO Toolkit",
+      "tag": "Votación On-Chain",
+      "pos": [
+        500,
+        280
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "billetera-safe",
+      "type": "security",
+      "label": "Safe Multi-Signature",
+      "sublabel": "Gnosis Safe (Multifirma)",
+      "tag": "Control Acceso",
+      "pos": [
+        730,
+        280
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "smart-contracts",
+      "type": "backend",
+      "label": "Smart Contracts",
+      "sublabel": "Solidity OOP & Interfaces",
+      "tag": "Lógica On-Chain",
+      "pos": [
+        40,
+        480
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "estandar-erc20",
+      "type": "database",
+      "label": "Tokens ERC-20",
+      "sublabel": "Fungibles & Acciones",
+      "tag": "Estándar Token",
+      "pos": [
+        270,
+        480
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "guards-seguridad",
+      "type": "security",
+      "label": "Guards & Seguridad",
+      "sublabel": "Admin Guards & Reentrancy",
+      "tag": "Seguridad",
+      "pos": [
+        500,
+        480
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "estandar-erc721",
+      "type": "database",
+      "label": "Tokens ERC-721",
+      "sublabel": "Tokens No Fungibles (NFTs)",
+      "tag": "Coleccionables",
+      "pos": [
+        730,
+        480
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "indexadores",
+      "type": "database",
+      "label": "Indexadores de Datos",
+      "sublabel": "The Graph / Envio (GraphQL)",
+      "tag": "Consultas",
+      "pos": [
+        40,
+        680
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "oraculos",
+      "type": "cloud",
+      "label": "Oráculos Descentralizados",
+      "sublabel": "Chainlink Data Feeds",
+      "tag": "Datos Off-chain",
+      "pos": [
+        270,
+        680
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "almacenamiento-descent",
+      "type": "database",
+      "label": "IPFS / Arweave",
+      "sublabel": "Metadatos & Frontends",
+      "tag": "Descentralizado",
+      "pos": [
+        500,
+        680
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "relayers-meta-tx",
+      "type": "messagebus",
+      "label": "Relayers & Meta-Tx",
+      "sublabel": "Transacciones Gasless",
+      "tag": "ERC-4337",
+      "pos": [
+        730,
+        680
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "capa-l2",
+      "type": "cloud",
+      "label": "Capa 2 (L2 Rollups)",
+      "sublabel": "Arbitrum / Optimism / Base",
+      "tag": "Escalabilidad",
+      "pos": [
+        40,
+        880
+      ],
+      "size": [
+        200,
+        64
+      ]
+    },
+    {
+      "id": "puentes-crosschain",
+      "type": "messagebus",
+      "label": "Puentes Cross-Chain",
+      "sublabel": "Bridges / Movimiento Activos",
+      "tag": "Interoperabilidad",
+      "pos": [
+        270,
+        880
+      ],
+      "size": [
+        200,
+        64
+      ]
+    },
+    {
+      "id": "coprocesadores",
+      "type": "backend",
+      "label": "Co-procesadores Cripto",
+      "sublabel": "ZK Coprocessors (Off-chain)",
+      "tag": "Zero-Knowledge",
+      "pos": [
+        500,
+        880
+      ],
+      "size": [
+        200,
+        64
+      ]
+    },
+    {
+      "id": "depin",
+      "type": "cloud",
+      "label": "Redes DePIN",
+      "sublabel": "Infraestructura Física Distribuida",
+      "tag": "Cómputo Hardware",
+      "pos": [
+        730,
+        880
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "evm",
+      "type": "backend",
+      "label": "Ethereum Virtual Machine",
+      "sublabel": "Bytecode, Opcodes & Gas (Read vs Write)",
+      "tag": "Motor EVM",
+      "pos": [
+        80,
+        1070
+      ],
+      "size": [
+        380,
+        64
+      ]
+    },
+    {
+      "id": "red-l1",
+      "type": "database",
+      "label": "Red L1 & Sepolia Testnet",
+      "sublabel": "Consenso PoS & Estado Global Blockchain",
+      "tag": "Capa de Consenso",
+      "pos": [
+        500,
+        1070
+      ],
+      "size": [
+        400,
+        64
+      ]
+    },
+    {
+      "id": "ides",
+      "type": "frontend",
+      "label": "IDEs de Desarrollo",
+      "sublabel": "Remix IDE & VS Code",
+      "tag": "Entorno",
+      "pos": [
+        980,
+        80
+      ],
+      "size": [
+        300,
+        64
+      ]
+    },
+    {
+      "id": "frameworks-dev",
+      "type": "backend",
+      "label": "Frameworks de Desarrollo",
+      "sublabel": "Foundry (Forge/Cast/Anvil) & Hardhat",
+      "tag": "Tooling Web3",
+      "pos": [
+        980,
+        280
+      ],
+      "size": [
+        300,
+        64
+      ]
+    },
+    {
+      "id": "suite-testing",
+      "type": "security",
+      "label": "Testing & Aseguramiento",
+      "sublabel": "Unit Tests, Fuzzing & Edge Cases",
+      "tag": "Forge Test",
+      "pos": [
+        980,
+        480
+      ],
+      "size": [
+        300,
+        64
+      ]
+    },
+    {
+      "id": "cliente-web3",
+      "type": "frontend",
+      "label": "Cliente Web3 & Librerías",
+      "sublabel": "Viem & Ethers.js",
+      "tag": "RPC Provider",
+      "pos": [
+        980,
+        680
+      ],
+      "size": [
+        300,
+        64
+      ]
+    },
+    {
+      "id": "exploradores",
+      "type": "external",
+      "label": "Exploradores & Deploy",
+      "sublabel": "Etherscan & Remix QuickApp",
+      "tag": "Inspección Tx",
+      "pos": [
+        980,
+        880
+      ],
+      "size": [
+        300,
+        64
+      ]
+    },
+    {
+      "id": "asistentes-ia",
+      "type": "external",
+      "label": "Asistentes de Código IA",
+      "sublabel": "Claude Code & Codex",
+      "tag": "Copilotos",
+      "pos": [
+        980,
+        1070
+      ],
+      "size": [
+        300,
+        64
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "1. Capa de Interfaz, Identidad y Clientes",
+      "wraps": [
+        "usuarios",
+        "billeteras",
+        "frontend-app",
+        "server-wallets"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "2. Capa de Aplicación y Protocolos DeFi / DAOs",
+      "wraps": [
+        "protocolo-aave",
+        "protocolo-uniswap",
+        "gobernanza-daos",
+        "billetera-safe"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "3. Capa de Smart Contracts y Estándares Solidity",
+      "wraps": [
+        "smart-contracts",
+        "estandar-erc20",
+        "guards-seguridad",
+        "estandar-erc721"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "4. Capa de Servicios Auxiliares y Middleware Off-Chain",
+      "wraps": [
+        "indexadores",
+        "oraculos",
+        "almacenamiento-descent",
+        "relayers-meta-tx"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "5. Capa de Escalabilidad, Interoperabilidad y Cómputo",
+      "wraps": [
+        "capa-l2",
+        "puentes-crosschain",
+        "coprocesadores",
+        "depin"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "6. Capa Base de Red y Ejecución (L1 & EVM)",
+      "wraps": [
+        "evm",
+        "red-l1"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "Herramientas de Desarrollo, Testing e IA",
+      "wraps": [
+        "ides",
+        "frameworks-dev",
+        "suite-testing",
+        "cliente-web3",
+        "exploradores",
+        "asistentes-ia"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "usuarios",
+      "to": "billeteras",
+      "label": "conectar",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 56
+    },
+    {
+      "from": "server-wallets",
+      "to": "frontend-app",
+      "label": "firmas KMS",
+      "fromSide": "left",
+      "toSide": "right",
+      "labelDy": 56
+    },
+    {
+      "from": "protocolo-aave",
+      "to": "smart-contracts",
+      "label": "lending pool",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "from": "protocolo-uniswap",
+      "to": "estandar-erc20",
+      "label": "swaps AMM",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "from": "gobernanza-daos",
+      "to": "billetera-safe",
+      "label": "ejecución",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 56
+    },
+    {
+      "from": "gobernanza-daos",
+      "to": "guards-seguridad",
+      "label": "admin check",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "from": "smart-contracts",
+      "to": "estandar-erc20",
+      "label": "mint / burn",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 56
+    },
+    {
+      "from": "estandar-erc20",
+      "to": "guards-seguridad",
+      "label": "reglas acceso",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 56
+    },
+    {
+      "from": "indexadores",
+      "to": "smart-contracts",
+      "label": "eventos on-chain",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelDy": -24
+    },
+    {
+      "from": "oraculos",
+      "to": "estandar-erc20",
+      "label": "price feeds",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelDy": -24
+    },
+    {
+      "from": "almacenamiento-descent",
+      "to": "estandar-erc721",
+      "label": "metadata URI",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelDy": -24
+    },
+    {
+      "from": "capa-l2",
+      "to": "evm",
+      "label": "ejecutar rollups",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "from": "puentes-crosschain",
+      "to": "red-l1",
+      "label": "bloquear / acuñar",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "from": "evm",
+      "to": "red-l1",
+      "label": "estado global",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 56
+    },
+    {
+      "from": "frameworks-dev",
+      "to": "suite-testing",
+      "label": "fuzz testing",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Interfaz & Identidad",
+      "items": [
+        "Clientes interactúan vía Web3/Mobile",
+        "Billeteras EOA y Cloud KMS gestionan llaves y firmas",
+        "React y Wagmi proporcionan hooks de conexión"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Protocolos & Contratos",
+      "items": [
+        "Lógica DeFi (Aave, Uniswap) y DAOs (Aragon, Safe)",
+        "Solidity con estándares ERC-20 y ERC-721",
+        "Patrones de seguridad con Admin y Reentrancy Guards"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Servicios & Middleware",
+      "items": [
+        "The Graph indexa eventos en consultas GraphQL",
+        "Chainlink conecta feeds de datos externos",
+        "Relayers habilitan meta-transacciones gasless"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Escalabilidad & Base",
+      "items": [
+        "L2 Rollups reducen costo de gas con alta velocidad",
+        "ZK Coprocessors permiten cómputo verificable",
+        "EVM ejecuta bytecode sobre el consenso PoS de Ethereum"
+      ]
+    }
+  ]
+}
