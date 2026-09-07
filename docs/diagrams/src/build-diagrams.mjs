@@ -279,7 +279,7 @@ const sessions = [
     num: 12,
     title: "Sesión 12: Presentación de proyectos finales (DAO con tests)",
     desc: "Presentación de proyecto integrador: diseño e implementación de una DAO con tests exhaustivos armados por humanos y contratos asistidos con herramientas de IA (Claude Code / Codex).",
-    activeNodes: ["gobernanza-daos", "billetera-safe", "smart-contracts", "suite-testing", "asistentes-ia"],
+    activeNodes: ["gobernanza-daos", "billetera-safe", "smart-contracts", "suite-testing", "ides"],
     instructor: "Nico"
   }
 ];

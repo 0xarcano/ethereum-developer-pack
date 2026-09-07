@@ -6,7 +6,7 @@
     "quality_profile": "showcase",
     "viewBox": [
       1340,
-      1260
+      1140
     ]
   },
   "components": [
@@ -72,9 +72,9 @@
     {
       "id": "protocolos-defi",
       "type": "backend",
-      "label": "Protocolos DeFi",
-      "sublabel": "Aave (Lending) & Uniswap (AMM)",
-      "tag": "DeFi",
+      "label": "Protocols",
+      "sublabel": "Uniswap, Aave, Curve & Polymarket",
+      "tag": "DeFi & Web3",
       "pos": [
         310,
         280
@@ -87,9 +87,9 @@
     {
       "id": "gobernanza-daos",
       "type": "backend",
-      "label": "Gobernanza & DAOs",
-      "sublabel": "Aragon / DaoHaus DAO Toolkit",
-      "tag": "Votación On-Chain",
+      "label": "Gobernanza & Coordinación",
+      "sublabel": "DAOs, Aragon, Snapshot & Tally",
+      "tag": "Coordinación",
       "pos": [
         535,
         280
@@ -282,9 +282,9 @@
     {
       "id": "ides",
       "type": "frontend",
-      "label": "IDEs de Desarrollo",
-      "sublabel": "Remix IDE & VS Code",
-      "tag": "Entorno",
+      "label": "IDEs & Asistentes IA",
+      "sublabel": "Remix, VS Code, Claude Code & Codex",
+      "tag": "Dev & IA",
       "pos": [
         1030,
         80
@@ -353,21 +353,6 @@
         260,
         64
       ]
-    },
-    {
-      "id": "asistentes-ia",
-      "type": "external",
-      "label": "Asistentes de Código IA",
-      "sublabel": "Claude Code & Codex",
-      "tag": "Copilotos",
-      "pos": [
-        1030,
-        980
-      ],
-      "size": [
-        260,
-        64
-      ]
     }
   ],
   "boundaries": [
@@ -382,7 +367,7 @@
     },
     {
       "kind": "region",
-      "label": "2. Capa de Aplicación y Protocolos DeFi / DAOs",
+      "label": "2. Capa Aplicación",
       "wraps": [
         "protocolos-defi",
         "gobernanza-daos",
@@ -427,8 +412,7 @@
         "frameworks-dev",
         "suite-testing",
         "cliente-web3",
-        "exploradores",
-        "asistentes-ia"
+        "exploradores"
       ]
     }
   ],
@@ -574,11 +558,11 @@
     },
     {
       "dot": "violet",
-      "title": "Protocolos & Gobernanza",
+      "title": "Capa Aplicación",
       "items": [
-        "Lógica DeFi (Aave, Uniswap) y DAOs (Aragon, Safe)",
-        "Gobernanza descentralizada y votación on-chain",
-        "Custodia multifirma con Gnosis Safe"
+        "Protocolos DeFi, AMMs, Lending, Predicciones & RWAs",
+        "Gobernanza descentralizada, DAOs y coordinación on/off-chain",
+        "Custodia multifirma y control de acceso con Safe"
       ]
     },
     {
