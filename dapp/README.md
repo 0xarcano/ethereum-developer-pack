@@ -41,4 +41,5 @@ dapp/
 
 ## Estado actual
 
-**Sesión 5** — token, tesorería y governor en [`contracts/src/`](./contracts/src/).
+**Sesión 7** — Foundry en [`contracts/`](./contracts/) con script de deploy.
+
