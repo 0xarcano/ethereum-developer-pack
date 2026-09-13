@@ -41,4 +41,4 @@ dapp/
 
 ## Estado actual
 
-**Sesión 3** — contrato monolítico en [`contracts/src/SimpleProposalVote.sol`](./contracts/src/SimpleProposalVote.sol).
+**Sesión 5** — token, tesorería y governor en [`contracts/src/`](./contracts/src/).

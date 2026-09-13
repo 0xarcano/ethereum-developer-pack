@@ -1,34 +1,45 @@
-# Contratos — Sesión 3
+# Contratos — Sesión 5
 
-Primer prototipo de la Mini-DAO: un contrato monolítico de votación para practicar en **Remix IDE**.
+La Mini-DAO deja de ser un monolito: el poder de voto vive en un **token ERC-20**, los fondos en una **tesorería**, y la lógica de propuestas en un **governor**.
 
-## Archivo
+## Archivos
 
-- [`src/SimpleProposalVote.sol`](./src/SimpleProposalVote.sol)
+| Contrato | Rol |
+| --- | --- |
+| [`src/GovernanceToken.sol`](./src/GovernanceToken.sol) | ERC-20 mínimo (membresía / peso de voto) |
+| [`src/CommunityTreasury.sol`](./src/CommunityTreasury.sol) | Bóveda de ETH; solo el governor puede `release` |
+| [`src/DaoGovernor.sol`](./src/DaoGovernor.sol) | Propuestas, votos ponderados, ejecución |
+| [`src/SimpleProposalVote.sol`](./src/SimpleProposalVote.sol) | Referencia de la sesión 3 (sigue disponible) |
 
 ## Objetivo didáctico
 
-Familiarizarse con compilación, despliegue, cuentas locales, gas y la diferencia entre **lecturas** (view) y **escrituras** (transactions).
+Ver cómo un contrato llama a otro en la EVM, el control de acceso entre contratos y un flujo de gobernanza con peso = `balanceOf`.
 
-## Cómo usar en Remix
+## Orden de despliegue en Remix
 
-1. Abre [Remix](https://remix.ethereum.org).
-2. Crea un archivo `SimpleProposalVote.sol` y pega el contenido de `src/SimpleProposalVote.sol` (o abre el repo con el plugin de Remix).
-3. Compila con Solidity `0.8.24` (o compatible `^0.8.24`).
-4. En **Deploy & Run Transactions**:
-   - Environment: `Remix VM` (local).
-   - Deploy con un texto de propuesta, por ejemplo: `"¿Aprobar presupuesto CEDIA?"`.
-5. Cambia de cuenta en el selector de cuentas y llama `vote(true)` o `vote(false)`.
-6. Observa `votesFor`, `votesAgainst`, `hasVoted` y `isApproved` (llamadas de solo lectura, sin gastar gas de red).
+1. Compila los tres contratos nuevos (`^0.8.24`).
+2. **Deploy `GovernanceToken`** con:
+   - `initialHolder`: tu cuenta
+   - `initialSupply`: p. ej. `1000000000000000000000000` (1_000_000e18)
+3. **Deploy `CommunityTreasury`** (sin argumentos).
+4. **Deploy `DaoGovernor`** con:
+   - `token_`: dirección del token
+   - `treasury_`: dirección de la tesorería
+   - `votingPeriod_`: p. ej. `300` (5 minutos en segundos) para demos
+   - `quorumVotes_`: p. ej. `100000000000000000000000` (100_000e18)
+5. En la tesorería llama `setGovernor(direcciónDelGovernor)` **una sola vez**.
+6. Fondea la tesorería: envía ETH (campo *Value* en Remix) a la dirección de `CommunityTreasury`.
+7. Opcional: `transfer` del token a otras cuentas para que voten con distinto peso.
 
-## API
+## Flujo de práctica
 
-| Función | Tipo | Descripción |
-| --- | --- | --- |
-| `vote(bool support)` | write | Un voto por dirección |
-| `isApproved()` | view | `true` si `votesFor > votesAgainst` |
-| `proposal` / `votesFor` / `votesAgainst` | view | Estado público |
+1. `createProposal("Pago taller", recipient, amountWei)`
+2. Con cuentas que tengan CGOV: `vote(proposalId, true/false)`
+3. Espera a que pase el `deadline` (en Remix VM puedes avanzar el tiempo en *Deploy & Run* → *Increase time* / *mine*, según entorno).
+4. `execute(proposalId)` → la tesorería envía ETH al recipient.
 
-## Próximo paso
+## Ideas de seguridad (preview de S10)
 
-En la sesión 5 el monolito se divide en token de gobernanza, tesorería y governor.
+- Solo el governor puede vaciar la tesorería.
+- Un address no puede votar dos veces en la misma propuesta.
+- La ejecución marca `executed` **antes** de llamar a `release` (checks-effects-interactions).
