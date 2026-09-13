@@ -41,4 +41,4 @@ dapp/
 
 ## Estado actual
 
-**Scaffold** — estructura base del monorepo. La sesión 3 añade el primer contrato.
+**Sesión 3** — contrato monolítico en [`contracts/src/SimpleProposalVote.sol`](./contracts/src/SimpleProposalVote.sol).
