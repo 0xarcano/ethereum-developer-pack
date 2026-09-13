@@ -38,4 +38,4 @@ dapp/
 
 ## Estado actual
 
-**Sesión 7** — proyecto Foundry en [`contracts/`](./contracts/).
+**Sesión 8** — frontend en [`frontend/`](./frontend/).
