@@ -23,7 +23,21 @@ contracts/
 cd dapp/contracts
 forge build
 forge test
+forge coverage
 ```
+
+### Suite de tests (sesión 10)
+
+| Archivo | Contenido |
+| --- | --- |
+| `test/DeploySmoke.t.sol` | Wiring básico post-deploy |
+| `test/DaoGovernor.t.sol` | Flujo feliz, edge cases, fuzz de peso de voto |
+
+Herramientas didácticas:
+
+- `vm.prank` — simular `msg.sender`
+- `vm.warp` — avanzar el tiempo de bloque (deadline de votación)
+- `forge coverage` — cobertura de líneas
 
 ### Deploy local con Anvil
 

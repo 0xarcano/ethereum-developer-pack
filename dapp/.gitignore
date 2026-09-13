@@ -15,3 +15,6 @@ broadcast/
 contracts/out/
 contracts/cache/
 apps/indexer/data/
+!apps/indexer/data/.gitkeep
+apps/indexer/data/*.json
+

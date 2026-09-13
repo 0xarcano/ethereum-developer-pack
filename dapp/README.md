@@ -42,5 +42,5 @@ dapp/
 
 ## Estado actual
 
-**Sesión 9** — indexer en [`apps/indexer/`](./apps/indexer/).
+**Sesión 10** — suite de tests Foundry en [`contracts/test/`](./contracts/test/). Versión completa del ciclo didáctico.
 
