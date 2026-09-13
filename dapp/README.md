@@ -42,12 +42,5 @@ dapp/
 
 ## Estado actual
 
-**Sesión 8** — frontend en [`apps/web/`](./apps/web/).
-
-```text
-dapp/
-  contracts/       # Solidity + Foundry
-  apps/
-    web/           # Vite + React + Wagmi
-```
+**Sesión 9** — indexer en [`apps/indexer/`](./apps/indexer/).
 
