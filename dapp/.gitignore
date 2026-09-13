@@ -14,4 +14,4 @@ cache/
 broadcast/
 contracts/out/
 contracts/cache/
-indexer/data/
+apps/indexer/data/

@@ -24,18 +24,21 @@ git checkout dapp/session-05   # ejemplo: estado al cerrar la sesión 5
 
 ```text
 dapp/
-  labs/           # Solidity plano para Remix (S3–S5)
-  contracts/      # Proyecto Foundry (desde S7)
-  frontend/       # Vite + React + Wagmi (desde S8)
-  indexer/        # Listener de eventos (desde S9)
+  contracts/       # Solidity (Remix al inicio; Foundry desde S7)
+    src/
+    script/        # desde S7
+    test/          # desde S7 (suite completa en S10)
+  apps/
+    web/           # Vite + React + Wagmi (desde S8)
+    indexer/       # Listener de eventos (desde S9)
 ```
 
 ## Convenciones
 
 - Material didáctico en **español**; código, comentarios de código y commits en **inglés**.
-- Onchain: reglas, tokens, votos y tesorería. Offchain: UI, metadatos e indexación.
+- Onchain: reglas, tokens, votos y tesorería. Offchain: UI e indexación.
 - Cadena de práctica principal: **Anvil** (local). Sepolia es opcional en las guías de cada sesión.
 
 ## Estado actual
 
-**Sesión 8** — frontend en [`frontend/`](./frontend/).
+**Scaffold** — estructura base del monorepo. La sesión 3 añade el primer contrato.
