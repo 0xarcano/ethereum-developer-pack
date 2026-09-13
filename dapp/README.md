@@ -38,4 +38,4 @@ dapp/
 
 ## Estado actual
 
-**Sesión 5** — sistema modular Remix en [`labs/session-05/`](./labs/session-05/).
+**Sesión 7** — proyecto Foundry en [`contracts/`](./contracts/).

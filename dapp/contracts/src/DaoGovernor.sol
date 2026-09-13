@@ -42,7 +42,6 @@ contract DaoGovernor is ReentrancyGuard {
     error AlreadyExecuted();
     error QuorumNotReached();
     error ProposalFailed();
-    error ReleaseFailed();
 
     event ProposalCreated(
         uint256 indexed proposalId,
