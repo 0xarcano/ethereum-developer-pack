@@ -31,6 +31,7 @@ dapp/
   apps/
     web/           # Vite + React + Wagmi (desde S8)
     indexer/       # Listener de eventos (desde S9)
+  scripts/         # utilidades (sync-abis)
 ```
 
 ## Convenciones
@@ -41,5 +42,12 @@ dapp/
 
 ## Estado actual
 
-**Sesión 7** — Foundry en [`contracts/`](./contracts/) con script de deploy.
+**Sesión 8** — frontend en [`apps/web/`](./apps/web/).
+
+```text
+dapp/
+  contracts/       # Solidity + Foundry
+  apps/
+    web/           # Vite + React + Wagmi
+```
 
