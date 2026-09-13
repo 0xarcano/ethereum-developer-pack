@@ -38,4 +38,4 @@ dapp/
 
 ## Estado actual
 
-**Sesión 3** — contrato monolítico en [`labs/session-03/`](./labs/session-03/).
+**Sesión 5** — sistema modular Remix en [`labs/session-05/`](./labs/session-05/).
