@@ -12,6 +12,9 @@ lcov.info
 .DS_Store
 cache/
 broadcast/
-**/contracts/out/
-**/contracts/cache/
-**/apps/indexer/data/*.json
+contracts/out/
+contracts/cache/
+apps/indexer/data/
+!apps/indexer/data/.gitkeep
+apps/indexer/data/*.json
+

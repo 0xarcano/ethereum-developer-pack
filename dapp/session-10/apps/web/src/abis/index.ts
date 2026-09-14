@@ -1,0 +1,7 @@
+import governanceTokenArtifact from "./GovernanceToken.json";
+import daoGovernorArtifact from "./DaoGovernor.json";
+import communityTreasuryArtifact from "./CommunityTreasury.json";
+
+export const governanceTokenAbi = governanceTokenArtifact.abi;
+export const daoGovernorAbi = daoGovernorArtifact.abi;
+export const communityTreasuryAbi = communityTreasuryArtifact.abi;
