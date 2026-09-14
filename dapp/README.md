@@ -4,16 +4,20 @@ Proyecto práctico del **Ethereum Developer Pack 2026** (CEDIA / Ecuador Web3). 
 
 ## Cómo recuperar un hito
 
-El desarrollo ocurre en el branch `develop`. Cada sesión práctica queda congelada en un **tag** de Git:
+El desarrollo ocurre en el branch `develop`. Cada sesión práctica queda congelada en un **tag** de Git y publicada como **Release** (con el código fuente adjunto, no solo el zip).
 
-| Tag | Sesión | Contenido |
-| --- | --- | --- |
-| `dapp/session-03` | S3 | Contrato monolítico de votación (Remix) |
-| `dapp/session-05` | S5 | Token + Tesorería + Governor (Remix modular) |
-| `dapp/session-07` | S7 | Migración a Foundry + script de deploy |
-| `dapp/session-08` | S8 | Frontend Vite + Wagmi + Viem |
-| `dapp/session-09` | S9 | Indexer Node.js de eventos |
-| `dapp/session-10` | S10 | Suite de tests Foundry (versión completa) |
+| Tag | Sesión | Ver código | Release |
+| --- | --- | --- | --- |
+| `dapp/session-03` | S3 | [árbol](https://github.com/0xarcano/ethereum-developer-pack/tree/dapp/session-03/dapp) | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-03) |
+| `dapp/session-05` | S5 | [árbol](https://github.com/0xarcano/ethereum-developer-pack/tree/dapp/session-05/dapp) | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-05) |
+| `dapp/session-07` | S7 | [árbol](https://github.com/0xarcano/ethereum-developer-pack/tree/dapp/session-07/dapp) | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-07) |
+| `dapp/session-08` | S8 | [árbol](https://github.com/0xarcano/ethereum-developer-pack/tree/dapp/session-08/dapp) | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-08) |
+| `dapp/session-09` | S9 | [árbol](https://github.com/0xarcano/ethereum-developer-pack/tree/dapp/session-09/dapp) | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-09) |
+| `dapp/session-10` | S10 | [árbol](https://github.com/0xarcano/ethereum-developer-pack/tree/dapp/session-10/dapp) | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-10) |
+
+En cada Release puedes:
+- **Navegar el código** con el enlace al árbol del tag (archivos `.sol`, frontend, etc. en el repo).
+- **Descargar archivos sueltos** (`.sol`, `.tsx`, guías) desde Assets, además del zip/tar automático de GitHub.
 
 ```bash
 git fetch --tags
