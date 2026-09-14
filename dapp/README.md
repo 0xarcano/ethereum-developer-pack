@@ -1,39 +1,49 @@
 # Mini-DAO Didáctica — Gobernanza y Tesorería
 
-Proyecto práctico del **Ethereum Developer Pack 2026** (CEDIA / Ecuador Web3). Cada sesión del curso tiene **su propia carpeta** con el código que corresponde a ese punto del temario.
+Proyecto práctico del **Ethereum Developer Pack 2026** (CEDIA / Ecuador Web3). La dApp evoluciona por sesiones desde un contrato monolítico en Remix hasta una arquitectura modular con Foundry, frontend, indexer y tests.
 
-## Carpetas por sesión
+## Cómo recuperar un hito
 
-| Carpeta | Sesión | Contenido | Branch |
-| --- | --- | --- | --- |
-| [`session-03/`](./session-03/) | S3 | Contrato monolítico de votación (Remix) | `session-03` |
-| [`session-05/`](./session-05/) | S5 | Token + Tesorería + Governor | `session-05` |
-| [`session-07/`](./session-07/) | S7 | Foundry + script de deploy | `session-07` |
-| [`session-08/`](./session-08/) | S8 | Frontend Vite + Wagmi + Viem | `session-08` |
-| [`session-09/`](./session-09/) | S9 | Indexer Node.js de eventos | `session-09` |
-| [`session-10/`](./session-10/) | S10 | Suite de tests Foundry (versión completa) | `session-10` |
+El desarrollo ocurre en el branch `develop` (versión completa). Cada sesión práctica queda congelada en un **branch** `session-XX` y un **tag** `dapp/session-XX` con la misma estructura de carpetas estándar (no hay una carpeta por sesión).
 
-En el branch `develop` están **todas** las carpetas. Cada branch `session-XX` contiene **solo** la carpeta de esa sesión.
+| Branch / Tag | Sesión | Contenido |
+| --- | --- | --- |
+| `session-03` / `dapp/session-03` | S3 | Contrato monolítico de votación (Remix) |
+| `session-05` / `dapp/session-05` | S5 | Token + Tesorería + Governor (Remix modular) |
+| `session-07` / `dapp/session-07` | S7 | Migración a Foundry + script de deploy |
+| `session-08` / `dapp/session-08` | S8 | Frontend Vite + Wagmi + Viem |
+| `session-09` / `dapp/session-09` | S9 | Indexer Node.js de eventos |
+| `session-10` / `dapp/session-10` | S10 | Suite de tests Foundry (versión completa) |
 
 ```bash
-git fetch origin
-git checkout session-05          # solo el código de la sesión 5
-cd dapp/session-05
+git checkout session-05          # estado al cerrar la sesión 5
+# o bien:
+git checkout dapp/session-05     # mismo snapshot vía tag
 ```
 
-Tags y Releases (con código adjunto):
+## Estructura del monorepo
 
-| Tag | Release |
-| --- | --- |
-| `dapp/session-03` | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-03) |
-| `dapp/session-05` | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-05) |
-| `dapp/session-07` | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-07) |
-| `dapp/session-08` | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-08) |
-| `dapp/session-09` | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-09) |
-| `dapp/session-10` | [release](https://github.com/0xarcano/ethereum-developer-pack/releases/tag/dapp/session-10) |
+En todos los branches/tags el código vive en las mismas rutas estándar:
+
+```text
+dapp/
+  contracts/       # Solidity (Remix al inicio; Foundry desde S7)
+    src/           # contratos
+    script/        # desde S7
+    test/          # desde S7 (suite completa en S10)
+  apps/
+    web/           # Vite + React + Wagmi (desde S8)
+    indexer/       # Listener de eventos (desde S9)
+  scripts/         # utilidades (sync-abis)
+```
 
 ## Convenciones
 
 - Material didáctico en **español**; código, comentarios de código y commits en **inglés**.
 - Onchain: reglas, tokens, votos y tesorería. Offchain: UI e indexación.
-- Cadena de práctica principal: **Anvil** (local).
+- Cadena de práctica principal: **Anvil** (local). Sepolia es opcional en las guías de cada sesión.
+
+## Estado actual
+
+**Sesión 10** — suite de tests Foundry en [`contracts/test/`](./contracts/test/). Versión completa del ciclo didáctico.
+
