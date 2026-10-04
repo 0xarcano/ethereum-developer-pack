@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Foundry: Toolchain y flujo de desarrollo",
+    "quality_profile": "showcase",
+    "viewBox": [1360, 780]
+  },
+  "components": [
+    {
+      "id": "desarrollador",
+      "type": "external",
+      "label": "Desarrollador",
+      "sublabel": "Contratos",
+      "pos": [30, 300],
+      "size": [130, 56]
+    },
+    {
+      "id": "ide-terminal",
+      "type": "frontend",
+      "label": "IDE & Terminal",
+      "sublabel": "VS Code · Remix",
+      "pos": [200, 300],
+      "size": [150, 56]
+    },
+    {
+      "id": "chisel",
+      "type": "backend",
+      "label": "Chisel",
+      "sublabel": "REPL Solidity",
+      "pos": [420, 80],
+      "size": [140, 56]
+    },
+    {
+      "id": "forge",
+      "type": "backend",
+      "label": "Forge",
+      "sublabel": "build · test · script",
+      "tag": "Core",
+      "pos": [420, 240],
+      "size": [140, 56]
+    },
+    {
+      "id": "cast",
+      "type": "backend",
+      "label": "Cast",
+      "sublabel": "CLI JSON-RPC",
+      "pos": [420, 400],
+      "size": [140, 56]
+    },
+    {
+      "id": "anvil",
+      "type": "cloud",
+      "label": "Anvil",
+      "sublabel": "cadena local",
+      "pos": [420, 560],
+      "size": [140, 56]
+    },
+    {
+      "id": "proyecto",
+      "type": "database",
+      "label": "Proyecto Foundry",
+      "sublabel": "src · test · script",
+      "tag": "foundry.toml",
+      "pos": [660, 170],
+      "size": [170, 56]
+    },
+    {
+      "id": "artefactos",
+      "type": "messagebus",
+      "label": "Artefactos",
+      "sublabel": "out/ ABI + bytecode",
+      "pos": [660, 320],
+      "size": [170, 56]
+    },
+    {
+      "id": "cliente-web3",
+      "type": "frontend",
+      "label": "Cliente Web3",
+      "sublabel": "Viem · Wagmi",
+      "pos": [920, 100],
+      "size": [150, 56]
+    },
+    {
+      "id": "rpc-red",
+      "type": "cloud",
+      "label": "RPC & Red",
+      "sublabel": "Anvil / Sepolia",
+      "pos": [920, 320],
+      "size": [150, 56]
+    },
+    {
+      "id": "exploradores",
+      "type": "external",
+      "label": "Exploradores",
+      "sublabel": "Etherscan",
+      "pos": [920, 560],
+      "size": [150, 56]
+    },
+    {
+      "id": "smart-contracts",
+      "type": "backend",
+      "label": "Smart Contracts",
+      "sublabel": "lógica on-chain",
+      "pos": [1140, 320],
+      "size": [170, 56]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Toolchain Foundry",
+      "wraps": ["forge", "cast", "anvil", "chisel"]
+    },
+    {
+      "kind": "region",
+      "label": "Proyecto Foundry",
+      "wraps": ["proyecto", "artefactos"]
+    },
+    {
+      "kind": "region",
+      "label": "Ejecución en red",
+      "wraps": ["rpc-red", "smart-contracts", "exploradores"]
+    }
+  ],
+  "connections": [
+    {
+      "from": "desarrollador",
+      "to": "ide-terminal",
+      "label": "código & comandos",
+      "variant": "emphasis",
+      "labelDy": -28
+    },
+    {
+      "from": "ide-terminal",
+      "to": "forge",
+      "label": "forge build/test/script",
+      "variant": "emphasis",
+      "labelAt": [380, 238]
+    },
+    {
+      "from": "forge",
+      "to": "chisel",
+      "label": "sandbox REPL",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelDy": -18
+    },
+    {
+      "from": "forge",
+      "to": "cast",
+      "label": "CLI RPC",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 18
+    },
+    {
+      "from": "forge",
+      "to": "proyecto",
+      "label": "lee src/test/script",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [610, 200]
+    },
+    {
+      "from": "forge",
+      "to": "artefactos",
+      "label": "emite ABI & bytecode",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [610, 310]
+    },
+    {
+      "from": "cast",
+      "to": "anvil",
+      "label": "nodo local",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 18
+    },
+    {
+      "from": "anvil",
+      "to": "rpc-red",
+      "label": "JSON-RPC :8545",
+      "fromSide": "right",
+      "toSide": "bottom",
+      "labelAt": [740, 640]
+    },
+    {
+      "from": "cast",
+      "to": "rpc-red",
+      "label": "llamadas RPC",
+      "fromSide": "right",
+      "toSide": "bottom",
+      "via": [[780, 428], [780, 500], [995, 500], [995, 376]],
+      "labelAt": [860, 520]
+    },
+    {
+      "from": "artefactos",
+      "to": "rpc-red",
+      "label": "deploy / broadcast",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [860, 390]
+    },
+    {
+      "from": "rpc-red",
+      "to": "smart-contracts",
+      "label": "ejecución EVM",
+      "variant": "emphasis",
+      "labelDy": -24
+    },
+    {
+      "from": "artefactos",
+      "to": "cliente-web3",
+      "label": "ABI para dApp",
+      "variant": "dashed",
+      "fromSide": "right",
+      "toSide": "left",
+      "via": [[900, 348], [900, 128], [920, 128]],
+      "labelAt": [940, 170]
+    },
+    {
+      "from": "rpc-red",
+      "to": "exploradores",
+      "label": "inspección de txs",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [1100, 480]
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Toolchain",
+      "items": [
+        "Forge: compile, test y deploy; Cast: CLI RPC; Anvil: cadena local; Chisel: REPL"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Ciclo de desarrollo",
+      "items": [
+        "src/test/script + foundry.toml → forge build → out/ → deploy en Anvil o Sepolia"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Integración",
+      "items": [
+        "Los ABI alimentan Viem/Wagmi; exploradores verifican txs on-chain"
+      ]
+    }
+  ]
+}
