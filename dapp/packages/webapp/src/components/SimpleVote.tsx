@@ -1,9 +1,9 @@
 import { useSimpleVote } from "../hooks";
-import { useAccount } from "wagmi";
+import { ConnectBar } from "./ConnectBar";
 
 export function SimpleVote() {
-  const { isConnected } = useAccount();
   const {
+    account,
     proposal,
     votesFor,
     votesAgainst,
@@ -11,19 +11,32 @@ export function SimpleVote() {
     hasVoted,
     isLoading,
     isVoting,
+    isConnecting,
     error,
     txHash,
+    connectWallet,
+    disconnectWallet,
     vote,
     refetch,
   } = useSimpleVote();
 
+  const isConnected = Boolean(account);
+
   return (
     <div className="simple-vote-card">
-      <div className="section-badge">Etapa 1 · Votación Directa (Viem)</div>
-      <h3>{proposal || "Cargando propuesta onchain..."}</h3>
+      <div className="card-top">
+        <div className="section-badge">Votación Onchain (Viem Puro)</div>
+        <ConnectBar
+          account={account}
+          isConnecting={isConnecting}
+          onConnect={connectWallet}
+          onDisconnect={disconnectWallet}
+        />
+      </div>
+
+      <h3>{proposal || (isLoading ? "Cargando propuesta onchain..." : "Sin propuesta cargada")}</h3>
       <p className="description">
-        Interacción directa con <code>SimpleProposalVote.sol</code>. Demuestra lecturas sin gas y
-        transacciones con recibo confirmado.
+        Interacción directa con <code>SimpleProposalVote.sol</code> usando <strong>Viem</strong> y llamadas JSON-RPC. Demuestra lectura pública sin gas, simulación previa de transacciones y confirmación en bloque.
       </p>
 
       <div className="stats-row">
@@ -36,7 +49,7 @@ export function SimpleVote() {
           <span className="stat-value text-red">{votesAgainst.toString()}</span>
         </div>
         <div className="stat">
-          <span className="stat-label">Aprobada</span>
+          <span className="stat-label">¿Aprobada?</span>
           <span className="stat-value">{isApproved ? "Sí" : "No"}</span>
         </div>
         <div className="stat">
@@ -50,7 +63,7 @@ export function SimpleVote() {
       {error && <p className="error-banner">{error}</p>}
       {txHash && (
         <p className="tx-banner">
-          Transacción enviada: <code>{txHash.slice(0, 10)}...{txHash.slice(-8)}</code>
+          Transacción confirmada: <code>{txHash.slice(0, 10)}...{txHash.slice(-8)}</code>
         </p>
       )}
 
@@ -60,14 +73,14 @@ export function SimpleVote() {
           disabled={!isConnected || hasVoted || isVoting || isLoading}
           onClick={() => void vote(true)}
         >
-          {isVoting ? "Procesando..." : "Votar Sí (YES)"}
+          {isVoting ? "Procesando firma y bloque..." : "Votar Sí (YES)"}
         </button>
         <button
           className="btn-vote-no"
           disabled={!isConnected || hasVoted || isVoting || isLoading}
           onClick={() => void vote(false)}
         >
-          {isVoting ? "Procesando..." : "Votar No (NO)"}
+          {isVoting ? "Procesando firma y bloque..." : "Votar No (NO)"}
         </button>
         <button
           className="btn-secondary"

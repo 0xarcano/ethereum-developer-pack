@@ -11,7 +11,7 @@ El desarrollo ocurre en el branch `develop`. Cada sesión práctica queda congel
 | `dapp/session-03` | S3 | Contrato monolítico de votación (Remix) |
 | `dapp/session-05` | S5 | Token + Tesorería + Governor (Remix modular) |
 | `dapp/session-07` | S7 | Migración a Foundry + script de deploy |
-| `dapp/session-08` | S8 | Frontend Web3 Progresivo: Viem → Wagmi en estándar monorepo |
+| `dapp/session-08` | S8 | Frontend Web3: Interacción directa con Viem y EIP-1193 |
 | `dapp/session-09` | S9 | Indexer Node.js de eventos |
 | `dapp/session-10` | S10 | Suite de tests Foundry (versión completa) |
 
@@ -32,23 +32,23 @@ dapp/
 │   ├── contracts/               # Proyecto de Foundry
 │   │   ├── lib/                 # Dependencias de Solidity (forge-std)
 │   │   ├── src/                 # Contratos inteligentes (.sol)
-│   │   │   ├── SimpleProposalVote.sol  # Contrato didáctico monolítico (S3 / S8 Etapa 1)
+│   │   │   ├── SimpleProposalVote.sol  # Contrato didáctico monolítico (S3 / S8)
 │   │   │   ├── GovernanceToken.sol     # Token ERC-20 de gobernanza
 │   │   │   ├── CommunityTreasury.sol   # Bóveda de fondos ETH
 │   │   │   └── DaoGovernor.sol         # Gobernador con votación ponderada
 │   │   ├── test/                # Pruebas en Solidity
 │   │   │   └── DeploySmoke.t.sol       # Tests de despliegue y cableado
 │   │   ├── script/              # Scripts de despliegue (Solidity)
-│   │   │   ├── DeploySimpleVote.s.sol  # Deploy rápido para Etapa 1 en Anvil
+│   │   │   ├── DeploySimpleVote.s.sol  # Deploy para Sesión 8 en Anvil
 │   │   │   └── DeployDAO.s.sol         # Deploy de la Mini-DAO completa
 │   │   └── foundry.toml         # Configuración específica de Foundry
 │   │
-│   └── webapp/                  # Proyecto Frontend (React 19 + Viem + Wagmi)
+│   └── webapp/                  # Proyecto Frontend (TypeScript + Viem + React)
 │       ├── public/              # Recursos estáticos
 │       ├── src/
-│       │   ├── components/      # Componentes React (SimpleVote, ProposalList, etc.)
-│       │   ├── hooks/           # Hooks personalizados para Viem (useSimpleVote) y Wagmi
-│       │   ├── config/          # Configuración de Viem/Wagmi (clientes, cadenas, contratos)
+│       │   ├── components/      # Componentes de interfaz (SimpleVote, ConnectBar)
+│       │   ├── hooks/           # Hook useSimpleVote (Viem puro)
+│       │   ├── config/          # Configuración de Viem (clientes, cadenas, contratos)
 │       │   └── abis/            # Archivos JSON de los ABIs sincronizados
 │       ├── package.json
 │       └── tsconfig.json

@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
-import { useAccount, useWalletClient } from "wagmi";
+import { createWalletClient, custom, type WalletClient, type Address } from "viem";
 import { publicClient, CONTRACTS, anvilChain } from "../config";
 import { simpleProposalVoteAbi } from "../abis";
 
 export interface SimpleVoteState {
+  account: Address | null;
   proposal: string;
   votesFor: bigint;
   votesAgainst: bigint;
@@ -11,16 +12,17 @@ export interface SimpleVoteState {
   hasVoted: boolean;
   isLoading: boolean;
   isVoting: boolean;
+  isConnecting: boolean;
   error: string | null;
   txHash: string | null;
+  connectWallet: () => Promise<void>;
+  disconnectWallet: () => void;
   vote: (support: boolean) => Promise<void>;
   refetch: () => Promise<void>;
 }
 
 export function useSimpleVote(): SimpleVoteState {
-  const { address } = useAccount();
-  const { data: walletClient } = useWalletClient();
-
+  const [account, setAccount] = useState<Address | null>(null);
   const [proposal, setProposal] = useState<string>("");
   const [votesFor, setVotesFor] = useState<bigint>(0n);
   const [votesAgainst, setVotesAgainst] = useState<bigint>(0n);
@@ -28,9 +30,11 @@ export function useSimpleVote(): SimpleVoteState {
   const [hasVoted, setHasVoted] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isVoting, setIsVoting] = useState<boolean>(false);
+  const [isConnecting, setIsConnecting] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [txHash, setTxHash] = useState<string | null>(null);
 
+  // Read proposal and user voting status
   const refetch = useCallback(async () => {
     setIsLoading(true);
     setError(null);
@@ -63,12 +67,12 @@ export function useSimpleVote(): SimpleVoteState {
       setVotesAgainst(vAgainst as bigint);
       setIsApproved(approved as boolean);
 
-      if (address) {
+      if (account) {
         const voted = await publicClient.readContract({
           address: CONTRACTS.SimpleProposalVote,
           abi: simpleProposalVoteAbi,
           functionName: "hasVoted",
-          args: [address],
+          args: [account],
         });
         setHasVoted(voted as boolean);
       } else {
@@ -76,19 +80,80 @@ export function useSimpleVote(): SimpleVoteState {
       }
     } catch (err) {
       console.error("Error reading SimpleProposalVote:", err);
-      setError("No se pudo leer el contrato. Verifica que Anvil esté activo.");
+      setError("No se pudo leer el contrato. Verifica que Anvil y el contrato estén activos.");
     } finally {
       setIsLoading(false);
     }
-  }, [address]);
+  }, [account]);
+
+  // Connect wallet via native window.ethereum (EIP-1193)
+  const connectWallet = useCallback(async () => {
+    if (typeof window === "undefined" || !window.ethereum) {
+      setError("No se detectó billetera Web3 (MetaMask/Rabby).");
+      return;
+    }
+
+    setIsConnecting(true);
+    setError(null);
+    try {
+      const accounts = (await window.ethereum.request({
+        method: "eth_requestAccounts",
+      })) as string[];
+
+      if (accounts && accounts[0]) {
+        setAccount(accounts[0] as Address);
+      }
+    } catch (err: any) {
+      console.error("Error connecting wallet:", err);
+      setError(err?.message ?? "Error conectando billetera.");
+    } finally {
+      setIsConnecting(false);
+    }
+  }, []);
+
+  const disconnectWallet = useCallback(() => {
+    setAccount(null);
+    setHasVoted(false);
+  }, []);
+
+  // Listen to EIP-1193 account & chain changes
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.ethereum) return;
+
+    const handleAccountsChanged = (accounts: string[]) => {
+      if (accounts.length === 0) {
+        setAccount(null);
+        setHasVoted(false);
+      } else {
+        setAccount(accounts[0] as Address);
+      }
+    };
+
+    window.ethereum.on?.("accountsChanged", handleAccountsChanged);
+
+    // Check if already authorized
+    window.ethereum
+      .request({ method: "eth_accounts" })
+      .then((accs: any) => {
+        if (accs && accs[0]) {
+          setAccount(accs[0] as Address);
+        }
+      })
+      .catch(console.error);
+
+    return () => {
+      window.ethereum?.removeListener?.("accountsChanged", handleAccountsChanged);
+    };
+  }, []);
 
   useEffect(() => {
     void refetch();
   }, [refetch]);
 
+  // Cast vote with Patrick Collins' Golden Rule: simulate first!
   const vote = useCallback(
     async (support: boolean) => {
-      if (!walletClient || !address) {
+      if (typeof window === "undefined" || !window.ethereum || !account) {
         setError("Conecta tu billetera primero.");
         return;
       }
@@ -98,35 +163,41 @@ export function useSimpleVote(): SimpleVoteState {
       setTxHash(null);
 
       try {
-        const hash = await walletClient.writeContract({
+        const walletClient: WalletClient = createWalletClient({
+          chain: anvilChain,
+          transport: custom(window.ethereum),
+        });
+
+        // Step 1: Simulate transaction prevention
+        const { request } = await publicClient.simulateContract({
           address: CONTRACTS.SimpleProposalVote,
           abi: simpleProposalVoteAbi,
           functionName: "vote",
           args: [support],
-          chain: anvilChain,
-          account: address,
+          account,
         });
 
+        // Step 2: Transmit signed transaction
+        const hash = await walletClient.writeContract(request);
         setTxHash(hash);
 
-        // Esperar recibo de la transacción
-        const receipt = await publicClient.waitForTransactionReceipt({ hash });
-        if (receipt.status === "success") {
-          await refetch();
-        } else {
-          setError("La transacción fue revertida en la EVM.");
-        }
-      } catch (err) {
+        // Step 3: Wait for transaction receipt in block
+        await publicClient.waitForTransactionReceipt({ hash });
+
+        // Step 4: Refresh UI
+        await refetch();
+      } catch (err: any) {
         console.error("Error casting vote:", err);
-        setError((err as Error).message || "Fallo al enviar el voto.");
+        setError(err?.shortMessage ?? err?.message ?? "Error al votar");
       } finally {
         setIsVoting(false);
       }
     },
-    [walletClient, address, refetch]
+    [account, refetch]
   );
 
   return {
+    account,
     proposal,
     votesFor,
     votesAgainst,
@@ -134,8 +205,11 @@ export function useSimpleVote(): SimpleVoteState {
     hasVoted,
     isLoading,
     isVoting,
+    isConnecting,
     error,
     txHash,
+    connectWallet,
+    disconnectWallet,
     vote,
     refetch,
   };

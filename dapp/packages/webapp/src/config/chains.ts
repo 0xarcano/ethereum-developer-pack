@@ -1,8 +1,6 @@
 import { defineChain } from "viem";
-import { anvil as wagmiAnvil } from "wagmi/chains";
 
 export const anvilChain = defineChain({
-  ...wagmiAnvil,
   id: 31337,
   name: "Anvil Localnet",
   nativeCurrency: {

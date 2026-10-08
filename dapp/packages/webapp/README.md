@@ -1,38 +1,31 @@
-# Frontend WebApp — Mini-DAO Didáctica
+# Frontend WebApp — Votación Onchain con Viem
 
 Proyecto frontend del **Ethereum Developer Pack 2026** (CEDIA / Ecuador Web3).
 
-Organizado según la estructura estándar de repositorios Web3 con **React 19**, **Viem**, **Wagmi v2** y **TanStack Query**.
+Desarrollado con **TypeScript**, **Viem** y **React** enfocado en interacción directa contra contratos EVM sin capas intermedias complejas.
 
 ## Estructura del Proyecto
 
 ```text
 webapp/
-├── public/                  # Recursos estáticos (favicon, iconos)
-├── index.html               # Punto de entrada estándar de la dApp
+├── public/                  # Recursos estáticos
+├── index.html               # Punto de entrada estándar
 ├── src/
-│   ├── components/          # Componentes de la interfaz
-│   │   ├── ConnectBar.tsx   # Barra de conexión de billetera (Wagmi)
-│   │   ├── SimpleVote.tsx   # Etapa 1: Votación Directa (Viem en React)
-│   │   ├── TokenBalance.tsx # Balance de tokens CGOV
-│   │   └── ProposalList.tsx # Listado de propuestas y votación DAO
-│   ├── hooks/               # Hooks personalizados para Viem y Wagmi
-│   │   ├── useSimpleVote.ts # Hook con Viem puro (readContract, writeContract, waitForTransactionReceipt)
-│   │   └── useTokenBalance.ts # Hook para balance CGOV
-│   ├── config/              # Configuración de Viem y Wagmi
+│   ├── components/          # Componentes de interfaz
+│   │   ├── ConnectBar.tsx   # Barra de conexión con proveedor EIP-1193
+│   │   └── SimpleVote.tsx   # Panel de votación directa onchain
+│   ├── hooks/               # Hooks de integración Web3
+│   │   └── useSimpleVote.ts # Hook con Viem puro (readContract, simulateContract, writeContract, waitForTransactionReceipt)
+│   ├── config/              # Configuración de red y clientes
 │   │   ├── chains.ts        # Definición de red Anvil (chain 31337)
 │   │   ├── viem.ts          # PublicClient de Viem
-│   │   ├── wagmi.ts         # Wagmi config con conectores inyectados
-│   │   ├── contracts.ts     # Direcciones y validaciones
+│   │   ├── contracts.ts     # Direcciones de contratos
 │   │   └── index.ts         # Re-export de configuración
-│   ├── abis/                # Archivos JSON de los ABIs de los contratos
+│   ├── abis/                # Archivos JSON de ABIs
 │   │   ├── SimpleProposalVote.json
-│   │   ├── GovernanceToken.json
-│   │   ├── DaoGovernor.json
-│   │   ├── CommunityTreasury.json
 │   │   └── index.ts
-│   ├── App.tsx              # Componente principal con selector de etapas
-│   ├── main.tsx             # Montaje de React y providers
+│   ├── App.tsx              # Componente principal
+│   ├── main.tsx             # Montaje de React
 │   └── index.css            # Estilos globales
 ├── package.json
 └── tsconfig.json
@@ -40,31 +33,30 @@ webapp/
 
 ## Estructura del Taller (4 Horas / 240 Minutos)
 
-1. **Parte 1: Horas 1 y 2 (00:00 - 02:00) — Fundamentos con HTML + TS + Viem (`index.html` y `src/index.ts`)**:
-   - Live coding guiado paso a paso, inspirado en la *"Sección 1: HTML/JS - Buy Me A Coffee"* del Masterclass de Patrick Collins (Cyfrin Updraft).
-   - Sin frameworks ni abstracciones: manipulando directamente el DOM con IDs nativos.
-   - Demuestra la interacción directa con `SimpleProposalVote.sol`:
-     - Inspección de `window.ethereum` (EIP-1193) y conexión de billetera con `walletClient.requestAddresses()`.
-     - Lecturas públicas con `publicClient.readContract()` sin coste de gas (`eth_call`).
-     - **Regla de oro de Patrick Collins**: Simulación previa con `publicClient.simulateContract()` para prevenir reverts y evitar gastar gas en vano.
-     - Escritura con `walletClient.writeContract()` (`txHash` en mempool).
-     - **Diferencia crítica**: El hash no es el recibo; espera explícita del bloque con `publicClient.waitForTransactionReceipt()`.
-     - "The Pain Points": Las limitaciones y dolores de cabeza del código imperativo.
+El taller sigue la metodología práctica del *Web3 Full-Stack Development Masterclass* de Cyfrin Updraft / Patrick Collins:
 
-2. **Parte 2: Horas 3 y 4 (02:00 - 04:00) — Mini-DAO Modular con React 19 + Wagmi v2 (`/`)**:
-   - Construcción paso a paso de los componentes declarativos y caché reactivo con TanStack Query.
-   - Gobernanza completa multi-contrato: `GovernanceToken`, `DaoGovernor` y `CommunityTreasury`.
-   - Hooks reactivos de Wagmi (`useAccount`, `useReadContract`, `useWriteContract`, `useWaitForTransactionReceipt`).
-   - Feedback visual profesional: `isPending`, `isConfirming` e `isConfirmed`.
-   - Accesible en desarrollo en: [http://localhost:5173/](http://localhost:5173/).
+1. **Bloque 1: Modelo Mental Web3 vs Web2**: Llamadas JSON-RPC a nodos EVM sin servidores ni bases de datos tradicionales.
+2. **Bloque 2: Estándar EIP-1193 (`window.ethereum`)**: Detección de billeteras (MetaMask, Rabby), permisos de cuentas con `eth_requestAccounts`.
+3. **Bloque 3: `PublicClient` de Viem**: Lecturas paralelas sin gas con `readContract` y resolución de ABIs.
+4. **Bloque 4: `WalletClient` y Simulación Preventiva**: Aplicación estricta de la Regla de Oro (`simulateContract`) para garantizar que la transacción no revertirá antes de solicitar la firma.
+5. **Bloque 5: Mempool vs Recibo**: Demostración de por qué el hash de transacción no es un recibo y sincronización con `waitForTransactionReceipt`.
+6. **Bloque 6: Eventos Onchain en Vivo**: Suscripción reactiva a logs de eventos con `watchContractEvent`.
+7. **Bloque 7: Edge Cases y Resiliencia**: Manejo de cambios de red, desconexiones y reversiones controladas.
 
-## Ejecución
+## Comandos de Ejecución
 
-Desde la raíz de `dapp/`:
+Desde la raíz del repositorio:
 
 ```bash
-# Iniciar frontend
+# 1. Iniciar blockchain local Anvil
+anvil
+
+# 2. Desplegar contrato didáctico
+cd dapp
+pnpm deploy:vote
+
+# 3. Iniciar el servidor web de desarrollo
 pnpm dev
 ```
 
-La aplicación correrá en [http://localhost:5173](http://localhost:5173).
+La aplicación se servirá en [http://localhost:5173](http://localhost:5173).
