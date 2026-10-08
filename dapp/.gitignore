@@ -12,6 +12,8 @@ lcov.info
 .DS_Store
 cache/
 broadcast/
-contracts/out/
-contracts/cache/
-apps/indexer/data/
+packages/contracts/out/
+packages/contracts/cache/
+packages/contracts/broadcast/
+packages/webapp/dist/
+packages/indexer/data/

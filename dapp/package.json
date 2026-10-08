@@ -4,9 +4,13 @@
   "version": "0.1.0",
   "description": "Didactic Mini-DAO monorepo for Ethereum Developer Pack 2026",
   "scripts": {
-    "web": "pnpm --filter @mini-dao/web",
-    "indexer": "pnpm --filter @mini-dao/indexer",
-    "sync-abis": "node scripts/sync-abis.mjs"
+    "dev": "pnpm --filter @mini-dao/webapp dev",
+    "build": "pnpm --recursive run build",
+    "build:contracts": "cd packages/contracts && forge build",
+    "test:contracts": "cd packages/contracts && forge test",
+    "sync-abis": "node scripts/sync-abis.mjs",
+    "deploy:vote": "cd packages/contracts && forge script script/DeploySimpleVote.s.sol --broadcast --rpc-url http://127.0.0.1:8545",
+    "deploy:dao": "cd packages/contracts && forge script script/DeployDAO.s.sol --broadcast --rpc-url http://127.0.0.1:8545"
   },
   "engines": {
     "node": ">=20"

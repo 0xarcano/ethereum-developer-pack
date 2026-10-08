@@ -1,5 +1,5 @@
 {
-  "name": "@mini-dao/web",
+  "name": "@mini-dao/webapp",
   "private": true,
   "version": "0.1.0",
   "type": "module",

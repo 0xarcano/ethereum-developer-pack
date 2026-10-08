@@ -95,7 +95,7 @@ Capacitar a los participantes para el desarrollo de aplicaciones blockchain segu
 |  |  | 6 | 3\. Governanza | 2.1. Admin guards 2.2. Estructura de DAOs 2.3. Aragon/DaoHaus DAO toolkit 2.4. Safe multi-signature  | Nico |
 |  |  |  | 4\. L2s y co-procesadores | 4.1. L2s y sus ventajas 4.2. co-procesadores 4.3. Usos en smart contracts  | Nico |
 | 3 | **Desarrollo de aplicaciones blockchain** | 7 | 1\. Smart Contracts | 1.1. Foundry 1.2. Solidity versions | Paul |
-|  |  | 8 | 2\. Frontend | 2.1. React 2.2. Viem \+ Wagmi 2.3. Best practices | Paul |
+|  |  | 8 | 2\. Frontend Web3 | 2.1. De Vanilla HTML/TS/Viem a React 19 2.2. Wagmi v2 + TanStack Query 2.3. Taller live coding Mini-DAO (4h) | Paul |
 |  |  | 9 | 3\. Backend | 3.1. backend auxiliares: Indexadores, oráculos, almacenamiento descentralizado, relayers, server wallets (AWS KMS, Google KMS, Stoffel MPC), DePIN 3.2. meta transacciones | Paul |
 | 4 |  | 10 | 4\. Testing | 4.1. Fundamentos 4.2. Test frameworks4.3. Edge cases | Paul y Nico |
 |  |  | 11 | 5\. Dudas  | 5.1. Clase abierta | Paul |

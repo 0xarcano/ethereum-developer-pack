@@ -3,12 +3,12 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const outDir = join(root, "contracts", "out");
-const destDir = join(root, "apps", "web", "src", "abis");
+const outDir = join(root, "packages", "contracts", "out");
+const destDir = join(root, "packages", "webapp", "src", "abis");
 
 mkdirSync(destDir, { recursive: true });
 
-const contracts = ["GovernanceToken", "DaoGovernor", "CommunityTreasury"];
+const contracts = ["GovernanceToken", "DaoGovernor", "CommunityTreasury", "SimpleProposalVote"];
 
 for (const name of contracts) {
   const artifactPath = join(outDir, `${name}.sol`, `${name}.json`);
